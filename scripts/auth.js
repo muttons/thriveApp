@@ -1,7 +1,9 @@
 
-function microsoftSignIn(){
+function signIn(){
 var provider = new firebase.auth.OAuthProvider('microsoft.com');
-firebase.auth().signInWithPopup(provider)
+provider.setCustomParameters({
+});
+firebase.auth().signInWithRedirect(provider)
   .then(function(result) {
     // User is signed in.
     // IdP data available in result.additionalUserInfo.profile.
@@ -18,7 +20,7 @@ firebase.auth().signInWithPopup(provider)
 }
 
 
-function microsoftSignOut(){
+function signOut(){
 firebase.auth().signOut().then(function() {
     // Sign-out successful.
     console.log("Successfull Log Out")
