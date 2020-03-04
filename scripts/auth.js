@@ -1,28 +1,18 @@
+authProvider = new firebase.auth.OAuthProvider('microsoft.com');
+var provider = new firebase.auth.GoogleAuthProvider();
 
-
-function signIn(){
-    var provider = new firebase.auth.OAuthProvider('microsoft.com');
-    provider.setCustomParameters({
-        tenant: 'common'
+microsoftSignIn = () => {
+    firebase.auth().signInWithPopup(authProvider).then(function(result){
+        console.log(result);
+        console.log("Successfull Sign In with Microsoft Account");
+    }).catch(function(err){
+        console.log(err);
+        console.log("Failed to Sign In with Microsoft Account");
     });
-    firebase.auth().signInWithPopup(provider)
-      .then(function(result) {
-        // User is signed in.
-        // IdP data available in result.additionalUserInfo.profile.
-        // OAuth access token can also be retrieved:
-        // result.credential.accessToken
-        // OAuth ID token can also be retrieved:
-        // result.credential.idToken
-        console.log("Success");
-      })
-      .catch(function(error) {
-        // Handle error.
-        console.log("Failure");
-      });
-    }
+}
 
 
-    function signOut(){
+microsoftSignOut = () => {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
         console.log("Successfull Log Out")
@@ -30,3 +20,4 @@ function signIn(){
         // An error happened.
       });
     }
+
