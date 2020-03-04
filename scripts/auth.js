@@ -1,5 +1,5 @@
 
-
+function signIn(){
 var provider = new firebase.auth.OAuthProvider('microsoft.com');
 provider.setCustomParameters({
     // Optional "tenant" parameter in case you are using an Azure AD tenant.
@@ -10,7 +10,7 @@ provider.setCustomParameters({
   });
 
   firebase.auth().signInWithRedirect(provider);
-
+}
 
 
 
