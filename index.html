@@ -5,37 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <title>Thrive App</title>
 </head>
 <body class="grey lighten-3"">
 
 
+  <!-- nav -->
+  <header>
+    <nav class="nav wrapper">
+      <div class="container text-white">
+        <a href="/index.html" class="brand-logo">ThriveApp</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-links">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a onclick="microsoftSignIn()" id="signIn" class="black-text">Login</a></li> 
+            <li><a onclick="microsoftSignOut()" id="signOut" class="black-text">Sign Out</a></li> 
+        </ul>
 
-  <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">
-        <img src="img/flower-75.png" style="width: 50px; padding-top: 5px;">
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </div>
+    </nav>
+  </header>
 
-        <li class="logged-in">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
-          </li>
+  <!-- side nav -->
+  <ul class="sidenav grey lighten-2" id="mobile-links">
+    <br>
+    <li><a onclick="microsoftSignIn()" id="signIn" class="black-text">Login</a></li> 
+    <li><a onclick="microsoftSignOut()" id="signOut" class="black-text">Sign Out</a></li> 
 
-          <li class="logged-in">
-            <a onclick="microsoftSignIn()" id="signIn" class="grey-text">Login</a>
-          </li>
-
-          <li class="logged-in">
-            <a onclick="microsoftSignOut()" id="signOut" class="grey-text">Sign Out</a>
-          </li>
-
-        </span>
-      </ul>
-    </div>
-  </nav>
-
+  </ul>
     
 
 
@@ -89,6 +91,7 @@
 
 
   <!-- Compiled and minified JavaScript -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="scripts/auth.js"></script>
   <script src="scripts/index.js"></script>
