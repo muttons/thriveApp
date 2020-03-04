@@ -21,6 +21,7 @@ firebase.auth().signInWithPopup(provider)
 function microsoftSignOut(){
 firebase.auth().signOut().then(function() {
     // Sign-out successful.
+    console.log("Successfull Log Out")
   }).catch(function(error) {
     // An error happened.
   });
