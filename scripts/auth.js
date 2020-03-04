@@ -4,11 +4,13 @@ auth.onAuthStateChanged(user => {
     if (user) {
         // return data from firebase if the user is logged in
         db.collection('guides').get().then(snapshot => {
-            setupGuides(snapshot.docs)
+            setupGuides(snapshot.docs);
+            setupUI(user);
         });
     } else {
         // return and empty array if they are logged out
       setupGuides([]);
+      setupUI();
 }});
 
 

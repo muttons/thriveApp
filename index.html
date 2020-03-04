@@ -18,13 +18,13 @@
   <header>
     <nav class="nav wrapper">
       <div class="container text-white">
-        <a href="/index.html" class="brand-logo">ThriveApp</a>
+        <a href="/thriveApp/index.html" class="brand-logo">ThriveApp</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-links">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-            <li><a onclick="microsoftSignIn()" id="signIn" class="black-text">Login</a></li> 
-            <li><a onclick="microsoftSignOut()" id="signOut" class="black-text">Sign Out</a></li> 
+            <li class="logged-out"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
+            <li class="logged-in"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
         </ul>
 
       </div>
@@ -34,8 +34,8 @@
   <!-- side nav -->
   <ul class="sidenav grey lighten-2" id="mobile-links">
     <br>
-    <li><a onclick="microsoftSignIn()" id="signIn" class="black-text">Login</a></li> 
-    <li><a onclick="microsoftSignOut()" id="signOut" class="black-text">Sign Out</a></li> 
+    <li class="logged-out"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
+    <li class="logged-in"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
   </ul>
     
