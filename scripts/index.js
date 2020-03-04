@@ -24,8 +24,12 @@ const setupGuides = (data) => {
     const guide = doc.data();
     const li = `
       <li>
-        <div class="collapsible-header grey lighten-4"> ${guide.title} </div>
-        <div class="collapsible-body white"> ${guide.content} </div>
+        <div class="collapsible-header grey lighten-4"> ${guide.fullName} </div>
+        <div class="collapsible-body white"> Location: | ${guide.location} </div>
+        <div class="collapsible-body white"> Position: | ${guide.position} </div>
+        <div class="collapsible-body white"> 1: | ${guide.questionOne} </div>
+        <div class="collapsible-body white"> 2: | ${guide.questionTwo} </div>
+        <div class="collapsible-body white"> 3: | ${guide.questionThree} </div>
       </li>
     `;
     html += li;

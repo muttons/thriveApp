@@ -11,7 +11,30 @@ auth.onAuthStateChanged(user => {
         // return and empty array if they are logged out
       setupGuides([]);
       setupUI();
-}});
+}
+});
+
+
+// create new info
+const createForm = document.querySelector('#create-form');
+createForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  db.collection('guides').add({
+    fullName: createForm.fullName.value,
+    location: createForm.location.value,
+    position: createForm.position.value,
+    questionOne: createForm.questionOne.value,
+    questionTwo: createForm.questionTwo.value,
+    questionThree: createForm.questionThree.value
+  }).then(() => {
+    // close the create modal & reset form
+    const modal = document.querySelector('#modal-create');
+    M.Modal.getInstance(modal).close();
+    createForm.reset();
+  }).catch(err => {
+    console.log(err.message);
+  });
+});
 
 
 // Sign In with Microsoft OAuth

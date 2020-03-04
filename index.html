@@ -25,6 +25,7 @@
         <ul class="right hide-on-med-and-down">
             <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
             <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
+            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
         </ul>
 
       </div>
@@ -40,7 +41,39 @@
   </ul>
     
 
-
+  <!-- CREATE GUIDE MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Info</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="fullName" required>
+          <label for="fullName">What is your Full Name</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="location" required>
+            <label for="location">What is your location</label>
+          </div>
+        <div class="input-field">
+          <textarea id="position" class="materialize-textarea" required></textarea>
+          <label for="position">What is your position</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="questionOne" required>
+            <label for="questionOne">what is 10 x 5</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="questionTwo" required>
+            <label for="questionTwo">what is 10 x 5</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="questionThree" required>
+            <label for="questionThree">what is 10 x 5</label>
+          </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
 
 
   <!-- GUIDE LIST -->
