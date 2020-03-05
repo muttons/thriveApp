@@ -59,6 +59,7 @@ const authProvider = new firebase.auth.OAuthProvider('microsoft.com');
 microsoftSignOut = () => {
 firebase.auth().signOut().then(function() {
     // Sign-out successful.
+    alert("You have Successfully signed out");
   }).catch(function(error) {
     // An error happened.
   });
