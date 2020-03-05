@@ -1,9 +1,9 @@
-
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
     if (user) {
         // return data from firebase if the user is logged in
-        db.collection('guides').get().then(snapshot => {
+        // .onSnapshot listens to the database and updates it in the UI realtime
+        db.collection('guides').onSnapshot(snapshot => {
             setupGuides(snapshot.docs);
             setupUI(user);
         });

@@ -19,27 +19,26 @@ const setupUI = (user) => {
 const setupGuides = (data) => {
 
   if (data.length) {
-  let html = '';
-  data.forEach(doc => {
-    const guide = doc.data();
-    const li = `
+    let html = '';
+    data.forEach(doc => {
+      const guide = doc.data();
+      const li = `
       <li>
-        <div class="collapsible-header grey lighten-4"> ${guide.fullName} </div>
-        <div class="collapsible-body white"> Location: | ${guide.location} </div>
-        <div class="collapsible-body white"> Position: | ${guide.position} </div>
-        <div class="collapsible-body white"> 1: | ${guide.questionOne} </div>
-        <div class="collapsible-body white"> 2: | ${guide.questionTwo} </div>
-        <div class="collapsible-body white"> 3: | ${guide.questionThree} </div>
+      <div class="collapsible-header grey lighten-4"> ${guide.fullName} </div>
+      <div class="collapsible-body white"> Location: | ${guide.location} </div>
+      <div class="collapsible-body white"> Position: | ${guide.position} </div>
+      <div class="collapsible-body white"> 1: | ${guide.questionOne} </div>
+      <div class="collapsible-body white"> 2: | ${guide.questionTwo} </div>
+      <div class="collapsible-body white"> 3: | ${guide.questionThree} </div>
       </li>
-    `;
-    html += li;
-  });
-  guideList.innerHTML = html;
-}else {
-  guideList.innerHTML = '<h5 class="center-align">Login to view information</h5>'
-}
-
-}
+      `;
+      html += li;
+    });
+    guideList.innerHTML = html
+  } else {
+    guideList.innerHTML = '<h5 class="center-align">Login to view guides</h5>';
+  }
+};
 
 
 // setup materialize components
@@ -55,5 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Sidenav.init(items);
 
 });
+
+
+
+
 
 
