@@ -1,0 +1,13 @@
+:root {
+    --primary: #29075A;
+    --secondary: #292929;
+  }
+
+
+.collapsible-header {
+    color: #fff;
+    background-color: var(--secondary)!important;
+  }
+  .collapsible {
+    color: var(--primary)!important;
+  }
