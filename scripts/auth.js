@@ -1,3 +1,4 @@
+
 // add admin cloud function
 const adminForm = document.querySelector('.admin-actions');
 adminForm.addEventListener('submit', (e) => {
@@ -5,16 +6,33 @@ adminForm.addEventListener('submit', (e) => {
 
   const adminEmail = document.querySelector('#admin-email').value;
   const addAdminRole = functions.httpsCallable('addAdminRole');
+
+  // for admin role
   addAdminRole({ email: adminEmail }).then(result => {
     console.log(result);
   });
 });
+
+// add Train cloud function
+const trainForm = document.querySelector('.train-actions');
+trainForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const trainEmail = document.querySelector('#train-email').value;
+  const addTrainRole = functions.httpsCallable('addTrainRole');
+  // for train role
+  addTrainRole({ email: trainEmail }).then(result => {
+    console.log(result);
+  });
+});
+
+
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
     user.getIdTokenResult().then(idTokenResult => {
       user.admin = idTokenResult.claims.admin;
+     
       setupUI(user);
     });
     db.collection('guides').onSnapshot(snapshot => {
