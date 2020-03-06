@@ -43,3 +43,24 @@ exports.addTrainRole = functions.https.onCall((data, context) => {
         return err;
     });
 });
+
+//remove all roles
+exports.addBasicRole = functions.https.onCall((data, context) => {
+    //check request is made by an admin
+    if (context.auth.token.admin !== true) {
+        return { error: 'only admins can add other admins, weeb'}
+    }
+    // get user and add custom claim (admin)
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.uid, {
+            admin:false,
+            train:false
+        });
+    }).then(() => {
+        return {
+            message: `Success! ${data.email} has been bade a Basic User`
+        }
+    }).catch(err => {
+        return err;
+    });
+});

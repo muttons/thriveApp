@@ -4,6 +4,7 @@ const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
 const trainItems = document.querySelectorAll('.train');
+const basicItems = document.querySelectorAll('.basic');
 
 
 
@@ -13,15 +14,14 @@ const setupUI = (user) => {
   if (user) {
     if (user.admin) {
       adminItems.forEach(item => item.style.display = 'block');
-    }
-    if (user.train) {
       trainItems.forEach(item => item.style.display = 'block');
     }
+
     // toggle user UI elements
     loggedInLinks.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');
-  } else {
-
+  } else
+   {
     // toggle user UI elements
     adminItems.forEach(item => item.style.display = 'none');
     trainItems.forEach(item => item.style.display = 'none');
@@ -29,6 +29,11 @@ const setupUI = (user) => {
     loggedOutLinks.forEach(item => item.style.display = 'block');
   }
 };
+
+
+
+
+
 
 // setup guides
 const setupGuides = (data) => {
