@@ -26,7 +26,7 @@
         </a>
         <ul class="right hide-on-med-and-down">
             <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
-            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
+            <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
             <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
         </ul>
@@ -39,11 +39,16 @@
   <ul class="sidenav grey lighten-2" id="mobile-links">
     <br>
     <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
-    <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
+    <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
     <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
   </ul>
-    
+
+  <!-- ADMIN ACTIONS -->
+  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none;">
+    <input type="email" placeholder="User email" id="admin-email" required />
+    <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
+  </form>
 
   <!-- CREATE GUIDE MODAL -->
   <div id="modal-create" class="modal">
@@ -97,6 +102,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -122,7 +128,7 @@
     // make auth and firestore references
     const auth = firebase.auth();
     const db = firebase.firestore();
-
+    const functions = firebase.functions();
 
     </script>
 

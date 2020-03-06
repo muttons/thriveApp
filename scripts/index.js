@@ -2,14 +2,24 @@
 const guideList = document.querySelector('.guides');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
+const adminItems = document.querySelectorAll('.admin');
 
+
+
+
+// settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
   if (user) {
+    if (user.admin) {
+      adminItems.forEach(item => item.style.display = 'block');
+    }
     // toggle user UI elements
     loggedInLinks.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');
   } else {
-    // toggle user elements
+
+    // toggle user UI elements
+    adminItems.forEach(item => item.style.display = 'none');
     loggedInLinks.forEach(item => item.style.display = 'none');
     loggedOutLinks.forEach(item => item.style.display = 'block');
   }
