@@ -18,6 +18,7 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     }).then(() => {
         return {
             message: `Success! ${data.email} has been made an admin and all lower roles`
+            
         }
     }).catch(err => {
         return err;
@@ -33,12 +34,11 @@ exports.addTrainRole = functions.https.onCall((data, context) => {
     // get user and add custom claim (train)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
-            admin: true,
             train: true
         });
     }).then(() => {
-        return {
-            message: `Success! ${data.email} has been made an admin and all lower roles`
+          return {
+            message: `Success! ${data.email} has been made an train and all lower roles`
         }
     }).catch(err => {
         return err;
