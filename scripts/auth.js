@@ -44,9 +44,16 @@ basicForm.addEventListener('submit', (e) => {
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
+    // for getting user admin token to work
     user.getIdTokenResult().then(idTokenResult => {
       user.admin = idTokenResult.claims.admin;
       setupUI(user);
+    });
+    // for getting user training token to work
+    user.getIdTokenResult().then(idTokenResult => {
+      user.train = idTokenResult.claims.train;
+      setupUI(user);
+      
     });
     db.collection('guides').onSnapshot(snapshot => {
       setupGuides(snapshot.docs);
