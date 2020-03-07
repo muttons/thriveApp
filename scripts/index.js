@@ -16,7 +16,10 @@ const setupUI = (user) => {
       adminItems.forEach(item => item.style.display = 'block');
       trainItems.forEach(item => item.style.display = 'block');
     }
-
+    if (user.train) {
+      adminItems.forEach(item => item.style.display = 'block');
+      trainItems.forEach(item => item.style.display = 'block');
+    }
     // toggle user UI elements
     loggedInLinks.forEach(item => item.style.display = 'block');
     loggedOutLinks.forEach(item => item.style.display = 'none');

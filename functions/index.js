@@ -12,8 +12,8 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     // get user and add custom claim (admin)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
-            admin:true,
-            train:true
+            admin: true,
+            train: true
         });
     }).then(() => {
         return {
@@ -24,43 +24,24 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     });
 });
 
-// add training role
+//add train role
 exports.addTrainRole = functions.https.onCall((data, context) => {
-    //check request is made by an admin
+    //check request is made by an train
     if (context.auth.token.admin !== true) {
-        return { error: 'only admins can add roles, weeb'}
+        return { error: 'only admins can add other roles, weeb'}
     }
-    // get user and add custom claim (train role)
+    // get user and add custom claim (train)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
-            train:true
+            admin: true,
+            train: true
         });
     }).then(() => {
         return {
-            message: `Success! ${data.email} has been given the train role`
+            message: `Success! ${data.email} has been made an admin and all lower roles`
         }
     }).catch(err => {
         return err;
     });
 });
 
-//remove all roles
-exports.addBasicRole = functions.https.onCall((data, context) => {
-    //check request is made by an admin
-    if (context.auth.token.admin !== true) {
-        return { error: 'only admins can add other admins, weeb'}
-    }
-    // get user and add custom claim (admin)
-    return admin.auth().getUserByEmail(data.email).then(user => {
-        return admin.auth().setCustomUserClaims(user.uid, {
-            admin:false,
-            train:false
-        });
-    }).then(() => {
-        return {
-            message: `Success! ${data.email} has been bade a Basic User`
-        }
-    }).catch(err => {
-        return err;
-    });
-});
