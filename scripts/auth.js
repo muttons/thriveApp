@@ -71,26 +71,25 @@ auth.onAuthStateChanged(user => {
 });
 
 
-// create new info
-const createForm = document.querySelector('#create-form');
-createForm.addEventListener('submit', (e) => {
+// test new info
+const testForm = document.querySelector('#test-form');
+testForm.addEventListener('submit', (e) => {
   e.preventDefault();
   db.collection('guides').add({
-    fullName: createForm.fullName.value,
-    location: createForm.location.value,
-    position: createForm.position.value,
-    questionOne: createForm.questionOne.value,
-    questionTwo: createForm.questionTwo.value,
-    questionThree: createForm.questionThree.value
+    fullName: testForm.fullName.value,
+    questionOne: testForm.questionOne.value,
+    questionTwo: testForm.questionTwo.value,
+    questionThree: testForm.questionThree.value
   }).then(() => {
-    // close the create modal & reset form
-    const modal = document.querySelector('#modal-create');
+    // close the test modal & reset form
+    const modal = document.querySelector('#modal-test');
     M.Modal.getInstance(modal).close();
-    createForm.reset();
+    testForm.reset();
   }).catch(err => {
     console.log(err.message);
   });
 });
+
 
 
 // Sign In with Microsoft OAuth
