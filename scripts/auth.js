@@ -55,6 +55,12 @@ auth.onAuthStateChanged(user => {
       setupUI(user);
       
     });
+    // for getting user basic token to work
+    user.getIdTokenResult().then(idTokenResult => {
+      user.basic = idTokenResult.claims.basic;
+      setupUI(user);
+      
+    });
     db.collection('guides').onSnapshot(snapshot => {
       setupGuides(snapshot.docs);
     }, err => console.log(err.message));
