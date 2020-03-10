@@ -64,3 +64,4 @@ exports.addBasicRole = functions.https.onCall((data, context) => {
         return err;
     });
 });
+

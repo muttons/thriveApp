@@ -72,20 +72,21 @@ auth.onAuthStateChanged(user => {
 
 
 // test new info
+const correctAnswers = ['A', 'B', 'A'];
+const form = document.querySelector('.testForm');
+const result = document.querySelector('.result');
 const testForm = document.querySelector('#test-form');
-let userGrade = 0;
+
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
   // get user grade
-if (testForm.questionOne.value == "A" ) {
-  userGrade += 25;
-}
-if (testForm.questionTwo.value == "B") {
-  userGrade += 25;
-}
-if (testForm.questionThree.value == "A") {
-  userGrade += 25;
-}
+  let userGrade = 0;
+  const userAnswers = [ testForm.questionOne.value, testForm.questionTwo.value, testForm.questionThree.value];
+  userAnswers.forEach((answer, index) => {
+    if (answer === correctAnswers[index]){
+      userGrade += 25;
+    }
+  });
   db.collection('guides').add({
     fullName: testForm.fullName.value,
     questionOne: testForm.questionOne.value,
