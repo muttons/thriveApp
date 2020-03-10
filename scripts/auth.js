@@ -73,18 +73,31 @@ auth.onAuthStateChanged(user => {
 
 // test new info
 const testForm = document.querySelector('#test-form');
+let userGrade = 0;
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  // get user grade
+if (testForm.questionOne.value == "A" ) {
+  userGrade += 25;
+}
+if (testForm.questionTwo.value == "B") {
+  userGrade += 25;
+}
+if (testForm.questionThree.value == "A") {
+  userGrade += 25;
+}
   db.collection('guides').add({
     fullName: testForm.fullName.value,
     questionOne: testForm.questionOne.value,
     questionTwo: testForm.questionTwo.value,
-    questionThree: testForm.questionThree.value
+    questionThree: testForm.questionThree.value,
+    userGrade: userGrade
   }).then(() => {
     // close the test modal & reset form
     const modal = document.querySelector('#modal-test');
     M.Modal.getInstance(modal).close();
     testForm.reset();
+    userGrade = 0;
   }).catch(err => {
     console.log(err.message);
   });
