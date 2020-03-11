@@ -97,6 +97,7 @@ testForm.addEventListener('submit', (e) => {
     });
 console.log(passOrFail);
     db.collection('guides').add({
+      date: testForm.date.value,
       fullName: testForm.fullName.value,
       questionOne: testForm.questionOne.value,
       questionTwo: testForm.questionTwo.value,

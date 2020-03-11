@@ -49,7 +49,7 @@ const setupGuides = (data) => {
     const guide = doc.data();
     const list = `
       <li>
-        <div class="collapsible-header"> ${guide.fullName} </div>
+        <div class="collapsible-header">${guide.fullName} - ${guide.date} </div>
         <div class="collapsible-body white">
         <ul class="collection">
         <li class="collection-item">1) ${guide.questionOne} </li>
