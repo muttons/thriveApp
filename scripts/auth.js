@@ -1,4 +1,3 @@
-
 // add admin cloud function
 const adminForm = document.querySelector('.admin-actions');
 adminForm.addEventListener('submit', (e) => {
@@ -95,25 +94,24 @@ testForm.addEventListener('submit', (e) => {
         passOrFail = 'Failed';
       };
     });
-console.log(passOrFail);
-    db.collection('guides').add({
-      date: testForm.date.value,
-      fullName: testForm.fullName.value,
-      questionOne: testForm.questionOne.value,
-      questionTwo: testForm.questionTwo.value,
-      questionThree: testForm.questionThree.value,
-      userGrade: userGrade,
-      passOrFail: passOrFail
-    }).then(() => {
-      // close the test modal & reset form
-      const modal = document.querySelector('#modal-test');
-      M.Modal.getInstance(modal).close();
-      testForm.reset();
-      userGrade = 0;
-    }).catch(err => {
-      console.log(err.message);
-    });
-
+    console.log(testForm.fullName);
+      db.collection('guides').add({
+        date: testForm.date.value,
+        fullName: testForm.fullName.value,
+        questionOne: testForm.questionOne.value,
+        questionTwo: testForm.questionTwo.value,
+        questionThree: testForm.questionThree.value,
+        userGrade: userGrade,
+        passOrFail: passOrFail
+      }).then(() => {
+        // close the test modal & reset form
+        const modal = document.querySelector('#modal-test');
+        M.Modal.getInstance(modal).close();
+        testForm.reset();
+        userGrade = 0;
+      }).catch(err => {
+        console.log(err.message);
+      });
   });
 });
 
