@@ -94,7 +94,7 @@ testForm.addEventListener('submit', (e) => {
         passOrFail = 'Failed';
       };
     });
-    console.log(testForm.fullName);
+  
       db.collection('guides').add({
         date: testForm.date.value,
         fullName: testForm.fullName.value,
