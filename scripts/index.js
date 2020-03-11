@@ -52,10 +52,11 @@ const setupGuides = (data) => {
         <div class="collapsible-header"> ${guide.fullName} </div>
         <div class="collapsible-body white">
         <ul class="collection">
-        <li class="collection-item">${guide.questionOne} </li>
-        <li class="collection-item">${guide.questionTwo} </li>
-        <li class="collection-item">${guide.questionThree} </li>
-        <li class="collection-item train" style="display: block;">${guide.userGrade}</li>
+        <li class="collection-item">1) ${guide.questionOne} </li>
+        <li class="collection-item">2) ${guide.questionTwo} </li>
+        <li class="collection-item">3) ${guide.questionThree} </li>
+        <li class="collection-item train" style="display: block;">Score: ${guide.userGrade}</li>
+        <li class="collection-item train" style="display: block;">${guide.passOrFail}</li>
         </ul>
         </div>
       </li>

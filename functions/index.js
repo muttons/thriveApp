@@ -65,3 +65,7 @@ exports.addBasicRole = functions.https.onCall((data, context) => {
     });
 });
 
+//http callable 
+exports.getTestOne = functions.https.onCall((data, context) => {
+    return ['A', 'B', 'A'];
+});

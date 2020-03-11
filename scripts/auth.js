@@ -70,39 +70,56 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-
-// test new info
-const correctAnswers = ['A', 'B', 'A'];
+// getTestOne
 const form = document.querySelector('.testForm');
 const result = document.querySelector('.result');
 const testForm = document.querySelector('#test-form');
-
+let userGrade = 0;
+let passOrFail = '';
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  // get user grade
-  let userGrade = 0;
-  const userAnswers = [ testForm.questionOne.value, testForm.questionTwo.value, testForm.questionThree.value];
-  userAnswers.forEach((answer, index) => {
-    if (answer === correctAnswers[index]){
-      userGrade += 25;
-    }
-  });
-  db.collection('guides').add({
-    fullName: testForm.fullName.value,
-    questionOne: testForm.questionOne.value,
-    questionTwo: testForm.questionTwo.value,
-    questionThree: testForm.questionThree.value,
-    userGrade: userGrade
-  }).then(() => {
-    // close the test modal & reset form
-    const modal = document.querySelector('#modal-test');
-    M.Modal.getInstance(modal).close();
-    testForm.reset();
-    userGrade = 0;
-  }).catch(err => {
-    console.log(err.message);
+  const getTestOne = firebase.functions().httpsCallable('getTestOne');
+  getTestOne().then(result => {
+    let getTestOne = result.data;
+    const userAnswers = [ 
+      testForm.questionOne.value, 
+      testForm.questionTwo.value, 
+      testForm.questionThree.value
+    ];
+    userAnswers.forEach((answer, index) => {
+      if (answer === getTestOne[index]){
+        userGrade += 25;
+      } if (userGrade > 70) {
+        passOrFail = 'Passed';
+      } else {
+        passOrFail = 'Failed';
+      };
+    });
+console.log(passOrFail);
+    db.collection('guides').add({
+      fullName: testForm.fullName.value,
+      questionOne: testForm.questionOne.value,
+      questionTwo: testForm.questionTwo.value,
+      questionThree: testForm.questionThree.value,
+      userGrade: userGrade,
+      passOrFail: passOrFail
+    }).then(() => {
+      // close the test modal & reset form
+      const modal = document.querySelector('#modal-test');
+      M.Modal.getInstance(modal).close();
+      testForm.reset();
+      userGrade = 0;
+    }).catch(err => {
+      console.log(err.message);
+    });
+
   });
 });
+
+
+
+
+
 
 
 
