@@ -6,8 +6,10 @@ const patterns = {
 // validation function
 function validate(field, regex) {
     if(regex.test(field.value)){
+        okButton.disabled = false;
         field.className = 'valid';
     } else {
+        okButton.disabled = true;
         field.className = 'invalid';
     }
 }

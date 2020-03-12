@@ -55,8 +55,9 @@ const setupGuides = (data) => {
         <li class="collection-item">1) ${guide.questionOne} </li>
         <li class="collection-item">2) ${guide.questionTwo} </li>
         <li class="collection-item">3) ${guide.questionThree} </li>
-        <li class="collection-item train" style="display: block;">Score: ${guide.userGrade}</li>
-        <li class="collection-item train" style="display: block;">${guide.passOrFail}</li>
+        <li class="collection-item train">Score: ${guide.userGrade}</li>
+        <li class="collection-item train">${guide.passOrFail}</li>
+        <button class="collection-item train">Delete</button>
         </ul>
         </div>
       </li>
