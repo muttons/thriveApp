@@ -78,6 +78,7 @@ function deleteItem() {
   guideList.addEventListener('click', evt => {
       const id = evt.target.getAttribute('data-id');
     db.collection("guides").doc(id).delete().then(function() {
+      location.reload();
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
