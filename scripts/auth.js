@@ -69,34 +69,6 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-// Sign In with Microsoft OAuth
-const authProvider = new firebase.auth.OAuthProvider('microsoft.com');
-    microsoftSignIn = () => {
-      authProvider.setCustomParameters({
-        // Have user select account - bypassess seamless sign on for the app
-        prompt: 'select_account'
-      });
-        firebase.auth().signInWithRedirect(authProvider).then(function(result){
-            console.log(result);
-            console.log("Successfull Sign In with Microsoft Account");
-        });
-    }
-
-// Sign Out
-microsoftSignOut = () => {
-firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    alert("You have Successfully signed out");
-  }).catch(function(error) {
-    // An error happened.
-  });
-}
-
-
-
-
-
-
 // getTestOne
 const form = document.querySelector('.testForm');
 const result = document.querySelector('.result');
@@ -150,4 +122,25 @@ testForm.addEventListener('submit', (e) => {
 
 
 
+// Sign In with Microsoft OAuth
+const authProvider = new firebase.auth.OAuthProvider('microsoft.com');
+    microsoftSignIn = () => {
+      authProvider.setCustomParameters({
+        // Have user select account - bypassess seamless sign on for the app
+        prompt: 'select_account'
+      });
+        firebase.auth().signInWithRedirect(authProvider).then(function(result){
+            console.log(result);
+            console.log("Successfull Sign In with Microsoft Account");
+        });
+    }
 
+// Sign Out
+microsoftSignOut = () => {
+firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    alert("You have Successfully signed out");
+  }).catch(function(error) {
+    // An error happened.
+  });
+}

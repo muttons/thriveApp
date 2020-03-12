@@ -9,6 +9,7 @@ const basicItems = document.querySelectorAll('.basic');
 
 
 
+
 // settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
   if (user) {
@@ -42,6 +43,7 @@ const setupUI = (user) => {
 
 // setup guides
 
+
 const setupGuides = (data) => {
   if (data.length) {
   let html = '';
@@ -49,7 +51,7 @@ const setupGuides = (data) => {
     const guide = doc.data();
     const list = `
       <li>
-        <div class="collapsible-header">${guide.fullName} - ${guide.date} </div>
+        <div class="collapsible-header" data-id="${doc.id}">${guide.fullName} - ${guide.date} </div>
         <div class="collapsible-body white">
         <ul class="collection">
         <li class="collection-item">1) ${guide.questionOne} </li>
@@ -57,7 +59,9 @@ const setupGuides = (data) => {
         <li class="collection-item">3) ${guide.questionThree} </li>
         <li class="collection-item train">Score: ${guide.userGrade}</li>
         <li class="collection-item train">${guide.passOrFail}</li>
-        <button class="collection-item train">Delete</button>
+        <div class="deleteDoc">
+        <i class="material-icons deleteDoc" onclick="deleteItem()" data-id="${doc.id}">delete_outline</i>
+        </div>
         </ul>
         </div>
       </li>
@@ -69,6 +73,23 @@ const setupGuides = (data) => {
   guideList.innerHTML = '<h5 class="center-align">Login to view information</h5>'
 }
 }
+
+function deleteItem() {
+  guideList.addEventListener('click', evt => {
+      const id = evt.target.getAttribute('data-id');
+   
+      db.collection("guides").doc(id).delete().then(function() {
+        console.log(id);
+  
+
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+  });
+}
+
+
+
 
 
 // setup materialize components
@@ -85,3 +106,12 @@ document.addEventListener('DOMContentLoaded', function() {
   var items = document.querySelectorAll('.datepicker');
   M.Datepicker.init(items);
 });
+
+
+
+db.collection('guides').get().then((snapshot) => {
+  snapshot.docs.forEach(doc => {
+
+  })
+})
+
