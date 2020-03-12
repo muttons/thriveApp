@@ -60,7 +60,7 @@ const setupGuides = (data) => {
         <li class="collection-item train">Score: ${guide.userGrade}</li>
         <li class="collection-item train">${guide.passOrFail}</li>
         <div class="deleteDoc">
-        <i class="material-icons deleteDoc" onclick="deleteItem()" data-id="${doc.id}">delete_outline</i>
+        <i class="material-icons" onclick="deleteItem()" data-id="${doc.id}">delete_outline</i>
         </div>
         </ul>
         </div>
@@ -77,11 +77,7 @@ const setupGuides = (data) => {
 function deleteItem() {
   guideList.addEventListener('click', evt => {
       const id = evt.target.getAttribute('data-id');
-   
-      db.collection("guides").doc(id).delete().then(function() {
-        console.log(id);
-  
-
+    db.collection("guides").doc(id).delete().then(function() {
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
