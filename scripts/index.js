@@ -5,20 +5,28 @@ const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
 const trainItems = document.querySelectorAll('.train');
 const basicItems = document.querySelectorAll('.basic');
-
-
+const accountDetails = document.querySelector('.account-details');
+const accountEmail = document.querySelector('.account-email');
 
 
 
 // settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
   if (user) {
+        // account info
+        const html = `
+        <div">${user.email}</div>
+      `;
+
+      accountDetails.innerHTML = html;
+     
     if (user.admin) {
       adminItems.forEach(item => item.style.display = 'block');
       trainItems.forEach(item => item.style.display = 'block');
     }
     if (user.train) {
       trainItems.forEach(item => item.style.display = 'block');
+      
     }
     if (user.basic) {
       basicItems.forEach(item => item.style.display = 'block');
@@ -29,6 +37,7 @@ const setupUI = (user) => {
   } else
    {
     // toggle user UI elements
+    
     adminItems.forEach(item => item.style.display = 'none');
     trainItems.forEach(item => item.style.display = 'none');
     loggedInLinks.forEach(item => item.style.display = 'none');
@@ -59,9 +68,9 @@ const setupGuides = (data) => {
         <li class="collection-item">3) ${guide.questionThree} </li>
         <li class="collection-item train">Score: ${guide.userGrade}</li>
         <li class="collection-item train">${guide.passOrFail}</li>
-        <div class="deleteDoc">
-        <i class="material-icons" onclick="deleteItem(event)" data-id="${doc.id}">delete_outline</i> <!--  opnClick gets the event so that the delete function can use thje getAttributes for the data-id -->
-        </div>
+
+        <a class="waves-effect waves-light btn right red" style="margin-top: 20px;" onclick="deleteItem(event)" data-id="${doc.id}"><i class="material-icons right">delete</i>delete</a>
+
         </ul>
         </div>
       </li>
@@ -70,7 +79,7 @@ const setupGuides = (data) => {
   });
   guideList.innerHTML = html;
 }else {
-  guideList.innerHTML = '<h5 class="center-align">Login to view information</h5>'
+  guideList.innerHTML = '<h5 class="center-align">All Caught Up!</h5>'
 }
 }
 
@@ -81,7 +90,6 @@ function deleteItem() {
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
-
 }
 
 
@@ -101,13 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Sidenav.init(items);
   var items = document.querySelectorAll('.datepicker');
   M.Datepicker.init(items);
+
+  
 });
 
 
 
-db.collection('guides').get().then((snapshot) => {
-  snapshot.docs.forEach(doc => {
 
-  })
-})
 

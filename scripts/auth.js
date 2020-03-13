@@ -42,6 +42,7 @@ basicForm.addEventListener('submit', (e) => {
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
+  
   if (user) {
     // for getting user admin token to work
     user.getIdTokenResult().then(idTokenResult => {
@@ -75,6 +76,10 @@ const result = document.querySelector('.result');
 const testForm = document.querySelector('#test-form');
 let userGrade = 0;
 let passOrFail = '';
+
+
+
+  
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getTestOne = firebase.functions().httpsCallable('getTestOne');
@@ -94,8 +99,10 @@ testForm.addEventListener('submit', (e) => {
         passOrFail = 'Failed';
       };
     });
-  
+      //adds the data to the guides collection
       db.collection('guides').add({
+        
+        email: testForm.userEmail,
         date: testForm.date.value,
         fullName: testForm.fullName.value,
         questionOne: testForm.questionOne.value,
@@ -103,7 +110,19 @@ testForm.addEventListener('submit', (e) => {
         questionThree: testForm.questionThree.value,
         userGrade: userGrade,
         passOrFail: passOrFail
+
+    
       }).then(() => {
+        //adds the data to the archive 
+        db.collection('archive').add({
+          date: testForm.date.value,
+          fullName: testForm.fullName.value,
+          questionOne: testForm.questionOne.value,
+          questionTwo: testForm.questionTwo.value,
+          questionThree: testForm.questionThree.value,
+          userGrade: userGrade,
+          passOrFail: passOrFail
+        })
         // close the test modal & reset form
         const modal = document.querySelector('#modal-test');
         M.Modal.getInstance(modal).close();
