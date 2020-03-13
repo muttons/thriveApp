@@ -77,9 +77,6 @@ const testForm = document.querySelector('#test-form');
 let userGrade = 0;
 let passOrFail = '';
 
-
-
-  
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const getTestOne = firebase.functions().httpsCallable('getTestOne');
@@ -101,8 +98,6 @@ testForm.addEventListener('submit', (e) => {
     });
       //adds the data to the guides collection
       db.collection('guides').add({
-        
-        email: testForm.userEmail,
         date: testForm.date.value,
         fullName: testForm.fullName.value,
         questionOne: testForm.questionOne.value,
