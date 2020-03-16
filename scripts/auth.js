@@ -85,11 +85,8 @@ let dateTime = date+' '+time;
 
 
 firebase.auth().onAuthStateChanged(function(user) {
-
 testForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
-
   //cloud function to get the array for test one
   const getTestOne = firebase.functions().httpsCallable('getTestOne');
 

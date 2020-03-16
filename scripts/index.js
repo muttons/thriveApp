@@ -13,13 +13,7 @@ const accountDetails = document.querySelector('.account-details');
 // settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
   if (user) {
-        // account info
-        let userEmail = user.email
-        const html = `
 
-        <div>${userEmail}</div>
-      `;
-      accountDetails.innerHTML = html;
     if (user.admin) {
       adminItems.forEach(item => item.style.display = 'block');
       trainItems.forEach(item => item.style.display = 'block');
