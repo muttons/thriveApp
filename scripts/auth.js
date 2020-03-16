@@ -61,12 +61,13 @@ auth.onAuthStateChanged(user => {
       setupUI(user);
       
     });
-    db.collection('guides').onSnapshot(snapshot => {
-      setupGuides(snapshot.docs);
+    db.collection('testOne').onSnapshot(snapshot => {
+      setupTestOne(snapshot.docs);
     }, err => console.log(err.message));
   } else {
     setupUI();
     setupGuides([]);
+    setupTestOne([]);
   }
 });
 
@@ -74,7 +75,7 @@ auth.onAuthStateChanged(user => {
 // getTestOne
 const form = document.querySelector('.testForm');
 const result = document.querySelector('.result');
-const testForm = document.querySelector('#test-form');
+const testForm = document.querySelector('#test-form-one');
 let userGrade = 0;
 let passOrFail = '';
 //get the time and date that gets added to the submittion
@@ -109,8 +110,8 @@ testForm.addEventListener('submit', (e) => {
       };
     });
   
-      //adds the data to the guides collection
-      db.collection('guides').add({
+      //adds the data to the testOne collection
+      db.collection('testOne').add({
         date: date+" "+time,
         email: user.email,
         questionOne: testForm.questionOne.value,

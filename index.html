@@ -25,8 +25,10 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
+            <li class="logged-in" style="display: none"><a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a></li>
             <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
             <li class="logged-in" style="display: none"><a href="/pages/training.html"  class="black-text">Training Page</a></li> 
+            <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li> 
             <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
             <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
@@ -39,8 +41,10 @@
   <!-- side nav -->
   <ul class="sidenav grey lighten-2" id="mobile-links">
     <br>
+    <li class="logged-in" style="display: none"><a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a></li>
     <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
     <li class="logged-in" style="display: none"><a href="/pages/training.html"  class="black-text">Training Page</a></li> 
+    <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li> 
     <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
     <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
@@ -68,6 +72,15 @@
 <div class="class h1 admin" style="display: none;">you are admin</div>
 <div class="class h1 train" style="display: none;">you are train</div>
 <div class="class h1 basic" style="display: none;">you are basic</div>
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+
+    </div>
+  </div>
 
   <!-- CREATE GUIDE MODAL -->
   <div id="modal-create" class="modal">
