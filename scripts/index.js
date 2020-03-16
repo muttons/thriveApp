@@ -6,7 +6,7 @@ const adminItems = document.querySelectorAll('.admin');
 const trainItems = document.querySelectorAll('.train');
 const basicItems = document.querySelectorAll('.basic');
 const accountDetails = document.querySelector('.account-details');
-const accountEmail = document.querySelector('.account-email');
+
 
 
 
@@ -14,12 +14,12 @@ const accountEmail = document.querySelector('.account-email');
 const setupUI = (user) => {
   if (user) {
         // account info
+        let userEmail = user.email
         const html = `
-        <div">${user.email}</div>
-      `;
 
+        <div>${userEmail}</div>
+      `;
       accountDetails.innerHTML = html;
-     
     if (user.admin) {
       adminItems.forEach(item => item.style.display = 'block');
       trainItems.forEach(item => item.style.display = 'block');
@@ -51,8 +51,6 @@ const setupUI = (user) => {
 
 
 // setup guides
-
-
 const setupGuides = (data) => {
   if (data.length) {
   let html = '';
@@ -60,7 +58,7 @@ const setupGuides = (data) => {
     const guide = doc.data();
     const list = `
       <li>
-        <div class="collapsible-header" data-id="${doc.id}">${guide.fullName} - ${guide.date} </div>
+        <div class="collapsible-header" data-id="${doc.id}">${guide.email} - ${guide.date} </div>
         <div class="collapsible-body white">
         <ul class="collection">
         <li class="collection-item">1) ${guide.questionOne} </li>

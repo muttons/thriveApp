@@ -78,15 +78,8 @@
     <div class="modal-content">
       <h4>Defensive Driving Test</h4><br />
       <form class="testOne" action="#" id="test-form">
-        <div class="input-field">
-          <input type="text" class="datepicker" id="date" required>
-          <label for="date">Todays Date</label>
-        </div>
-        <div class="input-field">
-          <input type="text" id="fullName" name="fullname" required>
-          <label for="fullName">What is your Full Name</label>
-        </div>
-        <br>
+
+      
  
    
     
@@ -94,13 +87,13 @@
           <h5>What is 2+2?</h5>
           <p>
             <label>
-              <input name="group1" type="radio" value="A" id="questionOne"/>
+              <input name="group1" type="radio" value="A" id="questionOne" required/>
               <span>4</span>
             </label>
           </p>
           <p>
             <label>
-              <input name="group1" type="radio" value="B" id="questionOne"/>
+              <input name="group1" type="radio" value="B" id="questionOne" required/>
               <span>2</span>
             </label>
           </p>
@@ -109,13 +102,13 @@
         <h5>What is 5+2?</h5>
         <p>
           <label>
-            <input name="group2" type="radio" value="A" id="questionTwo"/>
+            <input name="group2" type="radio" value="A" id="questionTwo" required/>
             <span>4</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group2" type="radio" value="B" id="questionTwo" />
+            <input name="group2" type="radio" value="B" id="questionTwo" required/>
             <span>7</span>
           </label>
         </p>
@@ -123,7 +116,7 @@
         <h5>What is 55+2?</h5>
         <p>
           <label>
-            <input name="group3" type="radio" value="A" id="questionThree"/>
+            <input name="group3" type="radio" value="A" id="questionThree" required/>
             <span>57</span>
           </label>
         </p>
@@ -136,7 +129,7 @@
        
 
           <br>
-        <button class="btn yellow darken-2 z-depth-0" id="okButton" disabled>Submit</button>
+        <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
       </form>
 
     </div>
@@ -145,7 +138,7 @@
 
   <!-- Test LIST -->
   <div class="container" style="margin-top: 40px;">
-    <ul class="collapsible popout guides train" style="border: none; display: none;">
+    <ul class="collapsible popout guides train email-details" style="border: none; display: none;">
 
     </ul>
   </div>
