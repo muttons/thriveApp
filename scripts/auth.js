@@ -7,8 +7,8 @@ adminForm.addEventListener('submit', (e) => {
   const addAdminRole = functions.httpsCallable('addAdminRole');
 
   // for admin role
-  addAdminRole({ email: adminEmail }).then(result => {
-    console.log(result);
+  addAdminRole({ email: adminEmail }).then(() => {
+    adminForm.reset();
   });
 });
 
@@ -19,8 +19,8 @@ trainForm.addEventListener('submit', (e) => {
   const trainEmail = document.querySelector('#train-email').value;
   const addTrainRole = functions.httpsCallable('addTrainRole');
   // for train role
-  addTrainRole({ email: trainEmail }).then(result => {
-    console.log(result);
+  addTrainRole({ email: trainEmail }).then(() => {
+    trainForm.reset();
   });
 });
 
@@ -31,8 +31,8 @@ basicForm.addEventListener('submit', (e) => {
   const basicEmail = document.querySelector('#basic-email').value;
   const addBasicRole = functions.httpsCallable('addBasicRole');
   // for basic role
-  addBasicRole({ email: basicEmail }).then(result => {
-    console.log(result);
+  addBasicRole({ email: basicEmail }).then(() => {
+    basicForm.reset();
   });
 });
 
