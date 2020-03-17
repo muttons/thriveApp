@@ -20,16 +20,16 @@
   <header>
     <nav class="nav wrapper">
       <div class="container text-white">
-        <a href="/thriveApp/index.html" class="brand-logo">ThriveApp</a>
+        <a href="/index.html" class="brand-logo">ThriveApp</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-links">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-            <li class="logged-in" style="display: none"><a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a></li>
+            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
             <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
             <li class="logged-in" style="display: none"><a href="/pages/training.html"  class="black-text">Training Page</a></li> 
             <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li> 
-            <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
+            <li class="logged-in" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li> 
             <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
         </ul>
@@ -41,37 +41,15 @@
   <!-- side nav -->
   <ul class="sidenav grey lighten-2" id="mobile-links">
     <br>
-    <li class="logged-in" style="display: none"><a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a></li>
+    <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
     <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
     <li class="logged-in" style="display: none"><a href="/pages/training.html"  class="black-text">Training Page</a></li> 
     <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li> 
-    <li class="admin" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-create">Create Info</a> 
+    <li class="logged-in" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li> 
     <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
   </ul>
 
-  <!-- ADMIN ACTIONS -->
-  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-    <input type="email" placeholder="User email" id="admin-email" required />
-    <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
-  </form>
-
-    <!-- ADMIN ACTIONS -->
-    <form class="center-align train-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-      <input type="email" placeholder="User email" id="train-email" required />
-      <button class="btn-small yellow darken-2 z-depth-0">Make training</button>
-    </form>
-
-        <!-- ADMIN ACTIONS -->
-        <form class="center-align basic-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-          <input type="email" placeholder="User email" id="basic-email" required />
-          <button class="btn-small yellow darken-2 z-depth-0">Make Basic</button>
-        </form>
-
-
-<div class="class h1 admin" style="display: none;">you are admin</div>
-<div class="class h1 train" style="display: none;">you are train</div>
-<div class="class h1 basic" style="display: none;">you are basic</div>
 
   <!-- ACCOUNT MODAL -->
   <div id="modal-account" class="modal">
@@ -82,54 +60,18 @@
     </div>
   </div>
 
-  <!-- CREATE GUIDE MODAL -->
-  <div id="modal-create" class="modal">
-    <div class="modal-content">
-      <h4>Create Info</h4><br />
-      <form id="create-form">
-        <div class="input-field">
-          <input type="text" id="fullName" required>
-          <label for="fullName">What is your Full Name</label>
-        </div>
-        <div class="input-field">
-            <input type="text" id="location" required>
-            <label for="location">What is your location</label>
-          </div>
-        <div class="input-field">
-          <textarea id="position" class="materialize-textarea" required></textarea>
-          <label for="position">What is your position</label>
-        </div>
-        <div class="input-field">
-            <input type="text" id="questionOne" required>
-            <label for="questionOne">what is 10 x 5</label>
-          </div>
-          <div class="input-field">
-            <input type="text" id="questionTwo" required>
-            <label for="questionTwo">what is 10 x 5</label>
-          </div>
-          <div class="input-field">
-            <input type="text" id="questionThree" required>
-            <label for="questionThree">what is 10 x 5</label>
-          </div>
-        <button class="btn yellow darken-2 z-depth-0">Create</button>
-      </form>
-    </div>
-  </div>
 
 
-  <!-- GUIDE LIST -->
-  <div class="container" style="margin-top: 40px;">
-    <ul class="collapsible popout guides" style="border: none;">
-
-    </ul>
-  </div>
 
 
 
 
   
 
-
+    <!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+    <div class="admin-actions" style="display: none;"></div>
+    <div class="train-actions" style="display: none;"></div>
+    <div class="basic-actions" style="display: none;"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>

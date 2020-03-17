@@ -19,6 +19,7 @@ const setupUI = (user) => {
         const html = `
 
         <div>${userEmail}</div>
+        <p class="admin">Role | Admin</p><p class="train">Role | Train</p><p class="basic">Role | Basic</p>
       `;
       accountDetails.innerHTML = html;
     if (user.admin) {
