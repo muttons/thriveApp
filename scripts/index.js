@@ -9,8 +9,6 @@ const basicItems = document.querySelectorAll('.basic');
 const accountDetails = document.querySelector('.account-details');
 
 
-
-
 // settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
   if (user) {
@@ -48,13 +46,6 @@ const setupUI = (user) => {
 };
 
 
-
-
-
-
-
-
-
 // function to delete documents from the guides database
 function deleteItem() {
       const id = event.target.getAttribute('data-id');
@@ -72,7 +63,6 @@ db.collection("testOne").doc(id).delete().then(function() {
     console.error("Error removing document: ", error);
 });
 }
-
 
 
 

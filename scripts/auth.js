@@ -64,7 +64,6 @@ auth.onAuthStateChanged(user => {
     }, err => console.log(err.message));
   } else {
     setupUI();
-    setupGuides([]);
     setupTestOne([]);
   }
 });
