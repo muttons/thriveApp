@@ -35,7 +35,11 @@ const setupUI = (user) => {
         const html = `
 
         <div>${userEmail}</div>
-        <p class="admin">Role | Admin</p><p class="train">Role | Train</p><p class="basic">Role | Basic</p>
+        <h5>Roles</h5>
+        <div class="divider"></div>
+        <p class="admin">Admin</p><p class="train">Train</p><p class="basic">Basic</p>
+        <div class="divider"></div>
+        <br><br><br><br>
       `;
       accountDetails.innerHTML = html;
     if (user.admin) {
@@ -96,11 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var items = document.querySelectorAll('.sidenav');
   M.Sidenav.init(items);
 
-  var elems = document.querySelectorAll('.fixed-action-btn');
-  
   var items = document.querySelectorAll('.datepicker');
   M.Datepicker.init(items);
 
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  M.Dropdown.init(elems);
   
 });
 

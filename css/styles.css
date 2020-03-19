@@ -1,3 +1,4 @@
+/* my css */
 :root {
     --primary: #29075A;
     --secondary: #292929;
@@ -12,11 +13,8 @@
     color: var(--primary)!important;
   }
 
-
-
-    
     @media screen and (min-width: 993px) {
-      .test{
+      .searchButton{
         top:-11px;/*desired value*/
         left: 88%;
         } 

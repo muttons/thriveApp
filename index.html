@@ -40,45 +40,24 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
+            
             <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li>
             <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
             <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
             <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
-            <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
-            
-            
-
+            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger center-align" data-target="modal-account">Account</a></li>
         </ul>
-
       </div>
     </nav>
   </header>
 
+<!-- Search button-->
+<div class="fixed-action-btn searchButton hover logged-in" style="display: none">
+  <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
+    <i class="large material-icons">search</i>
+  </a>
+</div>
 
-
-
-  <div class="fixed-action-btn test">
-    <a href="/pages/search.html" class="btn-floating btn-large blue logged-in">
-      <i class="large material-icons">search</i>
-    </a>
-  </div>
-   
-     
-  
-
-  <!-- side nav -->
-  <ul class="sidenav grey lighten-2" id="mobile-links">
-    <br>
-    <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
-    <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li>
-    <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
-    <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
-    <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
-    <li class="logged-in" style="display: none"><a href="/pages/search.html"  class="black-text">Search</a></li>
-    <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
-
-  </ul>
 
 
   <!-- ACCOUNT MODAL -->
@@ -86,9 +65,27 @@
     <div class="modal-content center-align">
       <h4>Account details</h4><br />
       <div class="account-details"></div>
-
+      <li class="divider" tabindex="-1"></li>
+      <li class="logged-in btn" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
     </div>
   </div>
+   
+    
+
+  <!-- side nav -->
+  <ul class="sidenav grey lighten-2" id="mobile-links">
+    <br>
+    
+    <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li>
+    <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
+    <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
+    <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
+    <li class="logged-in" style="display: none"><a href="/pages/search.html"  class="black-text">Search</a></li>
+    <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
+  </ul>
+
+
+
 
   <h1 class="container center" style="padding-top: 100px;">This is the Main Page</h1>
 
