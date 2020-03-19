@@ -8,6 +8,24 @@ const trainItems = document.querySelectorAll('.train');
 const basicItems = document.querySelectorAll('.basic');
 const accountDetails = document.querySelector('.account-details');
 
+// enable offline data
+db.enablePersistence()
+  .catch(function(err) {
+    if (err.code == 'failed-precondition') {
+      // probably multible tabs open at once
+      console.log('persistance failed');
+    } else if (err.code == 'unimplemented') {
+      // lack of browser support for the feature
+      console.log('persistance not available');
+    }
+  });
+
+  //LEAVE AS IS, SERVICE WORKER MUST REMAIN IN ROOT DIRECTORY
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log('service worker registered'))
+    .catch(err => console.log('service worker not registered', err));
+}
 
 // settings for displaying and not displaying based on the users status and role
 const setupUI = (user) => {
