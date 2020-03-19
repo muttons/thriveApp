@@ -1,4 +1,5 @@
-<html lang="en">
+
+  <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,6 @@
     <meta name="theme-color" content="#292929">
 
   <title>Thrive App</title>
-
 </head>
 <body class="grey lighten-3"">
 
@@ -45,7 +45,6 @@
             <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
             <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
             <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
-            <li class="logged-in" style="display: none"><a href="/pages/search.html"  class="black-text">Search</a></li>
             <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
 
         </ul>
@@ -62,7 +61,6 @@
     <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
     <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
     <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
-    <li class="logged-in" style="display: none"><a href="/pages/search.html"  class="black-text">Search</a></li>
     <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
 
   </ul>
@@ -77,7 +75,26 @@
     </div>
   </div>
 
-  <h1 class="container center" style="padding-top: 100px;">This is the Main Page</h1>
+  <div class="section-background">
+    <div class="container">
+      <div class="search-panel">
+        <div class="search-panel__filters">
+          <div id="list"></div>
+        </div>
+
+        <div class="search-panel__results">
+          <div id="searchbox"></div>
+          <h5>locations:</h5>
+          <div id="hits"></div>
+
+          <h5>employees:</h5>
+          <div id="hitsTwo"></div>
+        </div>
+      </div>
+
+      <div id="pagination"></div>
+    </div>
+  </div>
 
 
 
@@ -130,5 +147,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/scripts/auth.js"></script>
   <script src="/scripts/index.js"></script>
+
+  <!-- keep in this order FOR ALGOLIA SEARCH TO FUNCTION, DO NOT CHANGE -->
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.2.0"></script>
+  <script src="/scripts/searchApp.js"></script>
+
 </body>
 </html>
