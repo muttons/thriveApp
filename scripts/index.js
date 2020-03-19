@@ -52,67 +52,9 @@ const setupUI = (user) => {
 
 
 
-// setup guides
-const setupGuides = (data) => {
-  if (data.length) {
-  let html = '';
-  data.forEach(doc => {
-    const guide = doc.data();
-    const list = `
-      <li>
-        <div class="collapsible-header" data-id="${doc.id}">${guide.email} - ${guide.date} </div>
-        <div class="collapsible-body white">
-        <ul class="collection">
-        <li class="collection-item">1) ${guide.questionOne} </li>
-        <li class="collection-item">2) ${guide.questionTwo} </li>
-        <li class="collection-item">3) ${guide.questionThree} </li>
-        <li class="collection-item train">Score: ${guide.userGrade}</li>
-        <li class="collection-item train">${guide.passOrFail}</li>
 
-        <a class="waves-effect waves-light btn right red" style="margin-top: 20px;" onclick="deleteItem(event)" data-id="${doc.id}"><i class="material-icons right">delete</i>delete</a>
 
-        </ul>
-        </div>
-      </li>
-    `;
-    html += list;
-  });
-  guideList.innerHTML = html;
-}else {
-  guideList.innerHTML = '<h5 class="center-align">All Caught Up!</h5>'
-}
-}
 
-// setup testOne
-const setupTestOne = (data) => {
-  if (data.length) {
-  let html = '';
-  data.forEach(doc => {
-    const testOne = doc.data();
-    const list = `
-      <li>
-        <div class="collapsible-header" data-id="${doc.id}">${testOne.email} - ${testOne.date} </div>
-        <div class="collapsible-body white">
-        <ul class="collection">
-        <li class="collection-item">1) ${testOne.questionOne} </li>
-        <li class="collection-item">2) ${testOne.questionTwo} </li>
-        <li class="collection-item">3) ${testOne.questionThree} </li>
-        <li class="collection-item train">Score: ${testOne.userGrade}</li>
-        <li class="collection-item train">${testOne.passOrFail}</li>
-
-        <a class="waves-effect waves-light btn right red" style="margin-top: 20px;" onclick="deleteItem(event)" data-id="${doc.id}"><i class="material-icons right">delete</i>delete</a>
-
-        </ul>
-        </div>
-      </li>
-    `;
-    html += list;
-  });
-  testOneList.innerHTML = html;
-}else {
-  testOneList.innerHTML = '<h5 class="center-align">All Caught Up!</h5>'
-}
-}
 // function to delete documents from the guides database
 function deleteItem() {
       const id = event.target.getAttribute('data-id');
