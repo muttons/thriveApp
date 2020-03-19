@@ -95,6 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var items = document.querySelectorAll('.sidenav');
   M.Sidenav.init(items);
+
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  
   var items = document.querySelectorAll('.datepicker');
   M.Datepicker.init(items);
 

@@ -14,6 +14,13 @@
 
 
 
+    
+    @media screen and (min-width: 993px) {
+      .test{
+        top:-11px;/*desired value*/
+        left: 88%;
+        } 
+    }
 
 
 
@@ -24,7 +31,7 @@
 
 
 
-  
+
 /* EDIT AS NEEDED FOR CSS THAT CONTROLS THE SEARCH PAGE */
 
 
