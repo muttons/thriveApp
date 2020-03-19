@@ -69,9 +69,4 @@ testForm.addEventListener('submit', (e) => {
   });
 });
 
-
-
-  
-
-
 });
