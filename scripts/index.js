@@ -98,7 +98,9 @@ document.addEventListener('DOMContentLoaded', function() {
   M.Collapsible.init(items);
 
   var items = document.querySelectorAll('.sidenav');
-  M.Sidenav.init(items);
+  M.Sidenav.init(items, {
+    draggable: true
+  });
 
   var items = document.querySelectorAll('.datepicker');
   M.Datepicker.init(items);
@@ -106,6 +108,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.dropdown-trigger');
   M.Dropdown.init(elems);
   
+  var elems = document.querySelectorAll('.tooltipped');
+  M.Tooltip.init(elems, {
+    enterDelay: 0,
+    exitDelay: 0,
+    inDuration: 0,
+    outDuration: 0,
+    margin: 0
+  });
 });
 
 
