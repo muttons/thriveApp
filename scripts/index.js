@@ -8,6 +8,20 @@ const trainItems = document.querySelectorAll('.train');
 const basicItems = document.querySelectorAll('.basic');
 const accountDetails = document.querySelector('.account-details');
 
+
+
+function loaderClick() {
+  //preloader
+document.querySelector('.loader1').classList.add('progress');
+document.querySelector('.loader2').classList.add('indeterminate');
+
+setTimeout(function() {
+  document.querySelector('.loader1').classList.remove('progress');
+  document.querySelector('.loader2').classList.remove('indeterminate');
+
+},1000);
+}
+
 // enable offline data
 db.enablePersistence()
   .catch(function(err) {

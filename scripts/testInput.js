@@ -16,7 +16,6 @@ testForm.addEventListener('submit', (e) => {
   e.preventDefault();
   //cloud function to get the array for test one
   const getTestOne = firebase.functions().httpsCallable('getTestOne');
-
   getTestOne().then(result => {
     let getTestOne = result.data;
     // grab the users answers from testForm
@@ -35,7 +34,15 @@ testForm.addEventListener('submit', (e) => {
         passOrFail = 'Failed';
       };
     });
-  
+
+    //preloader
+        document.querySelector('.loader1').classList.add('progress');
+        document.querySelector('.loader2').classList.add('indeterminate');
+
+      setTimeout(function() {
+        document.querySelector('.loader1').classList.remove('progress');
+        document.querySelector('.loader2').classList.remove('indeterminate');
+      },3000);
       //adds the data to the testOne collection
       db.collection('testOne').add({
         date: date+" "+time,
@@ -59,6 +66,7 @@ testForm.addEventListener('submit', (e) => {
           passOrFail: passOrFail
         })
         // close the test modal & reset form
+
         const modal = document.querySelector('#modal-test');
         M.Modal.getInstance(modal).close();
         testForm.reset();

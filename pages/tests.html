@@ -27,7 +27,7 @@
 
   <title>Thrive App</title>
 </head>
-<body class="grey lighten-3"">
+<body class="grey lighten-3">
 
 
   <!-- nav -->
@@ -50,6 +50,9 @@
     </nav>
   </header>
   
+
+
+  
 <!-- Search button-->
 <div class="fixed-action-btn test">
   <a href="/pages/search.html" class="btn-floating btn-large blue waves-effect waves-light logged-in">
@@ -68,6 +71,10 @@
     <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
   </ul>
+
+  <div class="progress" style="display: none;" id="loadingItems">
+    <div class="indeterminate" ></div>
+  </div>
 
   <!--testOne card-->
   <div class="row container">
@@ -152,6 +159,13 @@
 
           <br>
         <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
+        
+            <!-- Preloader-->
+            <div class="loader1" id="progress">
+              <div class="loader2" id="indeterminate"></div>
+            </div>
+
+    </div>
       </form>
 
     </div>
