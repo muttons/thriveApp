@@ -10,18 +10,6 @@ const accountDetails = document.querySelector('.account-details');
 
 
 
-function loaderClick() {
-  //preloader
-document.querySelector('.loader1').classList.add('progress');
-document.querySelector('.loader2').classList.add('indeterminate');
-
-setTimeout(function() {
-  document.querySelector('.loader1').classList.remove('progress');
-  document.querySelector('.loader2').classList.remove('indeterminate');
-
-},1000);
-}
-
 // enable offline data
 db.enablePersistence()
   .catch(function(err) {
@@ -113,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var items = document.querySelectorAll('.sidenav');
   M.Sidenav.init(items, {
-    draggable: true
+    draggable: true,
+    edge: 'right'
   });
 
   var items = document.querySelectorAll('.datepicker');
@@ -122,6 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.dropdown-trigger');
   M.Dropdown.init(elems);
   
+  var tabs = document.querySelectorAll('.tabs')
+  for (var i = 0; i < tabs.length; i++){
+    M.Tabs.init(tabs[i]);
+  }
+
+
+
   var elems = document.querySelectorAll('.tooltipped');
   M.Tooltip.init(elems, {
     enterDelay: 0,

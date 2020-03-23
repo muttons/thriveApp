@@ -27,54 +27,76 @@
 
   <title>Thrive App</title>
 </head>
-<body class="grey lighten-3">
-
-
+<body class="grey lighten-3"></body>
   <!-- nav -->
   <header>
-    <nav class="nav wrapper">
-      <div class="container text-white">
-        <a href="/index.html" class="brand-logo">ThriveApp</a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-links">
-          <i class="material-icons">menu</i>
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="/index.html" class="brand-logo ">ThriveApp</a>
+        <!-- sidenav menu button-->
+        <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
+        <!-- Search button-->
+        <a href="/pages/search.html" class="right hide-on-large-only hover logged-inwaves-effect waves-light logged-in" style="display: none">
+          <i class="large material-icons">search</i>
         </a>
         <ul class="right hide-on-med-and-down">
-            <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
-            <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li>
-            <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li>
-            <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li>
-            <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li>
-            <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li>
+
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Login">Login</a></li>
+          
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Search"><i class="material-icons">search</i></a></li>
+
+          <li class="active"><a href="/pages/tests.html" class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;" data-tooltip="Tests"><i class="material-icons">school</i></a></li>
+
+          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Training Portal"><i class="material-icons center white-text">blur_circular</i></a></li>
+
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
+
+          <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped" data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i class="material-icons white-text">account_circle</i></a></li>
+  
         </ul>
       </div>
     </nav>
   </header>
-  
+  <!-- Main Content Area-->
+  <main>
 
+      <!-- side nav -->
+  <ul class="sidenav black lighten-1 " id="mobile-links">
+    <br><br>
+    
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
 
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
+
+          <li class="active"><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i class="material-icons white-text">school</i></a></li>
+
+          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal<i class="material-icons center white-text">blur_circular</i></a></li>
+
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text">blur_on</i></a></li>
+
+          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
+
+  </ul>
   
 <!-- Search button-->
-<div class="fixed-action-btn test">
-  <a href="/pages/search.html" class="btn-floating btn-large blue waves-effect waves-light logged-in">
+<div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
+  <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
     <i class="large material-icons">search</i>
   </a>
 </div>
 
-  <!-- side nav -->
-  <ul class="sidenav grey lighten-2" id="mobile-links">
-    <br>
-    <li class="logged-in" style="display: none"><a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a></li>
-    <li class="logged-out" style="display: none"><a onclick="microsoftSignIn()"  class="black-text">Login</a></li> 
-    <li class="logged-in" style="display: none"><a href="/pages/trainingPortal.html"  class="black-text">Training Portal</a></li> 
-    <li class="logged-in" style="display: none"><a href="/pages/tests.html"  class="black-text">Tests</a></li> 
-    <li class="admin" style="display: none"><a href="/pages/adminPortal.html"  class="black-text">Admin Portal</a></li> 
-    <li class="logged-in" style="display: none"><a onclick="microsoftSignOut()"  class="black-text">Sign Out</a></li> 
 
-  </ul>
-
-  <div class="progress" style="display: none;" id="loadingItems">
-    <div class="indeterminate" ></div>
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+      <li class="divider" tabindex="-1"></li>
+      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
+    </div>
   </div>
+
+
 
   <!--testOne card-->
   <div class="row container">
@@ -95,14 +117,7 @@
   </div>
   
 
-  <!-- ACCOUNT MODAL -->
-  <div id="modal-account" class="modal">
-    <div class="modal-content center-align">
-      <h4>Account details</h4><br />
-      <div class="account-details"></div>
-
-    </div>
-  </div>
+ 
 
 
   <!-- testOne MODAL -->
@@ -173,7 +188,40 @@
 
 
 
+</main>
 
+<!-- Footer Content Area-->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
+
+            <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text left">search</i></a></li>
+  
+            <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i class="material-icons white-text left">school</i></a></li>
+  
+            <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal<i class="material-icons center white-text left">blur_circular</i></a></li>
+  
+            <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text left">blur_on</i></a></li>
+  
+            <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text left">account_circle</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+      © 2020 Jonathan Osterud
+      </div>
+    </div>
+  </footer>
 
 
   

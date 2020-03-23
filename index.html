@@ -34,8 +34,13 @@
   <header>
     <nav>
       <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo">ThriveApp</a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>
+        <a href="#!" class="brand-logo activeLogo">ThriveApp</a>
+        <!-- sidenav menu button-->
+        <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
+        <!-- Search button-->
+        <a href="/pages/search.html" class="right hide-on-large-only hover logged-inwaves-effect waves-light logged-in" style="display: none">
+          <i class="large material-icons">search</i>
+        </a>
         <ul class="right hide-on-med-and-down">
 
           <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Login">Login</a></li>
@@ -54,34 +59,15 @@
       </div>
     </nav>
   </header>
-
-
-  
   <!-- Main Content Area-->
   <main>
 
-<!-- Search button-->
-<div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
-  <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
-    <i class="large material-icons">search</i>
-  </a>
-</div>
+  
+      
 
 
 
-  <!-- ACCOUNT MODAL -->
-  <div id="modal-account" class="modal">
-    <div class="modal-content center-align">
-      <h4>Account details</h4><br />
-      <div class="account-details"></div>
-      <li class="divider" tabindex="-1"></li>
-      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
-    </div>
-  </div>
-   
-    
-
-  <!-- side nav -->
+      <!-- side nav -->
   <ul class="sidenav black lighten-1 " id="mobile-links">
     <br><br>
     
@@ -101,6 +87,23 @@
 
 
 
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+      <li class="divider" tabindex="-1"></li>
+      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
+    </div>
+  </div>
+   
+    
+
+
+
+
+
   <h1 class="container center" style="padding-top: 100px;">This is the Main Page</h1>
 
 
@@ -111,23 +114,27 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <h5 class="white-text">Feedback is appreciated!</h5>
+          <div class="divider"></div>
+          
+          <i class="material-icons white-text footerContentText">email</i><a href="mailto:help.desk@thriveupstate.org?subject=Mail from App"> Click here to email Us about any incorrect information or bugs</a>  
+    
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
+          <div class="divider"></div>
           <ul>
             <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
 
-            <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text left">search</i></a></li>
+            <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search</a></li>
   
-            <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i class="material-icons white-text left">school</i></a></li>
+            <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests</a></li>
   
-            <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal<i class="material-icons center white-text left">blur_circular</i></a></li>
+            <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal</a></li>
   
-            <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text left">blur_on</i></a></li>
+            <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal</a></li>
   
-            <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text left">account_circle</i></a></li>
+            <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details</a></li>
           </ul>
         </div>
       </div>

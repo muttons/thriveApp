@@ -1,7 +1,8 @@
 /* my css */
 :root {
     --primary: #29075A;
-    --secondary: #292929;
+    --secondary: #353535;
+    --tertiary: #fcba03;
   }
 
 
@@ -23,6 +24,65 @@
     flex: 1 0 auto;
   }
       
+  .footer-copyright {
+    background-color: var(--secondary)!important;
+    color: var(--tertiary)!important;
+  }
+
+
+  .btn-floating {
+    background-color: var(--primary)!important;
+  }
+
+
+
+nav {
+  background-color: var(--secondary)!important;
+}
+
+a {
+  text-decoration: none;
+  color: #fff!important;
+}
+
+.footerContentText {
+  margin-top: 10px;
+}
+
+.tabs .indicator{
+  background-color: purple;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+  background: transparent;
+}
+
+.test {
+  padding-top: 13px;
+}
+
+.active {
+  border-bottom: 5px solid var(--tertiary);
+  background-color: rgba(0, 0, 0, 0.8)!important;
+}
+
+.activeLogo {
+  border-bottom: 5px solid var(--tertiary);
+
+}
+
+.progress{
+  background-color:var(--tertiary)!important;
+}
+.indeterminate{
+  background-color:var(--secondary)!important;
+}
+
+
+
+
+
+
+
 
 
 
