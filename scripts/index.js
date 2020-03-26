@@ -70,16 +70,9 @@ const setupUI = (user) => {
 };
 
 
-// function to delete documents from the guides database
-function deleteItem() {
-      const id = event.target.getAttribute('data-id');
-    db.collection("guides").doc(id).delete().then(function() {
-    }).catch(function(error) {
-        console.error("Error removing document: ", error);
-    });
-}
 
-// function to delete documents from the guides database
+
+// function to delete documents from the testOne database
 function deleteItem() {
   const id = event.target.getAttribute('data-id');
 db.collection("testOne").doc(id).delete().then(function() {
@@ -87,6 +80,7 @@ db.collection("testOne").doc(id).delete().then(function() {
     console.error("Error removing document: ", error);
 });
 }
+
 
 
 

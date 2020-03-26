@@ -149,6 +149,7 @@ h5 {
 
 .search-panel__results {
   flex: 1;
+  padding-top: 20px;
 }
 
 .ais-Highlight-highlighted {

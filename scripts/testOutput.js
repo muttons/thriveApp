@@ -15,7 +15,7 @@ const setupTestOne = (data) => {
           <li class="collection-item train">Score: ${testOne.userGrade}</li>
           <li class="collection-item train">${testOne.passOrFail}</li>
   
-          <a class="waves-effect waves-light btn right red" style="margin-top: 20px;" onclick="deleteItem(event)" data-id="${doc.id}"><i class="material-icons right">delete</i>delete</a>
+          <a class="waves-effect waves-light btn right red" style="margin-top: 20px;" onclick="deleteItem(event)" data-id="${doc.id}" data-id-two="${testOne.email}" ><i class="material-icons right">delete</i>delete</a>
   
           </ul>
           </div>
