@@ -6,6 +6,14 @@ adminForm.addEventListener('submit', (e) => {
   const adminEmail = document.querySelector('#admin-email').value;
   const addAdminRole = functions.httpsCallable('addAdminRole');
 
+   //preloader
+   document.querySelector('.loader1').classList.add('progress');
+   document.querySelector('.loader2').classList.add('indeterminate');
+ 
+ setTimeout(function() {
+   document.querySelector('.loader1').classList.remove('progress');
+   document.querySelector('.loader2').classList.remove('indeterminate');
+ },3000);
   // for admin role
   addAdminRole({ email: adminEmail }).then(() => {
     adminForm.reset();
@@ -18,6 +26,15 @@ trainForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const trainEmail = document.querySelector('#train-email').value;
   const addTrainRole = functions.httpsCallable('addTrainRole');
+
+   //preloader
+   document.querySelector('.loader1').classList.add('progress');
+   document.querySelector('.loader2').classList.add('indeterminate');
+ 
+ setTimeout(function() {
+   document.querySelector('.loader1').classList.remove('progress');
+   document.querySelector('.loader2').classList.remove('indeterminate');
+ },3000);
   // for train role
   addTrainRole({ email: trainEmail }).then(() => {
     trainForm.reset();
@@ -30,6 +47,15 @@ basicForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const basicEmail = document.querySelector('#basic-email').value;
   const addBasicRole = functions.httpsCallable('addBasicRole');
+
+  //preloader
+  document.querySelector('.loader1').classList.add('progress');
+  document.querySelector('.loader2').classList.add('indeterminate');
+
+setTimeout(function() {
+  document.querySelector('.loader1').classList.remove('progress');
+  document.querySelector('.loader2').classList.remove('indeterminate');
+},3000);
   // for basic role
   addBasicRole({ email: basicEmail }).then(() => {
     basicForm.reset();

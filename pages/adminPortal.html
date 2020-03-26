@@ -98,15 +98,19 @@
 
   <!-- ADMIN ACTIONS -->
 
-      <div class="row container">
+      <div class="row container admin">
   <!-- Make User Admin-->
-        <div class="col s12 m4">
+        <div class="col s12 m4 admin">
           <div class="card darken-1 admin">
             <div class="card-content white-text">
               <span class="card-title center-align black-text">Make User Admin</span>
               <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
                 <input type="email" class="center-align" placeholder="User email" id="admin-email" required />
             </div>
+  <!-- Preloader-->
+  <div class="loader1" id="progress">
+    <div class="loader2" id="indeterminate"></div>
+    </div>
             <div class="card-action blue-grey center-align">
               <button class="btn-small red darken-2">Make admin</button>
             </form>
@@ -122,6 +126,10 @@
               <form class="center-align train-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
                 <input type="email" class="center-align" placeholder="User email" id="train-email" required />
             </div>
+  <!-- Preloader-->
+  <div class="loader1" id="progress">
+    <div class="loader2" id="indeterminate"></div>
+    </div>
             <div class="card-action blue-grey center-align">
               <button class="btn-small blue darken-2">Make training</button>
             </form>
@@ -133,10 +141,14 @@
         <div class="col s12 m4">
           <div class="card darken-1 admin">
             <div class="card-content white-text">
-              <span class="card-title black-text center-align">Make User Train</span>
+              <span class="card-title black-text center-align">Make User Basic</span>
               <form class="center-align basic-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
                 <input type="email" class="center-align" placeholder="User email" id="basic-email" required />
             </div>
+  <!-- Preloader-->
+    <div class="loader1" id="progress">
+    <div class="loader2" id="indeterminate"></div>
+    </div>
             <div class="card-action blue-grey center-align">
               <button class="btn-small black darken-2">Make Basic</button>
             </form>
