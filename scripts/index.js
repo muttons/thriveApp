@@ -37,10 +37,6 @@ const setupUI = (user) => {
         const html = `
 
         <div>${userEmail}</div>
-        <h5>Roles</h5>
-        <div class="divider"></div>
-        <p class="admin">Admin</p><p class="train">Train</p><p class="basic">Basic</p>
-        <div class="divider"></div>
         <br><br><br><br>
       `;
       accountDetails.innerHTML = html;

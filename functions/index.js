@@ -19,7 +19,8 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
             admin: true,
-            train: true
+            train: true,
+            basic: true
         });
     }).then(() => {
         return {
@@ -40,7 +41,9 @@ exports.addTrainRole = functions.https.onCall((data, context) => {
     // get user and add custom claim (train)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
+            admin: false,
             train: true
+            
         });
     }).then(() => {
           return {
@@ -60,6 +63,8 @@ exports.addBasicRole = functions.https.onCall((data, context) => {
     // get user and add custom claim (train)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
+            admin: false,
+            train: false,
             basic: true
         });
     }).then(() => {
