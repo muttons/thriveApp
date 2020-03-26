@@ -59,7 +59,6 @@ setTimeout(function() {
 },3000);
   // for basic role
   addBasicRole({ email: basicEmail }).then(() => {
-    console.log('working?')
     basicForm.reset();
   });
 });
