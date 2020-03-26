@@ -17,6 +17,7 @@ const searchClient = algoliasearch(
   search.addWidgets([
     instantsearch.widgets.searchBox({
       container: '#searchbox',
+      placeholder: 'Search',
 
     }),
     instantsearch.widgets.configure({
@@ -32,7 +33,7 @@ const searchClient = algoliasearch(
 
       templates: {
         item:
-          '<h6>{{locationName}}</h6>',
+          `<h6>{{locationName}}</h6>`,
       },
     }),
   
