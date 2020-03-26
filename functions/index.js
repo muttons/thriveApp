@@ -67,6 +67,7 @@ exports.addBasicRole = functions.https.onCall((data, context) => {
             message: `Success! ${data.email} has been made a Basic user`
         }
     }).catch(err => {
+        console.log('failure');
         return err;
     });
 });

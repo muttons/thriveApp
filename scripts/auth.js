@@ -37,6 +37,7 @@ trainForm.addEventListener('submit', (e) => {
  },3000);
   // for train role
   addTrainRole({ email: trainEmail }).then(() => {
+    
     trainForm.reset();
   });
 });
@@ -58,6 +59,7 @@ setTimeout(function() {
 },3000);
   // for basic role
   addBasicRole({ email: basicEmail }).then(() => {
+    console.log('working?')
     basicForm.reset();
   });
 });
