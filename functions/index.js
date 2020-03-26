@@ -42,7 +42,8 @@ exports.addTrainRole = functions.https.onCall((data, context) => {
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
             admin: false,
-            train: true
+            train: true,
+            basic: true
             
         });
     }).then(() => {
@@ -70,7 +71,9 @@ exports.addBasicRole = functions.https.onCall((data, context) => {
     }).then(() => {
           return {
             message: `Success! ${data.email} has been made a Basic user`
+        
         }
+       
     }).catch(err => {
         console.log('failure');
         return err;
