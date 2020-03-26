@@ -4,7 +4,17 @@
     --secondary: #353535;
     --tertiary: #fcba03;
   }
+.primary-color {
+  color: var(--primary);
+}
 
+.secondary-color {
+  color: var(--secondary);
+}
+
+.tertiary-color {
+  color: var(--tertiary);
+}
 
 .collapsible-header {
     color: #fff;
@@ -77,6 +87,23 @@ a {
   background-color:var(--tertiary)!important;
 }
 
+.card {
+  margin-top: 30px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-action {
+  background-color: var(--secondary)!important;
+ }
+
+ .btn {
+   background-color: var(--tertiary)!important;
+   color: var(--secondary)!important;
+   font-weight: bold;
+ }
 
 
 
