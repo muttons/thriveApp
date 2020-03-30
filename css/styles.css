@@ -75,6 +75,9 @@ a {
   background-color: rgba(0, 0, 0, 0.8)!important;
 }
 
+.lable:active {
+  background-color: rgba(214, 16, 16, 0.8)!important;
+}
 .activeLogo {
   border-bottom: 5px solid var(--tertiary);
 

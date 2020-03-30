@@ -4,6 +4,7 @@ const result = document.querySelector('.result');
 const testForm = document.querySelector('#test-form-one');
 let userGrade = 0;
 let passOrFail = '';
+
 //get the time and date that gets added to the submittion
 let today = new Date();
 let date = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
