@@ -134,10 +134,11 @@ firebase.auth().signOut().then(function() {
       console.log(file);
       
       //dynamically set reference to the file name
-      var thisRef = storageRef.child('resume/' + ticketForm.subject.value + ' resume');
+      var thisRef = storageRef.child('resume/' + ticketForm.subject.value);
 
       //put request upload file to firebase storage
       thisRef.put(file).then(function(snapshot) {
       });
     }
+
 
