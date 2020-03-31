@@ -99,7 +99,7 @@
   </div>
    
 
-  <!--testOne card-->
+  <!--ticketOne card-->
   <div class="row container">
     <div class="col s12 m6">
       <div class="card logged-in">
@@ -110,7 +110,7 @@
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-test">Take Test</a> 
+          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-ticket">Take Test</a> 
         </div>
       </div>
     </div>
@@ -121,12 +121,12 @@
  
 
 
-  <!-- testOne MODAL -->
-  <div id="modal-test" class="modal">
+  <!-- Ticket MODAL -->
+  <div id="modal-ticket" class="modal">
     <div class="modal-content">
       <h4>Defensive Driving Test</h4><br />
       <div class="divider"></div>
-      <form class="testOneForm" action="#" id="test-form-one">
+      <form class="ticketFormOne" action="#" id="ticket-form-one">
 
       
         <!-- QuestionOne-->
@@ -135,7 +135,7 @@
         <div class="input-field col s6">
           <i class="material-icons prefix">mode_edit</i>
           <textarea id="subject"  class="materialize-textarea validate"></textarea>
-          <label for="subject">First Name</label>
+          <label for="subject">Ticket Subject</label>
         </div>
 
         <!-- QuestionTwo-->
@@ -143,23 +143,14 @@
         <div class="input-field col s6">
           <i class="material-icons prefix">mode_edit</i>
           <textarea id="text"  class="materialize-textarea validate"></textarea>
-          <label for="text">First Name</label>
+          <label for="text">Body Content</label>
         </div>
 
         <!-- file upload-->
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>File</span>
-            <input type="file">
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" id="file">
-          </div>
-        </div>
-       
-
+        <input type="file" id="files" name="files[]" multiple />
+        
           <br>
-        <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
+        <button class="btn yellow darken-2 z-depth-0" id="okButton" onclick="uploadFile()">Submit</button>
         
             <!-- Preloader-->
             <div class="loader1" id="progress">
@@ -174,9 +165,9 @@
 
 
 
-
-
-
+<div class="container">
+  
+</div>
 
 
 
@@ -234,14 +225,16 @@
     <div class="train-actions" style="display: none;"></div>
     <div class="basic-actions" style="display: none;"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+ 
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
 
     <script>
     // Your web app's Firebase configuration
@@ -250,7 +243,7 @@
         authDomain: "thriveupstateapp-jlo.firebaseapp.com",
         databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
         projectId: "thriveupstateapp-jlo",
-        storageBucket: "thriveupstateapp-jlo.appspot.com",
+        storageBucket: "gs://thriveupstateapp-jlo.appspot.com",
         messagingSenderId: "601846370875",
         appId: "1:601846370875:web:b8869db616e0005824021e",
         measurementId: "G-70M9CFWBJ4"
@@ -258,7 +251,6 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-
 
     // make auth and firestore references
     const auth = firebase.auth();
