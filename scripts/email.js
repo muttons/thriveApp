@@ -30,7 +30,15 @@ ticketForm.addEventListener('submit', (e) => {
         <h3> Ticket Information </h3> 
         <br>
         ${ticketForm.text.value}
-        ` 
+        ` ,
+        attachments: [
+          {
+            content: attachment,
+            filename: ticketForm.subject.value,
+            type: "application/pdf",
+            disposition: "attachment"
+          }
+        ]
         }
 
       }).then(() => {
