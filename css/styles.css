@@ -107,9 +107,25 @@ a {
    font-weight: bold;
  }
 
+ .vertical-align-middle { 
+  vertical-align: middle!important; 
+}
 
+.padding-bottom-3 {
+  padding-bottom: 3px;
+}
 
+.locationContainer {
+  background-color: var(--tertiary);
+  width: 100%;
+  border-radius: 5px;
+}
 
+.employeeContainer {
+  background-color: var(--tertiary);
+  width: 100%;
+  border-radius: 5px;
+}
 
 
 
@@ -880,7 +896,7 @@ a.collection-item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #fff;
+  background:var(--secondary);
   -webkit-box-shadow: 0 0 0 1px rgba(35, 38, 59, 0.05), 0 1px 3px 0 rgba(35, 38, 59, 0.15);
   box-shadow: 0 0 0 1px rgba(35, 38, 59, 0.05), 0 1px 3px 0 rgba(35, 38, 59, 0.15);
   display: -webkit-box;
@@ -889,7 +905,10 @@ a.collection-item {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
-  padding: 1.5rem; }
+  padding: 1.5rem; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
 
 .ais-Hits-item:first-of-type,
 .ais-InfiniteHits-item:first-of-type {

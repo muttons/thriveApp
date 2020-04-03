@@ -32,8 +32,21 @@ const searchClient = algoliasearch(
       container: '#hits',
 
       templates: {
-        item:
-          `<h6>{{locationName}}</h6>`,
+        item: //article tag lets it display on multiple lines rather than all inline
+          `
+          <article>
+          
+          <h6 class="tertiary-color">{{locationName}}</h6><br>
+          <div class="divider"></div><br>
+          <div class="section">
+          <a  href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{locationPhone}}</a><br>
+          <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p>
+          <a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> {{locationAddress}}</a>
+          </div>
+          </article>
+          
+
+          `,
       },
     }),
   
