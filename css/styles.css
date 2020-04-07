@@ -16,6 +16,9 @@
   color: var(--tertiary);
 }
 
+.page-footer {
+  background-color: #484c7a;
+}
 .collapsible-header {
     color: #fff;
     background-color: var(--secondary)!important;
