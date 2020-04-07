@@ -167,6 +167,12 @@ firebase.auth().onAuthStateChanged(function(user) {
           M.Modal.getInstance(modal).close();
           liftAndTransferForm.reset();
           userGrade = 0;
+          Swal.fire({
+            icon: 'success',
+            title: 'Your test has been submitted',
+            showConfirmButton: false,
+            timer: 3000
+          })
         }).catch(err => {
           console.log(err.message);
         });
