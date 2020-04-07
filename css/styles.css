@@ -440,13 +440,9 @@ a.collection-item {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fcfcfd));
-  background-image: linear-gradient(-180deg, #fff, #fcfcfd);
+  background-color:var(--secondary);
   border: 1px solid #d6d6e7;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 0 0 rgba(35, 38, 59, 0.05);
-  box-shadow: 0 1px 0 0 rgba(35, 38, 59, 0.05);
   color: #23263b;
   cursor: pointer;
   display: -webkit-inline-box;
@@ -491,9 +487,9 @@ a.collection-item {
 .ais-GeoSearch-redo:hover,
 .ais-GeoSearch-reset:hover,
 .ais-VoiceSearch-button:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5fa));
-  background-image: linear-gradient(-180deg, #fff, #f5f5fa);
-  border-color: #d6d6e7; }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: linear-gradient(-180deg, #000, #000);
+  border-color: #000; }
 
 .ais-HierarchicalMenu-showMore:focus,
 .ais-Menu-showMore:focus,
@@ -534,9 +530,8 @@ a.collection-item {
 .ais-GeoSearch-redo--disabled,
 .ais-GeoSearch-reset--disabled,
 .ais-VoiceSearch-button:disabled {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f5f5fa));
-  background-image: linear-gradient(-180deg, #fff, #f5f5fa);
-  border-color: #efeff5;
+
+  border-color: var(--secondary);
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #b6b7d5; }
