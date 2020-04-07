@@ -94,7 +94,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       setTimeout(function() {
         document.querySelector('.loader1').classList.remove('progress');
         document.querySelector('.loader2').classList.remove('indeterminate');
-      },6000);
+      },2000);
 
     //cloud function to get the array for test one
     const getLiftAndTransfer = firebase.functions().httpsCallable('getLiftAndTransfer');
@@ -194,9 +194,9 @@ firebase.auth().onAuthStateChanged(function(user) {
       setTimeout(function() {
         document.querySelector('.loader1').classList.remove('progress');
         document.querySelector('.loader2').classList.remove('indeterminate');
-      },6000);
+      },2000);
 
-    //cloud function to get the array for test one
+    //cloud function to get the array for therapeauticOptions one
     const getTherapeuticOptions = firebase.functions().httpsCallable('getTherapeuticOptions');
     getTherapeuticOptions().then(result => {
       let getTherapeuticOptions = result.data;

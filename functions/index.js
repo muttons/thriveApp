@@ -89,7 +89,7 @@ exports.getLiftAndTransfer = functions.https.onCall((data, context) => {
 
 //http callable Therapeutic Options
 exports.getTherapeuticOptions = functions.https.onCall((data, context) => {
-    return ['F', 'A', 'D', 'C', 'B', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'C', 'A', 'C', 'B', 'C', 'B', 'G'];
+    return ['F', 'A', 'D', 'C', 'B', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'C', 'A', 'C', 'B', 'C', 'B', 'H'];
 });
 
 
