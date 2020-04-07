@@ -1,6 +1,7 @@
 // DOM elements
 const guideList = document.querySelector('.guides');
-const testOneList = document.querySelector('.testOne');
+const liftAndTransferList = document.querySelector('.liftAndTransfer');
+const therapeuticOptionsList = document.querySelector('.therapeuticOptions');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
@@ -68,15 +69,24 @@ const setupUI = (user) => {
 
 
 
-// function to delete documents from the testOne database
-function deleteItem() {
+
+// function to delete documents from database
+function deleteTherapeuticOptions() {
   const id = event.target.getAttribute('data-id');
-db.collection("testOne").doc(id).delete().then(function() {
+db.collection("therapeuticOptions").doc(id).delete().then(function() {
 }).catch(function(error) {
     console.error("Error removing document: ", error);
 });
 }
 
+// function to delete documents from database
+function deleteLiftAndTransfer() {
+  const id = event.target.getAttribute('data-id');
+db.collection("liftAndTransfer").doc(id).delete().then(function() {
+}).catch(function(error) {
+    console.error("Error removing document: ", error);
+});
+}
 
 
 

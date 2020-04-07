@@ -86,12 +86,19 @@ auth.onAuthStateChanged(user => {
       setupUI(user);
       
     });
+
     db.collection('liftAndTransfer').onSnapshot(snapshot => {
       setupLiftAndTransfer(snapshot.docs);
     }, err => console.log(err.message));
-  } else {
+
+    db.collection('therapeuticOptions').onSnapshot(snapshot => {
+      setupTherapeuticOptions(snapshot.docs);
+    }, err => console.log(err.message));
+  } 
+  else {
     setupUI();
     setupLiftAndTransfer([]);
+    setupTherapeuticOptions([]);
   }
 });
 
