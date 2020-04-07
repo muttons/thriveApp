@@ -86,12 +86,12 @@ auth.onAuthStateChanged(user => {
       setupUI(user);
       
     });
-    db.collection('testOne').onSnapshot(snapshot => {
-      setupTestOne(snapshot.docs);
+    db.collection('liftAndTransfer').onSnapshot(snapshot => {
+      setupLiftAndTransfer(snapshot.docs);
     }, err => console.log(err.message));
   } else {
     setupUI();
-    setupTestOne([]);
+    setupLiftAndTransfer([]);
   }
 });
 

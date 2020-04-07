@@ -85,7 +85,10 @@ exports.getTestOne = functions.https.onCall((data, context) => {
     return ['A', 'B', 'A'];
 });
 
-
+//http callable 
+exports.getLiftAndTransfer = functions.https.onCall((data, context) => {
+    return ['A', 'C', 'A', 'B', 'C', 'B', 'B', 'A', 'A', 'A'];
+});
 
 
 /// Cloud Functions

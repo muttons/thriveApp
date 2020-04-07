@@ -98,18 +98,18 @@
 
 
 
-  <!--testOne card-->
+  <!--liftAndTransfer card-->
   <div class="row container">
     <div class="col s12 m6">
       <div class="card logged-in">
         <div class="card-content black-text">
-          <span class="card-title secondary-color" style="padding-bottom: 10px;">Test Title</span>
+          <span class="card-title secondary-color" style="padding-bottom: 10px;">Lift and Transfer</span>
           <div class="divider"></div>
           <p style="padding-top: 10px;">I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-test">Take Test</a> 
+          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-lift-and-transfer">Take Test</a> 
         </div>
       </div>
     </div>
@@ -120,58 +120,194 @@
  
 
 
-  <!-- testOne MODAL -->
-  <div id="modal-test" class="modal">
+  <!-- LiftAndTransfer MODAL -->
+  <div id="modal-lift-and-transfer" class="modal">
     <div class="modal-content">
-      <h4>Defensive Driving Test</h4><br />
+      <h4>Lift and Transfer Test</h4><br/>
       <div class="divider"></div>
-      <form class="testOneForm" action="#" id="test-form-one">
+      <form class="LiftAndTransferForm" action="#" id="lift-and-transfer-form">
 
       
         <!-- QuestionOne-->
-          <h5>What is 2+2?</h5>
+          <h5>The most common factor contributing to back injuries is the caregivers' tendency to exeed their own safe lifting capacity</h5>
+          <div class="divider"></div>
           <p>
             <label>
-              <input name="group1" type="radio" value="A" id="questionOne" required/>
-              <span>4</span>
+              <input name="latg1" type="radio" value="A" id="questionOne" required/>
+              <span>True</span>
             </label>
           </p>
           <p>
             <label>
-              <input name="group1" type="radio" value="B" id="questionOne" required/>
-              <span>2</span>
+              <input name="latg1" type="radio" value="B" id="questionOne" required/>
+              <span>False</span>
             </label>
           </p>
+          <br/>
 
         <!-- QuestionTwo-->
-        <h5>What is 5+2?</h5>
+        <h5>Back injuries can develop:</h5>
+        <div class="divider"></div>
         <p>
           <label>
-            <input name="group2" type="radio" value="A" id="questionTwo" required/>
-            <span>4</span>
+            <input name="latg2" type="radio" value="A" id="questionTwo" required/>
+            <span>A) Gradually as a result of repetitive actions</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group2" type="radio" value="B" id="questionTwo" required/>
-            <span>7</span>
+            <input name="latg2" type="radio" value="B" id="questionTwo" required/>
+            <span>B) As a result of a single traumatic event</span>
           </label>
         </p>
+        <label>
+          <input name="latg2" type="radio" value="C" id="questionTwo" required/>
+          <span>C) Both A and B</span>
+        </label>
+      </p>
+      <br/>
+
         <!-- QuestionThree-->
-        <h5>What is 55+2?</h5>
+        <h5>To protect your back DO NOT twist your body while lifting</h5>
+        <div class="divider"></div>
         <p>
           <label>
-            <input name="group3" type="radio" value="A" id="questionThree" required/>
-            <span>57</span>
+            <input name="latg3" type="radio" value="A" id="questionThree" required/>
+            <span>True</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="group3" type="radio" value="B" id="questionThree" />
-            <span>7</span>
+            <input name="latg3" type="radio" value="B" id="questionThree" />
+            <span>False</span>
           </label>
         </p>
-       
+        <br/>
+
+       <!-- QuestionFour-->
+       <h5>A transfer belt (gait belt) is applied:</h5>
+       <div class="divider"></div>
+       <p>
+         <label>
+           <input name="latg4" type="radio" value="A" id="questionFour" required/>
+           <span>A) Under the robe or coat</span>
+         </label>
+       </p>
+       <p>
+         <label>
+           <input name="latg4" type="radio" value="B" id="questionFour" required/>
+           <span>B) Over ALL clothing</span>
+         </label>
+       </p>
+       <label>
+         <input name="latg4" type="radio" value="C" id="questionFour" required/>
+         <span>C) Several inches above the waist and loose</span>
+       </label>
+     </p>
+     <br/>
+
+       <!-- QuestionFive-->
+       <h5>About what percentage of people will experience a back injury in their lifetime?</h5>
+       <div class="divider"></div>
+       <p>
+         <label>
+           <input name="latg5" type="radio" value="A" id="questionFive" required/>
+           <span>A) 25%</span>
+         </label>
+       </p>
+       <p>
+         <label>
+           <input name="latg5" type="radio" value="B" id="questionFive" required/>
+           <span>B) 50%</span>
+         </label>
+       </p>
+       <label>
+         <input name="latg5" type="radio" value="C" id="questionFive" required/>
+         <span>C) 80%</span>
+       </label>
+     </p>
+     <br/>
+
+ <!-- QuestionSix-->
+ <h5>When helping someone to get up from a bed or chair:</h5>
+ <div class="divider"></div>
+ <p>
+   <label>
+     <input name="latg6" type="radio" value="A" id="questionSix" required/>
+     <span>A) Stand beside the person and hold their arm</span>
+   </label>
+ </p>
+ <p>
+   <label>
+     <input name="latg6" type="radio" value="B" id="questionSix" required/>
+     <span>B) Stand in front of them and block their knees</span>
+   </label>
+ </p>
+<br/>
+
+  <!-- QuestionSeven-->
+  <h5>When helping someone transfer from bed to wheelchair:</h5>
+  <div class="divider"></div>
+  <p>
+    <label>
+      <input name="latg7" type="radio" value="A" id="questionSeven" required/>
+      <span>A) The weaker side moves first</span>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input name="latg7" type="radio" value="B" id="questionSeven" required/>
+      <span>B) The stronger side moves first</span>
+    </label>
+  </p>
+  <br/>
+        <!-- QuestionEight-->
+        <h5>Proper stance and balance is important to protecting your back</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg8" type="radio" value="A" id="questionEight" required/>
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg8" type="radio" value="B" id="questionEight" />
+            <span>False</span>
+          </label>
+        </p>
+        <br/>
+        <!-- QuestionNine-->
+        <h5>Most training on lift and transfer DOES NOT reduce Worker Compensation claims becuase staff that have been working for a while DO NOT use the information; they just continue to do what they have always done</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg9" type="radio" value="A" id="questionNine" required/>
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg9" type="radio" value="B" id="questionNine" />
+            <span>False</span>
+          </label>
+        </p>
+        <br/>
+        <!-- QuestionTen-->
+        <h5>Improper lifting can lead to a herniated disc, which really hurts and can put you out of work for many weeks</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg10" type="radio" value="A" id="questionTen" required/>
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg10" type="radio" value="B" id="questionTen" />
+            <span>False</span>
+          </label>
+        </p>
 
           <br>
         <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
@@ -187,6 +323,7 @@
     </div>
   </div>
 
+   
 
 
 </main>
