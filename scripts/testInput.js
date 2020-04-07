@@ -226,7 +226,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       //compare users answers to the test one array of answers for validation
       userAnswers.forEach((answer, index) => {
-        if (answer === getLiftAndTransfer[index]){
+        if (answer === getTherapeuticOptions[index]){
           userGrade += 5;
         } if (userGrade >= 80) {
           passOrFail = 'Passed';
