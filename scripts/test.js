@@ -13,14 +13,14 @@ async function main() {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-        user: ,
-        pass: 
+        user: process.env.UserAPI,
+        pass: process.env.PassAPI
     }
 });
 
   // send mail with defined transport object
-  let info = transporter.sendMail({
-    from: '"Fred Foo 👻" <foo@example.com>', // sender address
+  let info =  await transporter.sendMail({
+    from: '"test account" <foo@example.com>', // sender address
     to: "help.desk@thriveupstate.org", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
