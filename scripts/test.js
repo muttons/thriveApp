@@ -13,8 +13,8 @@ async function main() {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-        user: 'apikey',
-        pass: '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'
+        user: ,
+        pass: 
     }
 });
 
