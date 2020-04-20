@@ -25,6 +25,12 @@
     <meta name="apple-mobile-web-app-status-bar" content="#292929">
     <meta name="theme-color" content="#292929">
 
+    <script>
+      if (location.protocol != 'https:') {
+       location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+      }
+      </script>
+  
   <title>Thrive App</title>
 
 </head>
