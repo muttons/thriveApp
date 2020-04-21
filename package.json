@@ -1,0 +1,27 @@
+{
+  "name": "thriveApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+  "dependencies": {
+    "@sendgrid/mail": "^7.0.1",
+    "async": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muttons/thriveApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muttons/thriveApp/issues"
+  },
+  "homepage": "https://github.com/muttons/thriveApp#readme"
+}
