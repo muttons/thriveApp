@@ -64,3 +64,4 @@ build/Release
 # dotenv environment variables file
 .env
 sendgrid.env
+.env
