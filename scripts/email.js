@@ -4,7 +4,7 @@ reguire('dotenv').config()
 const nodemailer = require("nodemailer");
 
 // async..await is not allowed in global scope, must use a wrapper
-async function testEmail() {
+async function testMailer() {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -34,4 +34,4 @@ async function testEmail() {
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 
-testEmail().catch(console.error);
+testMailer().catch(console.error);
