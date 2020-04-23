@@ -1,7 +1,7 @@
 reguire('dotenv').config()
 
-
 const nodemailer = require("nodemailer");
+
 function testMailer() {
 
   // create reusable transporter object using the default SMTP transport
@@ -16,12 +16,21 @@ function testMailer() {
   });
 
   // send mail with defined transport object
-  let info = transporter.sendMail({
+  let mailOptions ={
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
     to: "bar@example.com, baz@example.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>" // html body
-  });
-}
+  };
 
+
+transporter.sendMail(mailOptions, function(err, data) {
+  if (err) {
+    console.log('error', err);
+  } else {
+    console.log('it worked');
+  }
+});
+
+}
