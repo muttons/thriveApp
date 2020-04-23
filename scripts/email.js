@@ -1,4 +1,4 @@
-reguire('dotenv').config()
+require('dotenv').config();
 
 const nodemailer = require("nodemailer");
 
@@ -8,8 +8,8 @@ const nodemailer = require("nodemailer");
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: API_USER, // generated ethereal user
-      pass: API_KEY // generated ethereal password
+      user: process.env.API_USER, 
+      pass: process.env.API_KEY 
     }
   });
 
@@ -22,7 +22,6 @@ const nodemailer = require("nodemailer");
     html: "<b>Hello world?</b>" // html body
   };
 
-
 transporter.sendMail(mailOptions, function(err, data) {
   if (err) {
     console.log('error', err);
@@ -30,5 +29,6 @@ transporter.sendMail(mailOptions, function(err, data) {
     console.log('it worked');
   }
 });
+
 
 
