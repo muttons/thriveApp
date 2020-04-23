@@ -2,8 +2,6 @@ reguire('dotenv').config()
 
 const nodemailer = require("nodemailer");
 
-function testMailer() {
-
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: "smtp.sendgrid.net",
@@ -18,7 +16,7 @@ function testMailer() {
   // send mail with defined transport object
   let mailOptions ={
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
+    to: "help.desk@thriveupstate.org", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>" // html body
@@ -33,4 +31,4 @@ transporter.sendMail(mailOptions, function(err, data) {
   }
 });
 
-}
+
