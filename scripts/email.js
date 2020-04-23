@@ -22,6 +22,7 @@ const nodemailer = require("nodemailer");
     html: "<b>Hello world?</b>" // html body
   };
 
+testMailer = () => {
 transporter.sendMail(mailOptions, function(err, data) {
   if (err) {
     console.log('error', err);
@@ -29,6 +30,6 @@ transporter.sendMail(mailOptions, function(err, data) {
     console.log('it worked');
   }
 });
-
+}
 
 
