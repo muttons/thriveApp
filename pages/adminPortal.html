@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,81 +14,97 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- Service Worker Manifest -->
   <link rel="manifest" href="/manifest.json">
-    <!-- ios support -->
-    <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/img/icons/icon-72x72.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-120x120.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-144x144.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-310x310.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
-    <meta name="apple-mobile-web-app-status-bar" content="#292929">
-    <meta name="theme-color" content="#292929">
+  <!-- ios support -->
+  <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-120x120.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-310x310.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#292929">
+  <meta name="theme-color" content="#292929">
 
-    <script>
-      if (location.protocol != 'https:') {
-       location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-      }
-      </script>
-      
+  <script>
+    if (location.protocol != 'https:') {
+      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
+  </script>
+
   <title>Thrive App</title>
 </head>
+
 <body class="grey lighten-3"></body>
-  <!-- nav -->
-  <header>
-    <nav>
-      <div class="nav-wrapper container">
-        <a href="/index.html" class="brand-logo ">ThriveApp</a>
-        <!-- sidenav menu button-->
-        <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
+<!-- nav -->
+<header>
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo ">ThriveApp</a>
+      <!-- sidenav menu button-->
+      <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
 
-        <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down">
 
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Login">Login</a></li>
-          
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Search"><i class="material-icons">search</i></a></li>
+        <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped"
+            style="display: none;" data-tooltip="Login">Login</a></li>
 
-          <li><a href="/pages/tests.html" class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;" data-tooltip="Tests"><i class="material-icons">school</i></a></li>
+        <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;"
+            data-tooltip="Search"><i class="material-icons">search</i></a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Training Portal"><i class="material-icons center white-text">blur_circular</i></a></li>
+        <li><a href="/pages/tests.html" class="white-text logged-in tooltipped waves-effect waves-light"
+            style="display: none;" data-tooltip="Tests"><i class="material-icons">school</i></a></li>
 
-          <li class="activeNav"><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
+        <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in tooltipped"
+            style="display: none;" data-tooltip="Training Portal"><i
+              class="material-icons center white-text">blur_circular</i></a></li>
 
-          <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped" data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i class="material-icons white-text">account_circle</i></a></li>
-  
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Main Content Area-->
-  <main>
+        <li class="activeNav"><a href="/pages/adminPortal.html"
+            class="white-text admin waves-effect waves-light tooltipped" style="display: none;"
+            data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
 
-      <!-- side nav -->
+        <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped"
+            data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i
+              class="material-icons white-text">account_circle</i></a></li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Main Content Area-->
+<main>
+
+  <!-- side nav -->
   <ul class="sidenav black lighten-1 " id="mobile-links">
     <br><br>
-    
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
 
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
+    <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text"
+        style="display: none;">Login</a></li>
 
-          <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i class="material-icons white-text">school</i></a></li>
+    <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text"
+        style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal<i class="material-icons center white-text">blur_circular</i></a></li>
+    <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i
+          class="material-icons white-text">school</i></a></li>
 
-          <li class="activeNav"><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text">blur_on</i></a></li>
+    <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in"
+        style="display: none;">Training Portal<i class="material-icons center white-text">blur_circular</i></a></li>
 
-          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
+    <li class="activeNav"><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light"
+        style="display: none;">Admin Portal<i class="material-icons white-text">blur_on</i></a></li>
+
+    <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account"
+        style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
 
   </ul>
-  
-<!-- Search button-->
-<div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
-  <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
-    <i class="large material-icons">search</i>
-  </a>
-</div>
+
+  <!-- Search button-->
+  <div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
+    <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
+      <i class="large material-icons">search</i>
+    </a>
+  </div>
 
 
   <!-- ACCOUNT MODAL -->
@@ -96,66 +113,67 @@
       <h4>Account details</h4><br />
       <div class="account-details"></div>
       <li class="divider" tabindex="-1"></li>
-      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
+      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light"
+        style="display: none;">Sign Out</a>
     </div>
   </div>
 
-    <!-- Preloader-->
-    <div class="loader1" id="progress">
-      <div class="loader2" id="indeterminate"></div>
-      </div>
-      
+  <!-- Preloader-->
+  <div class="loader1" id="progress">
+    <div class="loader2" id="indeterminate"></div>
+  </div>
+
   <!-- ADMIN ACTIONS -->
 
-      <div class="row container admin">
-  <!-- Make User Admin-->
-        <div class="col s12 m4 admin">
-          <div class="card darken-1 admin">
-            <div class="card-content white-text">
-              <span class="card-title center-align black-text">Make User Admin</span>
-              <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-                <input type="email" class="center-align" placeholder="User email" id="admin-email" required />
-            </div>
-
-            <div class="card-action blue-grey center-align">
-              <button class="btn-small red darken-2">Make admin</button>
-            </form>
-            </div>
-          </div>
+  <div class="row container admin">
+    <!-- Make User Admin-->
+    <div class="col s12 m4 admin">
+      <div class="card darken-1 admin">
+        <div class="card-content white-text">
+          <span class="card-title center-align black-text">Make User Admin</span>
+          <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
+            <input type="email" class="center-align" placeholder="User email" id="admin-email" required />
         </div>
 
-<!-- Make User Train-->
-        <div class="col s12 m4">
-          <div class="card darken-1 admin">
-            <div class="card-content white-text">
-              <span class="card-title black-text center-align">Make User Train</span>
-              <form class="center-align train-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-                <input type="email" class="center-align" placeholder="User email" id="train-email" required />
-            </div>
-
-            <div class="card-action blue-grey center-align">
-              <button class="btn-small blue darken-2">Make training</button>
-            </form>
-            </div>
-          </div>
-        </div>
-
-  <!-- Make User Basic-->
-        <div class="col s12 m4">
-          <div class="card darken-1 admin">
-            <div class="card-content white-text">
-              <span class="card-title black-text center-align">Make User Basic</span>
-              <form class="center-align basic-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-                <input type="email" class="center-align" placeholder="User email" id="basic-email" required />
-            </div>
-
-            <div class="card-action blue-grey center-align">
-              <button class="btn-small black darken-2">Make Basic</button>
-            </form>
-            </div>
-          </div>
+        <div class="card-action blue-grey center-align">
+          <button class="btn-small red darken-2">Make admin</button>
+          </form>
         </div>
       </div>
+    </div>
+
+    <!-- Make User Train-->
+    <div class="col s12 m4">
+      <div class="card darken-1 admin">
+        <div class="card-content white-text">
+          <span class="card-title black-text center-align">Make User Train</span>
+          <form class="center-align train-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
+            <input type="email" class="center-align" placeholder="User email" id="train-email" required />
+        </div>
+
+        <div class="card-action blue-grey center-align">
+          <button class="btn-small blue darken-2">Make training</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Make User Basic-->
+    <div class="col s12 m4">
+      <div class="card darken-1 admin">
+        <div class="card-content white-text">
+          <span class="card-title black-text center-align">Make User Basic</span>
+          <form class="center-align basic-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
+            <input type="email" class="center-align" placeholder="User email" id="basic-email" required />
+        </div>
+
+        <div class="card-action blue-grey center-align">
+          <button class="btn-small black darken-2">Make Basic</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -165,20 +183,23 @@
     <div class="col s12 m6">
       <div class="card logged-in">
         <div class="card-content black-text">
-          <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Create Help Desk Ticket</h4></span>
+          <span class="card-title secondary-color center" style="padding-bottom: 10px;">
+            <h4>Create Help Desk Ticket</h4>
+          </span>
           <div class="divider"></div>
 
         </div>
         <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-ticket">Start</a> 
+          <a href="#" style="display: none" class="modal-trigger logged-in btn call"
+            data-target="modal-ticket">Start</a>
         </div>
       </div>
     </div>
-  
-  </div>
-  
 
- 
+  </div>
+
+
+
 
 
   <!-- Ticket MODAL -->
@@ -188,13 +209,13 @@
       <div class="divider"></div>
       <form class="ticketFormOne" action="#" id="ticket-form-one">
 
-      
+
         <!-- TicketFieldOne-->
 
 
         <div class="input-field col s6">
           <i class="material-icons prefix">mode_edit</i>
-          <textarea id="subject"  class="materialize-textarea validate"></textarea>
+          <textarea id="subject" class="materialize-textarea validate"></textarea>
           <label for="subject">Enter Subject of the Ticket</label>
         </div>
 
@@ -202,58 +223,24 @@
 
         <div class="input-field col s6">
           <i class="material-icons prefix">mode_edit</i>
-          <textarea id="text"  class="materialize-textarea validate"></textarea>
+          <textarea id="text" class="materialize-textarea validate"></textarea>
           <label for="text">Describe the issue in as much detail as possible</label>
         </div>
 
         <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
 
-            <!-- Preloader-->
-            <div class="loader1" id="progress">
-              <div class="loader2" id="indeterminate"></div>
-            </div>
+        <!-- Preloader-->
+        <div class="loader1" id="progress">
+          <div class="loader2" id="indeterminate"></div>
+        </div>
 
     </div>
-      </form>
+    </form>
 
-    </div>
+  </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
+</main>
 
 <!-- Footer Content Area-->
 <footer class="page-footer">
@@ -262,80 +249,88 @@
       <div class="col l6 s12">
         <h5 class="white-text">Feedback is appreciated!</h5>
         <div class="divider"></div>
-        
-        <i class="material-icons white-text footerContentText">email</i><a href="mailto:help.desk@thriveupstate.org?subject=Mail from App"> Click here to email Us about any incorrect information or bugs</a>  
-  
+
+        <i class="material-icons white-text footerContentText">email</i><a
+          href="mailto:help.desk@thriveupstate.org?subject=Mail from App"> Click here to email Us about any incorrect
+          information or bugs</a>
+
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <div class="divider"></div>
         <ul>
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text"
+              style="display: none;">Login</a></li>
 
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search</a></li>
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text"
+              style="display: none;">Search</a></li>
 
-          <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests</a></li>
+          <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light"
+              style="display: none;">Tests</a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal</a></li>
+          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in"
+              style="display: none;">Training Portal</a></li>
 
-          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal</a></li>
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light"
+              style="display: none;">Admin Portal</a></li>
 
-          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details</a></li>
+          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light"
+              data-target="modal-account" style="display: none;">Account Details</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container center">
-    © 2020 Jonathan Osterud
+      © 2020 Jonathan Osterud
     </div>
   </div>
 </footer>
-  
 
-    <!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
-    <div class="admin-actions" style="display: none;"></div>
-    <div class="train-actions" style="display: none;"></div>
-    <div class="basic-actions" style="display: none;"></div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+<div class="admin-actions" style="display: none;"></div>
+<div class="train-actions" style="display: none;"></div>
+<div class="basic-actions" style="display: none;"></div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
 
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyApz5zn0Sw553xEJAuw-uzbJbS8rTSZcOA",
-        authDomain: "thriveupstateapp-jlo.firebaseapp.com",
-        databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
-        projectId: "thriveupstateapp-jlo",
-        storageBucket: "thriveupstateapp-jlo.appspot.com",
-        messagingSenderId: "601846370875",
-        appId: "1:601846370875:web:b8869db616e0005824021e",
-        measurementId: "G-70M9CFWBJ4"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    const functions = firebase.functions();
-
-    </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyApz5zn0Sw553xEJAuw-uzbJbS8rTSZcOA",
+    authDomain: "thriveupstateapp-jlo.firebaseapp.com",
+    databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
+    projectId: "thriveupstateapp-jlo",
+    storageBucket: "thriveupstateapp-jlo.appspot.com",
+    messagingSenderId: "601846370875",
+    appId: "1:601846370875:web:b8869db616e0005824021e",
+    measurementId: "G-70M9CFWBJ4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
 
-  <!-- Compiled and minified JavaScript -->
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const functions = firebase.functions();
+</script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/scripts/auth.js"></script>
-  <script src="/scripts/index.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/auth.js"></script>
+<script src="/scripts/index.js"></script>
 </body>
+
 </html>

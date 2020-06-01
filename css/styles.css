@@ -4,6 +4,7 @@
     --secondary: #353535;
     --tertiary: #fcba03;
   }
+
 .primary-color {
   color: var(--primary);
 }
@@ -213,9 +214,6 @@ h5 {
   margin: 2rem auto;
   text-align: center;
 }
-
-
-
 
 h4 {
   color: var(--secondary);

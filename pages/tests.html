@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,87 +14,103 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- Service Worker Manifest -->
   <link rel="manifest" href="/manifest.json">
-    <!-- ios support -->
-    <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/img/icons/icon-72x72.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-120x120.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-144x144.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-310x310.png">
-    <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
-    <meta name="apple-mobile-web-app-status-bar" content="#292929">
-    <meta name="theme-color" content="#292929">
+  <!-- ios support -->
+  <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/icons/icon-72x72.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-120x120.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-144x144.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-310x310.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#292929">
+  <meta name="theme-color" content="#292929">
 
-    <script>
-      if (location.protocol != 'https:') {
-       location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-      }
-      </script>
-      
+  <script>
+    if (location.protocol != 'https:') {
+      location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
+  </script>
+
   <title>Thrive App</title>
 </head>
+
 <body class="grey lighten-3"></body>
-  <!-- nav -->
-  <header>
-    <nav>
-      <div class="nav-wrapper container">
-        <a href="/index.html" class="brand-logo ">ThriveApp</a>
-        <!-- sidenav menu button-->
-        <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
-        <!-- Search button-->
+<!-- nav -->
+<header>
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="/index.html" class="brand-logo ">ThriveApp</a>
+      <!-- sidenav menu button-->
+      <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
+      <!-- Search button-->
 
-        <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down">
 
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Login">Login</a></li>
-          
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Search"><i class="material-icons">search</i></a></li>
+        <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped"
+            style="display: none;" data-tooltip="Login">Login</a></li>
 
-          <li class="activeNav"><a href="/pages/tests.html" class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;" data-tooltip="Tests"><i class="material-icons">school</i></a></li>
+        <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;"
+            data-tooltip="Search"><i class="material-icons">search</i></a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light train tooltipped" style="display: none;" data-tooltip="Training Portal"><i class="material-icons center white-text">blur_circular</i></a></li>
+        <li class="activeNav"><a href="/pages/tests.html"
+            class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;"
+            data-tooltip="Tests"><i class="material-icons">school</i></a></li>
 
-          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
+        <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light train tooltipped"
+            style="display: none;" data-tooltip="Training Portal"><i
+              class="material-icons center white-text">blur_circular</i></a></li>
 
-          <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped" data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i class="material-icons white-text">account_circle</i></a></li>
-  
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Main Content Area-->
-  <main>
+        <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light tooltipped"
+            style="display: none;" data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
 
-      <!-- Preloader-->
-      <div class="loader1" id="progress">
-      <div class="loader2" id="indeterminate"></div>
-      </div>
-    
-      <!-- side nav -->
+        <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped"
+            data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i
+              class="material-icons white-text">account_circle</i></a></li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- Main Content Area-->
+<main>
+
+  <!-- Preloader-->
+  <div class="loader1" id="progress">
+    <div class="loader2" id="indeterminate"></div>
+  </div>
+
+  <!-- side nav -->
   <ul class="sidenav black lighten-1 " id="mobile-links">
     <br><br>
-    
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
 
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
+    <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text"
+        style="display: none;">Login</a></li>
 
-          <li class="activeNav"><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests<i class="material-icons white-text">school</i></a></li>
+    <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text"
+        style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal<i class="material-icons center white-text">blur_circular</i></a></li>
+    <li class="activeNav"><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light"
+        style="display: none;">Tests<i class="material-icons white-text">school</i></a></li>
 
-          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text">blur_on</i></a></li>
+    <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in"
+        style="display: none;">Training Portal<i class="material-icons center white-text">blur_circular</i></a></li>
 
-          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
+    <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin
+        Portal<i class="material-icons white-text">blur_on</i></a></li>
+
+    <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account"
+        style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
 
   </ul>
-  
-<!-- Search button-->
-<div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
-  <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
-    <i class="large material-icons">search</i>
-  </a>
-</div>
+
+  <!-- Search button-->
+  <div class="hide-on-large-only fixed-action-btn  searchButton hover logged-in" style="display: none">
+    <a href="/pages/search.html" class="btn-floating btn-large green waves-effect waves-light logged-in">
+      <i class="large material-icons">search</i>
+    </a>
+  </div>
 
 
   <!-- ACCOUNT MODAL -->
@@ -102,11 +119,12 @@
       <h4>Account details</h4><br />
       <div class="account-details"></div>
       <li class="divider" tabindex="-1"></li>
-      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
+      <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light"
+        style="display: none;">Sign Out</a>
     </div>
   </div>
 
- <!-- Card Container-->
+  <!-- Card Container-->
   <div class="row container">
 
     <!--liftAndTransfer card-->
@@ -116,26 +134,28 @@
           <span class="card-title secondary-color" style="padding-bottom: 10px;">Lift and Transfer</span>
           <div class="divider"></div>
           <p style="padding-top: 10px;">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+            I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-lift-and-transfer">Take Test</a> 
+          <a href="#" style="display: none" class="modal-trigger logged-in btn call"
+            data-target="modal-lift-and-transfer">Take Test</a>
         </div>
       </div>
     </div>
 
-  
-   <!--therapeuticOptions card-->
+
+    <!--therapeuticOptions card-->
     <div class="col s12 m6">
       <div class="card logged-in">
         <div class="card-content black-text">
           <span class="card-title secondary-color" style="padding-bottom: 10px;">Therapeutic Options</span>
           <div class="divider"></div>
           <p style="padding-top: 10px;">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+            I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call" data-target="modal-therapeutic-options">Take Test</a> 
+          <a href="#" style="display: none" class="modal-trigger logged-in btn call"
+            data-target="modal-therapeutic-options">Take Test</a>
         </div>
       </div>
     </div>
@@ -143,64 +163,65 @@
 
 
   </div>
-  
 
 
- 
+
+
 
   <!-- LiftAndTransfer MODAL -->
   <div id="modal-lift-and-transfer" class="modal">
     <div class="modal-content">
-      <h4>Lift and Transfer Test</h4><br/>
+      <h4>Lift and Transfer Test</h4><br />
       <div class="divider"></div>
       <form class="LiftAndTransferForm" action="#" id="lift-and-transfer-form">
 
-      
+
         <!-- QuestionOne-->
-          <h5>The most common factor contributing to back injuries is the caregivers' tendency to exeed their own safe lifting capacity</h5>
-          <div class="divider"></div>
-          <p>
-            <label>
-              <input name="latg1" type="radio" value="A" id="questionOne" required/>
-              <span>True</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="latg1" type="radio" value="B" id="questionOne" required/>
-              <span>False</span>
-            </label>
-          </p>
-          <br/>
+        <h5>The most common factor contributing to back injuries is the caregivers' tendency to exeed their own safe
+          lifting capacity</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg1" type="radio" value="A" id="questionOne" required />
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg1" type="radio" value="B" id="questionOne" required />
+            <span>False</span>
+          </label>
+        </p>
+        <br />
 
         <!-- QuestionTwo-->
         <h5>Back injuries can develop:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="latg2" type="radio" value="A" id="questionTwo" required/>
+            <input name="latg2" type="radio" value="A" id="questionTwo" required />
             <span>A) Gradually as a result of repetitive actions</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="latg2" type="radio" value="B" id="questionTwo" required/>
+            <input name="latg2" type="radio" value="B" id="questionTwo" required />
             <span>B) As a result of a single traumatic event</span>
           </label>
         </p>
         <label>
-          <input name="latg2" type="radio" value="C" id="questionTwo" required/>
+          <input name="latg2" type="radio" value="C" id="questionTwo" required />
           <span>C) Both A and B</span>
         </label>
-      </p>
-      <br/>
+        </p>
+        <br />
 
         <!-- QuestionThree-->
         <h5>To protect your back DO NOT twist your body while lifting</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="latg3" type="radio" value="A" id="questionThree" required/>
+            <input name="latg3" type="radio" value="A" id="questionThree" required />
             <span>True</span>
           </label>
         </p>
@@ -210,91 +231,91 @@
             <span>False</span>
           </label>
         </p>
-        <br/>
+        <br />
 
-       <!-- QuestionFour-->
-       <h5>A transfer belt (gait belt) is applied:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="latg4" type="radio" value="A" id="questionFour" required/>
-           <span>A) Under the robe or coat</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="latg4" type="radio" value="B" id="questionFour" required/>
-           <span>B) Over ALL clothing</span>
-         </label>
-       </p>
-       <label>
-         <input name="latg4" type="radio" value="C" id="questionFour" required/>
-         <span>C) Several inches above the waist and loose</span>
-       </label>
-     </p>
-     <br/>
+        <!-- QuestionFour-->
+        <h5>A transfer belt (gait belt) is applied:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg4" type="radio" value="A" id="questionFour" required />
+            <span>A) Under the robe or coat</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg4" type="radio" value="B" id="questionFour" required />
+            <span>B) Over ALL clothing</span>
+          </label>
+        </p>
+        <label>
+          <input name="latg4" type="radio" value="C" id="questionFour" required />
+          <span>C) Several inches above the waist and loose</span>
+        </label>
+        </p>
+        <br />
 
-       <!-- QuestionFive-->
-       <h5>About what percentage of people will experience a back injury in their lifetime?</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="latg5" type="radio" value="A" id="questionFive" required/>
-           <span>A) 25%</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="latg5" type="radio" value="B" id="questionFive" required/>
-           <span>B) 50%</span>
-         </label>
-       </p>
-       <label>
-         <input name="latg5" type="radio" value="C" id="questionFive" required/>
-         <span>C) 80%</span>
-       </label>
-     </p>
-     <br/>
+        <!-- QuestionFive-->
+        <h5>About what percentage of people will experience a back injury in their lifetime?</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg5" type="radio" value="A" id="questionFive" required />
+            <span>A) 25%</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg5" type="radio" value="B" id="questionFive" required />
+            <span>B) 50%</span>
+          </label>
+        </p>
+        <label>
+          <input name="latg5" type="radio" value="C" id="questionFive" required />
+          <span>C) 80%</span>
+        </label>
+        </p>
+        <br />
 
- <!-- QuestionSix-->
- <h5>When helping someone to get up from a bed or chair:</h5>
- <div class="divider"></div>
- <p>
-   <label>
-     <input name="latg6" type="radio" value="A" id="questionSix" required/>
-     <span>A) Stand beside the person and hold their arm</span>
-   </label>
- </p>
- <p>
-   <label>
-     <input name="latg6" type="radio" value="B" id="questionSix" required/>
-     <span>B) Stand in front of them and block their knees</span>
-   </label>
- </p>
-<br/>
+        <!-- QuestionSix-->
+        <h5>When helping someone to get up from a bed or chair:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg6" type="radio" value="A" id="questionSix" required />
+            <span>A) Stand beside the person and hold their arm</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg6" type="radio" value="B" id="questionSix" required />
+            <span>B) Stand in front of them and block their knees</span>
+          </label>
+        </p>
+        <br />
 
-  <!-- QuestionSeven-->
-  <h5>When helping someone transfer from bed to wheelchair:</h5>
-  <div class="divider"></div>
-  <p>
-    <label>
-      <input name="latg7" type="radio" value="A" id="questionSeven" required/>
-      <span>A) The weaker side moves first</span>
-    </label>
-  </p>
-  <p>
-    <label>
-      <input name="latg7" type="radio" value="B" id="questionSeven" required/>
-      <span>B) The stronger side moves first</span>
-    </label>
-  </p>
-  <br/>
+        <!-- QuestionSeven-->
+        <h5>When helping someone transfer from bed to wheelchair:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="latg7" type="radio" value="A" id="questionSeven" required />
+            <span>A) The weaker side moves first</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="latg7" type="radio" value="B" id="questionSeven" required />
+            <span>B) The stronger side moves first</span>
+          </label>
+        </p>
+        <br />
         <!-- QuestionEight-->
         <h5>Proper stance and balance is important to protecting your back</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="latg8" type="radio" value="A" id="questionEight" required/>
+            <input name="latg8" type="radio" value="A" id="questionEight" required />
             <span>True</span>
           </label>
         </p>
@@ -304,13 +325,14 @@
             <span>False</span>
           </label>
         </p>
-        <br/>
+        <br />
         <!-- QuestionNine-->
-        <h5>Most training on lift and transfer DOES NOT reduce Worker Compensation claims becuase staff that have been working for a while DO NOT use the information; they just continue to do what they have always done</h5>
+        <h5>Most training on lift and transfer DOES NOT reduce Worker Compensation claims becuase staff that have been
+          working for a while DO NOT use the information; they just continue to do what they have always done</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="latg9" type="radio" value="A" id="questionNine" required/>
+            <input name="latg9" type="radio" value="A" id="questionNine" required />
             <span>True</span>
           </label>
         </p>
@@ -320,13 +342,14 @@
             <span>False</span>
           </label>
         </p>
-        <br/>
+        <br />
         <!-- QuestionTen-->
-        <h5>Improper lifting can lead to a herniated disc, which really hurts and can put you out of work for many weeks</h5>
+        <h5>Improper lifting can lead to a herniated disc, which really hurts and can put you out of work for many weeks
+        </h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="latg10" type="radio" value="A" id="questionTen" required/>
+            <input name="latg10" type="radio" value="A" id="questionTen" required />
             <span>True</span>
           </label>
         </p>
@@ -337,113 +360,115 @@
           </label>
         </p>
 
-          <br>
+        <br>
         <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
-        
 
 
-    </div>
-      </form>
 
     </div>
+    </form>
+
+  </div>
   </div>
 
 
   <!-- therapeuticOptions MODAL -->
   <div id="modal-therapeutic-options" class="modal">
     <div class="modal-content">
-      <h4>Therapeutic Options Test</h4><br/>
+      <h4>Therapeutic Options Test</h4><br />
       <div class="divider"></div>
       <form class="therapeuticOptionsForm" action="#" id="therapeutic-options-form">
 
-      
+
         <!-- QuestionOne-->
-          <h5>The Therapeutic Options curriculum was designed to answer these two questions:</h5>
-          <div class="divider"></div>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="A" id="questionOne" required/>
-              <span>A) How can we get people to always obey us?</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="B" id="questionOne" required/>
-              <span>B) How can we deliver services in such a way that people do not have to behave aggressively in order to be heard, participate, be taken seriously, and have their needs met?</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="C" id="questionOne" required/>
-              <span>C) How can we keep everyone safe during a behavioral emergency while perserving the helping relationship?</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="D" id="questionOne" required/>
-              <span>D) How can we do the elast amount of work in order to not lose our jobs?</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="E" id="questionOne" required/>
-              <span>E) Both A and B</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="F" id="questionOne" required/>
-              <span>F) Both B and C</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="G" id="questionOne" required/>
-              <span>G) Both B and D</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input name="tog1" type="radio" value="H" id="questionOne" required/>
-              <span>H) Both A and C</span>
-            </label>
-          </p>
-          <br/>
+        <h5>The Therapeutic Options curriculum was designed to answer these two questions:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="A" id="questionOne" required />
+            <span>A) How can we get people to always obey us?</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="B" id="questionOne" required />
+            <span>B) How can we deliver services in such a way that people do not have to behave aggressively in order
+              to be heard, participate, be taken seriously, and have their needs met?</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="C" id="questionOne" required />
+            <span>C) How can we keep everyone safe during a behavioral emergency while perserving the helping
+              relationship?</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="D" id="questionOne" required />
+            <span>D) How can we do the elast amount of work in order to not lose our jobs?</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="E" id="questionOne" required />
+            <span>E) Both A and B</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="F" id="questionOne" required />
+            <span>F) Both B and C</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="G" id="questionOne" required />
+            <span>G) Both B and D</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog1" type="radio" value="H" id="questionOne" required />
+            <span>H) Both A and C</span>
+          </label>
+        </p>
+        <br />
 
         <!-- QuestionTwo-->
         <h5>When we say that the helping relationship is not a social relationship, we mean:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog2" type="radio" value="A" id="questionTwo" required/>
+            <input name="tog2" type="radio" value="A" id="questionTwo" required />
             <span>A) We are not in the relationship to meet our own needs for companionship</span>
           </label>
         </p>
         <p>
           <label>
-            <input name="tog2" type="radio" value="B" id="questionTwo" required/>
+            <input name="tog2" type="radio" value="B" id="questionTwo" required />
             <span>B) The person should be paying us for every service</span>
           </label>
         </p>
         <label>
-          <input name="tog2" type="radio" value="C" id="questionTwo" required/>
+          <input name="tog2" type="radio" value="C" id="questionTwo" required />
           <span>C) We do not need to treat the person with dignity or respect</span>
         </label>
-      </p>
-      <p>
-      <label>
-        <input name="tog2" type="radio" value="D" id="questionTwo" required/>
-        <span>D) The person should be grateful for whatever kindness we show</span>
-      </label>
-    </p>
-      <br/>
+        </p>
+        <p>
+          <label>
+            <input name="tog2" type="radio" value="D" id="questionTwo" required />
+            <span>D) The person should be grateful for whatever kindness we show</span>
+          </label>
+        </p>
+        <br />
 
         <!-- QuestionThree-->
         <h5>The helping relationship can be strengthened by:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog3" type="radio" value="A" id="questionThree" required/>
+            <input name="tog3" type="radio" value="A" id="questionThree" required />
             <span>A) Attending and listening to the person</span>
           </label>
         </p>
@@ -457,112 +482,114 @@
           <input name="tog3" type="radio" value="C" id="questionThree" />
           <span>C) Demonstraiting sincere commitment to the person's welfare</span>
         </label>
-      </p>
-      <p>
-      <label>
-        <input name="tog3" type="radio" value="D" id="questionThree" />
-        <span>D) All of the above</span>
-      </label>
-    </p>
-        <br/>
+        </p>
+        <p>
+          <label>
+            <input name="tog3" type="radio" value="D" id="questionThree" />
+            <span>D) All of the above</span>
+          </label>
+        </p>
+        <br />
 
-       <!-- QuestionFour-->
-       <h5>Behavior is:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog4" type="radio" value="A" id="questionFour" required/>
-           <span>A) The person's attitude</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog4" type="radio" value="B" id="questionFour" required/>
-           <span>B) What a person really feels inside</span>
-         </label>
-       </p>
-       <p>
-       <label>
-         <input name="tog4" type="radio" value="C" id="questionFour" required/>
-         <span>C) What a person does to interact with the world and get his needs met</span>
-       </label>
-     </p>
-     <p>
-      <label>
-        <input name="tog4" type="radio" value="D" id="questionFour" required/>
-        <span>D) Only what a person does that breaks a rule or causes problems for others </span>
-      </label>
-    </p>
-     <br/>
-
-       <!-- QuestionFive-->
-       <h5>Most behavior happens:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog5" type="radio" value="A" id="questionFive" required/>
-           <span>A) For no real reason</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog5" type="radio" value="B" id="questionFive" required/>
-           <span>B) To get the person something or to get the person away from something</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog5" type="radio" value="C" id="questionFive" required/>
-         <span>C) Becuase alien beings orbiting the earth control it by radio transmissions</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog5" type="radio" value="D" id="questionFive" required/>
-        <span>D) Because neurons in the person's brain misfire</span>
-      </label>
-    </p>
-     <br/>
-
- <!-- QuestionSix-->
- <h5>Sometimes, the services we provide actually create problem behaviors:</h5>
- <div class="divider"></div>
- <p>
-   <label>
-     <input name="tog6" type="radio" value="A" id="questionSix" required/>
-     <span>True</span>
-   </label>
- </p>
- <p>
-   <label>
-     <input name="tog6" type="radio" value="B" id="questionSix" required/>
-     <span>False</span>
-   </label>
- </p>
-<br/>
-
-  <!-- QuestionSeven-->
-  <h5>The behavior of staff is often affected by the same things that affect the behavior of people receiving services</h5>
-  <div class="divider"></div>
-  <p>
-    <label>
-      <input name="tog7" type="radio" value="A" id="questionSeven" required/>
-      <span>True</span>
-    </label>
-  </p>
-  <p>
-    <label>
-      <input name="tog7" type="radio" value="B" id="questionSeven" required/>
-      <span>False</span>
-    </label>
-  </p>
-  <br/>
-        <!-- QuestionEight-->
-        <h5>Understanding how a behavior works for a person helps us decide what skills we may need to help the person learn and about changes we may need to make in the person's environment:</h5>
+        <!-- QuestionFour-->
+        <h5>Behavior is:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog8" type="radio" value="A" id="questionEight" required/>
+            <input name="tog4" type="radio" value="A" id="questionFour" required />
+            <span>A) The person's attitude</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog4" type="radio" value="B" id="questionFour" required />
+            <span>B) What a person really feels inside</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog4" type="radio" value="C" id="questionFour" required />
+            <span>C) What a person does to interact with the world and get his needs met</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog4" type="radio" value="D" id="questionFour" required />
+            <span>D) Only what a person does that breaks a rule or causes problems for others </span>
+          </label>
+        </p>
+        <br />
+
+        <!-- QuestionFive-->
+        <h5>Most behavior happens:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog5" type="radio" value="A" id="questionFive" required />
+            <span>A) For no real reason</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog5" type="radio" value="B" id="questionFive" required />
+            <span>B) To get the person something or to get the person away from something</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog5" type="radio" value="C" id="questionFive" required />
+            <span>C) Becuase alien beings orbiting the earth control it by radio transmissions</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog5" type="radio" value="D" id="questionFive" required />
+            <span>D) Because neurons in the person's brain misfire</span>
+          </label>
+        </p>
+        <br />
+
+        <!-- QuestionSix-->
+        <h5>Sometimes, the services we provide actually create problem behaviors:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog6" type="radio" value="A" id="questionSix" required />
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog6" type="radio" value="B" id="questionSix" required />
+            <span>False</span>
+          </label>
+        </p>
+        <br />
+
+        <!-- QuestionSeven-->
+        <h5>The behavior of staff is often affected by the same things that affect the behavior of people receiving
+          services</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog7" type="radio" value="A" id="questionSeven" required />
+            <span>True</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog7" type="radio" value="B" id="questionSeven" required />
+            <span>False</span>
+          </label>
+        </p>
+        <br />
+        <!-- QuestionEight-->
+        <h5>Understanding how a behavior works for a person helps us decide what skills we may need to help the person
+          learn and about changes we may need to make in the person's environment:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog8" type="radio" value="A" id="questionEight" required />
             <span>True</span>
           </label>
         </p>
@@ -572,13 +599,14 @@
             <span>False</span>
           </label>
         </p>
-        <br/>
+        <br />
         <!-- QuestionNine-->
-        <h5>People sometimes use violence when they feel they have no other way to experience and express personal power:</h5>
+        <h5>People sometimes use violence when they feel they have no other way to experience and express personal
+          power:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog9" type="radio" value="A" id="questionNine" required/>
+            <input name="tog9" type="radio" value="A" id="questionNine" required />
             <span>True</span>
           </label>
         </p>
@@ -588,13 +616,13 @@
             <span>False</span>
           </label>
         </p>
-        <br/>
+        <br />
         <!-- QuestionTen-->
         <h5>Crisis can sometimes lead to personal growth:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog10" type="radio" value="A" id="questionTen" required/>
+            <input name="tog10" type="radio" value="A" id="questionTen" required />
             <span>True</span>
           </label>
         </p>
@@ -606,11 +634,12 @@
         </p>
         <br>
         <!-- QuestionEleven-->
-        <h5>Before we try to change a person's behavior, we should determione whether the challenging behavior is a response to something in our service system that we can reasonably change:</h5>
+        <h5>Before we try to change a person's behavior, we should determione whether the challenging behavior is a
+          response to something in our service system that we can reasonably change:</h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog11" type="radio" value="A" id="questionEleven" required/>
+            <input name="tog11" type="radio" value="A" id="questionEleven" required />
             <span>True</span>
           </label>
         </p>
@@ -626,7 +655,7 @@
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog12" type="radio" value="A" id="questionTwelve" required/>
+            <input name="tog12" type="radio" value="A" id="questionTwelve" required />
             <span>True</span>
           </label>
         </p>
@@ -638,11 +667,12 @@
         </p>
         <br>
         <!-- QuestionThirteen-->
-        <h5>When a person's behavior is escalating to violence it is important that we raise his reactivity threshhold by eliminating stressors and helping him manage his arousal: </h5>
+        <h5>When a person's behavior is escalating to violence it is important that we raise his reactivity threshhold
+          by eliminating stressors and helping him manage his arousal: </h5>
         <div class="divider"></div>
         <p>
           <label>
-            <input name="tog13" type="radio" value="A" id="questionThirteen" required/>
+            <input name="tog13" type="radio" value="A" id="questionThirteen" required />
             <span>True</span>
           </label>
         </p>
@@ -653,239 +683,241 @@
           </label>
         </p>
         <br>
-       <!-- QuestionFourteen-->
-       <h5>Crisis is a process in which:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog14" type="radio" value="A" id="questionFourteen" required/>
-           <span>A) A person loses control of himself and hits someone</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog14" type="radio" value="B" id="questionFourteen" required/>
-           <span>B) A person must be hospitalized</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog14" type="radio" value="C" id="questionFourteen" required/>
-         <span>C) A person's ability to cope is signnificantly challenged by internal and external stressors</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog14" type="radio" value="D" id="questionFourteen" required/>
-        <span>D) The police must be called to intervene</span>
-      </label>
-    </p>
-    <br>
-       <!-- QuestionFifteen-->
-       <h5>When we say that a person's behavior is purposeful, we mean that:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog15" type="radio" value="A" id="questionFifteen" required/>
-           <span>A) The person's behavior serves a purpose or meets a need</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog15" type="radio" value="B" id="questionFifteen" required/>
-           <span>B) The person needs to try harder to behave</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog15" type="radio" value="C" id="questionFifteen" required/>
-         <span>C) It's the person's fault if things don't go right</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog15" type="radio" value="D" id="questionFifteen" required/>
-        <span>D) It doesn't matter why he's doing a behavior</span>
-      </label>
-    </p>  
-    <br>
-       <!-- QuestionSixteen-->
-       <h5>Which of the following is NOT part of a positive behavior support approach?</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog16" type="radio" value="A" id="questionSixteen" required/>
-           <span>A) Making changes to the environment so the behavior is no longer necessary</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog16" type="radio" value="B" id="questionSixteen" required/>
-           <span>B) Enhancing the overall quality of the person's life</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog16" type="radio" value="C" id="questionSixteen" required/>
-         <span>C) Restricting a person's freedom until we're positive he'll be good</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog16" type="radio" value="D" id="questionSixteen" required/>
-        <span>D) Helping the person learn other ways to get his needs met</span>
-      </label>
-    </p> 
-    <br>
-       <!-- QuestionSeventeen-->
-       <h5>A person with tight jaws and clenching fists says, "I'm sick of all these stupid rules." Which of the following demonstrates understanding of how the person feels?</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog17" type="radio" value="A" id="questionSeventeen" required/>
-           <span>A) "The rules are there to keep everything working smoothly"</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog17" type="radio" value="B" id="questionSeventeen" required/>
-           <span>B) "It can be really frustraiting to live here sometimes"</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog17" type="radio" value="C" id="questionSeventeen" required/>
-         <span>C) "There wouldn't be this many rules if you people could just behave"</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog17" type="radio" value="D" id="questionSeventeen" required/>
-        <span>D) "You should be more respectful to staff. We're doing the best we can"</span>
-      </label>
-    </p> 
-    <br>
-       <!-- QuestionEighteen-->
-       <h5>When a person in crisis has stopped responding to you, the simplest and safest way to get him to orient toward you again is to:</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog18" type="radio" value="A" id="questionEighteen" required/>
-           <span>A) Raise your voice</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog18" type="radio" value="B" id="questionEighteen" required/>
-           <span>B) Shake him on the shoulder</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog18" type="radio" value="C" id="questionEighteen" required/>
-         <span>C) Say his name</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog18" type="radio" value="D" id="questionEighteen" required/>
-        <span>D) Snap your fingers in front of his face and stamp your foot</span>
-      </label>
-    </p> 
-    <br>
-       <!-- QuestionNineteen-->
-       <h5>Which of the following is NOT a way to reduce arousal during when a person's behaviour is escalating</h5>
-       <div class="divider"></div>
-       <p>
-         <label>
-           <input name="tog19" type="radio" value="A" id="questionNineteen" required/>
-           <span>A) Remove any audience</span>
-         </label>
-       </p>
-       <p>
-         <label>
-           <input name="tog19" type="radio" value="B" id="questionNineteen" required/>
-           <span>B) Implement a standing restraint</span>
-         </label>
-       </p>
-       <P>
-       <label>
-         <input name="tog19" type="radio" value="C" id="questionNineteen" required/>
-         <span>C) Move the person to a quiet area</span>
-       </label>
-     </p>
-     <P>
-      <label>
-        <input name="tog19" type="radio" value="D" id="questionNineteen" required/>
-        <span>D) Eliminate any environmental triggers</span>
-      </label>
-    </p> 
-    <br>
-            <!-- QuestionTwenty-->
-            <h5>The two main goals of physical interventions are:</h5>
-            <div class="divider"></div>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="A" id="questionTwenty" required/>
-                <span>A) To get it over with fast</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="B" id="questionTwenty" required/>
-                <span>B) To keep everyone safe and unharmed</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="C" id="questionTwenty" required/>
-                <span>C) To teach the person not to misbehave</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="D" id="questionTwenty" required/>
-                <span>D) To maintain the helping alliance</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="E" id="questionTwenty" required/>
-                <span>E) To make a lesson of it to any observer</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="F" id="questionTwenty" required/>
-                <span>F) Both A and B</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="G" id="questionTwenty" required/>
-                <span>G) Both B and C</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="H" id="questionTwenty" required/>
-                <span>H) Both B and D</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input name="tog20" type="radio" value="I" id="questionTwenty" required/>
-                <span>I) Both A and E</span>
-              </label>
-            </p>
-          <br>
+        <!-- QuestionFourteen-->
+        <h5>Crisis is a process in which:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog14" type="radio" value="A" id="questionFourteen" required />
+            <span>A) A person loses control of himself and hits someone</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog14" type="radio" value="B" id="questionFourteen" required />
+            <span>B) A person must be hospitalized</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog14" type="radio" value="C" id="questionFourteen" required />
+            <span>C) A person's ability to cope is signnificantly challenged by internal and external stressors</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog14" type="radio" value="D" id="questionFourteen" required />
+            <span>D) The police must be called to intervene</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionFifteen-->
+        <h5>When we say that a person's behavior is purposeful, we mean that:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog15" type="radio" value="A" id="questionFifteen" required />
+            <span>A) The person's behavior serves a purpose or meets a need</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog15" type="radio" value="B" id="questionFifteen" required />
+            <span>B) The person needs to try harder to behave</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog15" type="radio" value="C" id="questionFifteen" required />
+            <span>C) It's the person's fault if things don't go right</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog15" type="radio" value="D" id="questionFifteen" required />
+            <span>D) It doesn't matter why he's doing a behavior</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionSixteen-->
+        <h5>Which of the following is NOT part of a positive behavior support approach?</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog16" type="radio" value="A" id="questionSixteen" required />
+            <span>A) Making changes to the environment so the behavior is no longer necessary</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog16" type="radio" value="B" id="questionSixteen" required />
+            <span>B) Enhancing the overall quality of the person's life</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog16" type="radio" value="C" id="questionSixteen" required />
+            <span>C) Restricting a person's freedom until we're positive he'll be good</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog16" type="radio" value="D" id="questionSixteen" required />
+            <span>D) Helping the person learn other ways to get his needs met</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionSeventeen-->
+        <h5>A person with tight jaws and clenching fists says, "I'm sick of all these stupid rules." Which of the
+          following demonstrates understanding of how the person feels?</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog17" type="radio" value="A" id="questionSeventeen" required />
+            <span>A) "The rules are there to keep everything working smoothly"</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog17" type="radio" value="B" id="questionSeventeen" required />
+            <span>B) "It can be really frustraiting to live here sometimes"</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog17" type="radio" value="C" id="questionSeventeen" required />
+            <span>C) "There wouldn't be this many rules if you people could just behave"</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog17" type="radio" value="D" id="questionSeventeen" required />
+            <span>D) "You should be more respectful to staff. We're doing the best we can"</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionEighteen-->
+        <h5>When a person in crisis has stopped responding to you, the simplest and safest way to get him to orient
+          toward you again is to:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog18" type="radio" value="A" id="questionEighteen" required />
+            <span>A) Raise your voice</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog18" type="radio" value="B" id="questionEighteen" required />
+            <span>B) Shake him on the shoulder</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog18" type="radio" value="C" id="questionEighteen" required />
+            <span>C) Say his name</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog18" type="radio" value="D" id="questionEighteen" required />
+            <span>D) Snap your fingers in front of his face and stamp your foot</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionNineteen-->
+        <h5>Which of the following is NOT a way to reduce arousal during when a person's behaviour is escalating</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog19" type="radio" value="A" id="questionNineteen" required />
+            <span>A) Remove any audience</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog19" type="radio" value="B" id="questionNineteen" required />
+            <span>B) Implement a standing restraint</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog19" type="radio" value="C" id="questionNineteen" required />
+            <span>C) Move the person to a quiet area</span>
+          </label>
+        </p>
+        <P>
+          <label>
+            <input name="tog19" type="radio" value="D" id="questionNineteen" required />
+            <span>D) Eliminate any environmental triggers</span>
+          </label>
+        </p>
+        <br>
+        <!-- QuestionTwenty-->
+        <h5>The two main goals of physical interventions are:</h5>
+        <div class="divider"></div>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="A" id="questionTwenty" required />
+            <span>A) To get it over with fast</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="B" id="questionTwenty" required />
+            <span>B) To keep everyone safe and unharmed</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="C" id="questionTwenty" required />
+            <span>C) To teach the person not to misbehave</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="D" id="questionTwenty" required />
+            <span>D) To maintain the helping alliance</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="E" id="questionTwenty" required />
+            <span>E) To make a lesson of it to any observer</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="F" id="questionTwenty" required />
+            <span>F) Both A and B</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="G" id="questionTwenty" required />
+            <span>G) Both B and C</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="H" id="questionTwenty" required />
+            <span>H) Both B and D</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input name="tog20" type="radio" value="I" id="questionTwenty" required />
+            <span>I) Both A and E</span>
+          </label>
+        </p>
+        <br>
         <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
-        
+
 
     </div>
-      </form>
+    </form>
 
-    </div>
+  </div>
   </div>
 
   </div>
@@ -899,86 +931,94 @@
       <div class="col l6 s12">
         <h5 class="white-text">Feedback is appreciated!</h5>
         <div class="divider"></div>
-        
-        <i class="material-icons white-text footerContentText">email</i><a href="mailto:help.desk@thriveupstate.org?subject=Mail from App"> Click here to email Us about any incorrect information or bugs</a>  
-  
+
+        <i class="material-icons white-text footerContentText">email</i><a
+          href="mailto:help.desk@thriveupstate.org?subject=Mail from App"> Click here to email Us about any incorrect
+          information or bugs</a>
+
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <div class="divider"></div>
         <ul>
-          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text"
+              style="display: none;">Login</a></li>
 
-          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search</a></li>
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text"
+              style="display: none;">Search</a></li>
 
-          <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Tests</a></li>
+          <li><a href="/pages/tests.html" class="white-text logged-in waves-effect waves-light"
+              style="display: none;">Tests</a></li>
 
-          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Training Portal</a></li>
+          <li><a href="/pages/trainingPortal.html" class="white-text waves-effect waves-light logged-in"
+              style="display: none;">Training Portal</a></li>
 
-          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal</a></li>
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light"
+              style="display: none;">Admin Portal</a></li>
 
-          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details</a></li>
+          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light"
+              data-target="modal-account" style="display: none;">Account Details</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container center">
-    © 2020 Jonathan Osterud
+      © 2020 Jonathan Osterud
     </div>
   </div>
 </footer>
 
 
-  
 
-    <!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
-    <div class="admin-actions" style="display: none;"></div>
-    <div class="train-actions" style="display: none;"></div>
-    <div class="basic-actions" style="display: none;"></div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+<div class="admin-actions" style="display: none;"></div>
+<div class="train-actions" style="display: none;"></div>
+<div class="basic-actions" style="display: none;"></div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
 
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyApz5zn0Sw553xEJAuw-uzbJbS8rTSZcOA",
-        authDomain: "thriveupstateapp-jlo.firebaseapp.com",
-        databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
-        projectId: "thriveupstateapp-jlo",
-        storageBucket: "thriveupstateapp-jlo.appspot.com",
-        messagingSenderId: "601846370875",
-        appId: "1:601846370875:web:b8869db616e0005824021e",
-        measurementId: "G-70M9CFWBJ4"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    const functions = firebase.functions();
-
-    </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyApz5zn0Sw553xEJAuw-uzbJbS8rTSZcOA",
+    authDomain: "thriveupstateapp-jlo.firebaseapp.com",
+    databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
+    projectId: "thriveupstateapp-jlo",
+    storageBucket: "thriveupstateapp-jlo.appspot.com",
+    messagingSenderId: "601846370875",
+    appId: "1:601846370875:web:b8869db616e0005824021e",
+    measurementId: "G-70M9CFWBJ4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
 
-  <!-- Compiled and minified JavaScript -->
+  // make auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const functions = firebase.functions();
+</script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  <script src="/scripts/auth.js"></script>
-  <script src="/scripts/index.js"></script>
-  <script src="/scripts/validation.js"></script>
-  <script src="/scripts/testInput.js"></script>
-  <script src="/scripts/testOutput.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="/scripts/auth.js"></script>
+<script src="/scripts/index.js"></script>
+<script src="/scripts/validation.js"></script>
+<script src="/scripts/testInput.js"></script>
+<script src="/scripts/testOutput.js"></script>
 </body>
+
 </html>
