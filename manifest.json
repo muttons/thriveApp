@@ -6,7 +6,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "Scope": "/",
-    "start_url": "thriveApp/index.html",
+    "start_url": "index.html",
     "icons": [
       {
         "src": "/thriveApp/img/icons/icon-72x72.png",
