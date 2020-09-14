@@ -36,13 +36,16 @@ const searchClient = algoliasearch(
           `
           <article>
           
-          <h6 class="tertiary-color">{{locationName}}</h6><br>
+          <h5 class="tertiary-color">{{locationName}}</h5><br>
           <div class="divider"></div><br>
-          <div class="section">
-          <a  href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{locationPhone}}</a><br>
-          <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p>
-          <a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> {{locationAddress}}</a>
-          </div>
+
+          <ul>
+          <li><a href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{locationPhone}}</a><br></li>
+          <li><p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p></li>
+          <li><a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> {{locationAddress}}</a></li>
+          
+          
+          </ul>
           </article>
           
 
@@ -69,7 +72,7 @@ const searchClient = algoliasearch(
             <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a></li>
             <li><a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a></li>
             <li><a href="tel:+1-{{userOfficePhone}}"><i class="material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a></li>
-            <li><p class="white-text"> <i class="material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p></li>
+            <li><p class="white-text"><i class="material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p></li>
             </ul>
             </article>
             
