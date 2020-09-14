@@ -63,13 +63,15 @@ const searchClient = algoliasearch(
             <h6 class="tertiary-color">{{userName}}</h6><br>
             <div class="divider"></div><br>
             <div class="section">
-            <p class="white-text"> <i class="material-icons vertical-align-middle">speaker_notes</i> Title: {{userTitle}}</p>
-            <p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p>
-            <a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a><br><br>
-            <a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a><br><br>
-            <a href="tel:+1-{{userOfficePhone}}"><i class="material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a><br><br>
-            <p class="white-text"> <i class="material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p>
-        
+
+            <ul class="collection">
+            <p class="white-text"> <i class="collection-item material-icons vertical-align-middle">speaker_notes</i> Title: {{userTitle}}</p>
+            <p class="white-text"> <i class="collection-item material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p>
+            <a href="mailto:{{userEmail}}"><i class="collection-item material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a>
+            <a href="tel:+1-{{userCellPhone}}"><i class="collection-item material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a>
+            <a href="tel:+1-{{userOfficePhone}}"><i class="collection-item material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a>
+            <p class="white-text"> <i class="collection-item material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p>
+            </ul>
             
             
             </div>
