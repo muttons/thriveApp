@@ -66,10 +66,10 @@ const searchClient = algoliasearch(
             <h6 class="white-text">{{userTitle}}</h6>
             <ul>
             <li><p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p></li>
-            <li><a href="mailto:{{userEmail}}"><i class="tiny material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a></li>
-            <li><a href="tel:+1-{{userCellPhone}}"><i class="tiny material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a></li>
-            <li><a href="tel:+1-{{userOfficePhone}}"><i class="tiny material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a></li>
-            <li><p class="white-text"> <i class="tiny material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p></li>
+            <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a></li>
+            <li><a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a></li>
+            <li><a href="tel:+1-{{userOfficePhone}}"><i class="material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a></li>
+            <li><p class="white-text"> <i class="material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p></li>
             </ul>
             </article>
             
