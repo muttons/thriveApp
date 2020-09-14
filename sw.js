@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v10.37'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v10.37'; //CHANGE THIS - name of your dynamic cache
+const staticCacheName = 'site-static-v10.38'; //CHANGE THIS - name of your static cache
+const dynamicCacheName = 'site-dynamic-v10.38'; //CHANGE THIS - name of your dynamic cache
 const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
   '',
   '/index.html',

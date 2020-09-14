@@ -57,7 +57,22 @@ const searchClient = algoliasearch(
           container: '#hitsTwo',
           templates: {
             item:
-              '<h6>{{userName}}</h6>',
+            `
+            <article>
+            
+            <h6 class="tertiary-color">{{userName}}</h6><br>
+            <div class="divider"></div><br>
+            <div class="section">
+            <a  href="tel:+1-{{userOfficePhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{userOfficePhone}}</a><br>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Ext.: {{userExt}}</p>
+            <a  href="tel:+1-{{userCellPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{userCellPhone}}</a><br>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Title: {{userTitle}}</p>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Title: {{userDepartment}}</p>
+            </div>
+            </article>
+            
+  
+            `,
           },
         
         }),
