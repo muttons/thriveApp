@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v10.61'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v10.61'; //CHANGE THIS - name of your dynamic cache
+const staticCacheName = 'site-static-v10.62'; //CHANGE THIS - name of your static cache
+const dynamicCacheName = 'site-dynamic-v10.62'; //CHANGE THIS - name of your dynamic cache
 const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
   '',
   '/index.html',
@@ -78,6 +78,4 @@ self.addEventListener('fetch', evt => {
 
 
 
-
-// custom install prompt tests
 
