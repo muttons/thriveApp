@@ -133,7 +133,10 @@ a {
   border-radius: 5px;
 }
 
-
+li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 
 
 

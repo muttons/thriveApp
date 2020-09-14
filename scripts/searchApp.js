@@ -63,7 +63,7 @@ const searchClient = algoliasearch(
             <h5 class="tertiary-color">{{userName}}</h5><br>
             <div class="divider"></div><br>
     
-            <h6 class="white-text">{{userTitle}}</h6>
+            <h6 class="white-text">{{userTitle}}</h6><br><br>
             <ul>
             <li><p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p></li>
             <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a></li>
