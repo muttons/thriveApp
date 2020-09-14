@@ -1,20 +1,20 @@
-const staticCacheName = 'site-static-v10.59'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v10.59'; //CHANGE THIS - name of your dynamic cache
+const staticCacheName = 'site-static-v10.60'; //CHANGE THIS - name of your static cache
+const dynamicCacheName = 'site-dynamic-v10.60'; //CHANGE THIS - name of your dynamic cache
 const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
   '',
   '/index.html',
-  '/js/app.js',
-  '/js/ui.js',
-  '/js/db.js',
-  '/src/searchApp.js',
-  '/src/searchApp.css',
+  '/scripts/index.js',
+  '/scripts/searchApp.js',
+  '/scripts/auth.js',
   '/css/styles.css',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2',
   'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
   '/pages/fallback.html',
   '/pages/search.html',
-  '/manifest.json'
+  '/pages/tests.html',
+  '/manifest.json',
+  '/sw.js'
 ];
 
 // cache size limit function
