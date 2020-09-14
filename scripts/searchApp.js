@@ -40,9 +40,9 @@ const searchClient = algoliasearch(
           <div class="divider"></div><br>
 
           <ul>
-          <li><a href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{locationPhone}}</a><br></li>
+          <li><a href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> Office Phone: {{locationPhone}}</a><br></li>
           <li><p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p></li>
-          <li><a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> {{locationAddress}}</a></li>
+          <li><a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> Address: {{locationAddress}}</a></li>
           
           
           </ul>
@@ -66,11 +66,11 @@ const searchClient = algoliasearch(
             <h5 class="tertiary-color">{{userName}}</h5><br>
             <div class="divider"></div><br>
     
-            <h6 class="white-text">{{userTitle}}</h6><br><br>
+            <h6 class="white-text">{{userTitle}}</h6><br>
             <ul>
             <li><p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p></li>
-            <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> {{userEmail}}</a></li>
-            <li><a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a></li>
+            <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> Email: {{userEmail}}</a></li>
+            <li><a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> Cell Phone: {{userCellPhone}}</a></li>
             <li><a href="tel:+1-{{userOfficePhone}}"><i class="material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a></li>
             <li><p class="white-text"><i class="material-icons vertical-align-middle">dialpad</i> Ext: {{userExt}}</p></li>
             </ul>
