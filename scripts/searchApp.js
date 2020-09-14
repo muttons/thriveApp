@@ -63,12 +63,12 @@ const searchClient = algoliasearch(
             <h6 class="tertiary-color">{{userName}}</h6><br>
             <div class="divider"></div><br>
             <div class="section">
-            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Title: {{userTitle}}</p>
-            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Department: {{userDepartment}}</p>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">speaker_notes</i> Title: {{userTitle}}</p>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p>
             <a  href="{{userEmail}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">mail</i> {{userEmail}}</a><br>
-            <a  href="tel:+1-{{userCellPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> {{userCellPhone}}</a><br>
+            <a  href="tel:+1-{{userCellPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone_iphone</i> {{userCellPhone}}</a><br>
             <a  href="tel:+1-{{userOfficePhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a><br>
-            <p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Ext.: {{userExt}}</p>
+            <p class="white-text"> <i class="material-icons vertical-align-middle">dialpad</i> Ext.: {{userExt}}</p>
         
             
             
