@@ -40,9 +40,9 @@ const searchClient = algoliasearch(
           <div class="divider"></div><br>
 
           <ul>
-          <li><a href="tel:+1-{{locationPhone}}" class="collection-item"><i class="small material-icons prefix vertical-align-middle">phone</i> Office Phone: {{locationPhone}}</a><br></li>
+          <li><a href="tel:+1-{{locationPhone}}" ><i class="small material-icons prefix vertical-align-middle">phone</i> Office Phone: {{locationPhone}}</a></li>
           <li><p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p></li>
-          <li><a href="{{locationAddressLink}}" class="collection-item" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> Address: {{locationAddress}}</a></li>
+          <li><a href="{{locationAddressLink}}" target="_blank"><i class="small material-icons vertical-align-middle">add_location</i> Address: {{locationAddress}}</a></li>
           
           
           </ul>
@@ -61,7 +61,7 @@ const searchClient = algoliasearch(
           templates: {
             item:
             `
-            <article>
+            <article class="center-align">
             
             <h5 class="tertiary-color">{{userName}}</h5><br>
             <div class="divider"></div><br>
