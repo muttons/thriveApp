@@ -1,12 +1,12 @@
 {
-    "name": "Thrive WebApp",
+    "name": "Thrive App",
     "short_name": "Thrive App",
     "theme_color": "#0a5188",
     "background_color": "#0a5188",
     "display": "standalone",
     "orientation": "portrait",
     "Scope": "/",
-    "start_url": "index.html",
+    "start_url": "/index.html",
     "icons": [
       {
         "src": "/thriveApp/img/icons/icon-72x72.png",
