@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v10.69'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v10.69'; //CHANGE THIS - name of your dynamic cache
+const staticCacheName = 'site-static-v10.70'; //CHANGE THIS - name of your static cache
+const dynamicCacheName = 'site-dynamic-v10.70'; //CHANGE THIS - name of your dynamic cache
 const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
   '',
   '/index.html',
@@ -13,8 +13,7 @@ const assets = [ //CHANGE THIS - list of assets to automatically get added to th
   '/pages/fallback.html',
   '/pages/search.html',
   '/pages/tests.html',
-  '/manifest.json',
-  '/sw.js'
+  '/manifest.json'
 ];
 
 // cache size limit function
