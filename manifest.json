@@ -1,8 +1,8 @@
 {
     "name": "Thrive App",
     "short_name": "Thrive App",
-    "theme_color": "#0a5188",
-    "background_color": "#0a5188",
+    "theme_color": "#353535",
+    "background_color": "#353535",
     "display": "standalone",
     "orientation": "portrait",
     "Scope": "/",
