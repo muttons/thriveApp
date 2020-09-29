@@ -70,6 +70,11 @@ nav {
   background-color: var(--secondary)!important;
 }
 
+nav ul a:hover {
+  background-color: rgba(0,0,0,0.5);
+  border-bottom: 0.5rem solid var(--tertiary);
+}
+
 a {
   text-decoration: none;
   color: #fff!important;
@@ -147,10 +152,6 @@ a {
   border-radius: 5px;
 }
 
-li {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
 
 
 
@@ -184,9 +185,12 @@ li {
     
   }
 
+  .nav-item {
+    padding-right: 1rem;
+  }
   .activeFooter {
-    color: var(--secondary)!important;
-    background-color: #f5f5fa;
+    border-bottom: 0.5rem solid var(--tertiary);
+    background-color: rgba(0, 0, 0, 0.8)!important;
   }
 
 
