@@ -193,6 +193,12 @@ li {
   main {
     margin: 0;
   }
+
+  .footer-copyright {
+    margin-bottom: 5rem;
+    border-top: none;
+    color: white!important;
+  }
 }
 
 
