@@ -1,7 +1,7 @@
 /* my css */
 :root {
     --primary: #29075A;
-    --secondary: #353535;
+    --secondary: #23232e;
     --tertiary: #fcba03;
   }
 
@@ -27,7 +27,8 @@ p {
 }
 
 .page-footer {
-  background-color: #484c7a;
+  background-color: var(--secondary);
+ 
 }
 .collapsible-header {
     color: #fff;
@@ -50,6 +51,7 @@ p {
   .footer-copyright {
     background-color: var(--secondary)!important;
     color: var(--tertiary)!important;
+    border-top: 3px solid var(--tertiary);
   }
 
 
