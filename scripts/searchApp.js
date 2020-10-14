@@ -69,7 +69,7 @@ const searchClient = algoliasearch(
             <h6 class="white-text">{{userTitle}}</h6><br>
             <ul>
             <li><p class="white-text"> <i class="material-icons vertical-align-middle">group</i> Department: {{userDepartment}}</p></li>
-            <li><p class="white-text"> <i class="material-icons vertical-align-middle">location_on</i> Department: {{userLocation}}</p></li>
+            <li><p class="white-text"> <i class="material-icons vertical-align-middle">location_on</i> Location: {{userLocation}}</p></li>
             <li><a href="mailto:{{userEmail}}"><i class="material-icons white-text vertical-align-middle">mail</i> Email: {{userEmail}}</a></li>
             <li><a href="tel:+1-{{userCellPhone}}"><i class="material-icons white-text vertical-align-middle">phone_iphone</i> Cell Phone: {{userCellPhone}}</a></li>
             <li><a href="tel:+1-{{userOfficePhone}}"><i class="material-icons white-text vertical-align-middle">phone</i> Office Phone: {{userOfficePhone}}</a></li>

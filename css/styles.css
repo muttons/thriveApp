@@ -525,7 +525,7 @@ a.collection-item {
   -ms-flex-pack: center;
   justify-content: center;
   line-height: 1.25rem;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
   place-items: center;
   text-decoration: none;
   -webkit-user-select: none;
@@ -1375,7 +1375,7 @@ a.collection-item {
 
 .ais-Pagination-item + .ais-Pagination-item > .ais-Pagination-link {
   border-radius: 0;
-  margin-left: -1px; }
+ }
 
 .ais-Pagination-item:last-child > .ais-Pagination-link {
   border-radius: 0 3px 3px 0; }
