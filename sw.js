@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v10.99'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v10.99'; //CHANGE THIS - name of your dynamic cache
+const staticCacheName = 'site-static-v11.00'; //CHANGE THIS - name of your static cache
+const dynamicCacheName = 'site-dynamic-v11.00'; //CHANGE THIS - name of your dynamic cache
 const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
   '',
   '/index.html',
@@ -12,7 +12,7 @@ const assets = [ //CHANGE THIS - list of assets to automatically get added to th
   'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
   '/pages/fallback.html',
   '/pages/search.html',
-  '/pages/tests.html',
+  '/pages/forms.html',
   '/manifest.json'
 ];
 
