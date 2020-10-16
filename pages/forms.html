@@ -55,7 +55,7 @@
           
           <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Search"><i class="material-icons">search</i></a></li>
 
-          <li><a href="/pages/classes.html" class="white-text waves-effect waves-light train tooltipped" style="display: none;" data-tooltip="Classes"><i class="material-icons center white-text">school</i></a></li>
+          <li><a href="/pages/classes.html" class="white-text waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Classes"><i class="material-icons center white-text">school</i></a></li>
         
           <li class="activeNav"><a href="/pages/forms.html" class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;" data-tooltip="Forms"><i class="material-icons">fact_check</i></a></li>
 
@@ -167,6 +167,24 @@
 
 </div>
 
+<!--map user card-->
+<div class="row container map" style="display: none;">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-content black-text">
+        <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Individual Locator</h4></span>
+        <div class="divider"></div>
+
+      </div>
+      <div class="card-action center">
+        <a href="https://www.google.com/maps/d/edit?mid=1bud2y35_xiKijfuDUPB648hKsNl1rqcF&usp=sharing"  class="modal-trigger btn call" target="_Blank">Start</a> 
+      </div>
+    </div>
+  </div> 
+
+
+
+</div>
 
 
 
@@ -262,9 +280,9 @@
 
   
 
-    <!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+    <!-- FOR SOME REASON IT REQUIRES ADMIN-map-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
     <div class="admin-actions" style="display: none;"></div>
-    <div class="train-actions" style="display: none;"></div>
+    <div class="map-actions" style="display: none;"></div>
     <div class="basic-actions" style="display: none;"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>

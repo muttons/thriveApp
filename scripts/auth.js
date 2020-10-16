@@ -20,12 +20,12 @@ adminForm.addEventListener('submit', (e) => {
   });
 });
 
-// add Train cloud function
-const trainForm = document.querySelector('.train-actions');
-trainForm.addEventListener('submit', (e) => {
+// add Map cloud function
+const mapForm = document.querySelector('.map-actions');
+mapForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const trainEmail = document.querySelector('#train-email').value;
-  const addTrainRole = functions.httpsCallable('addTrainRole');
+  const mapEmail = document.querySelector('#map-email').value;
+  const addMapRole = functions.httpsCallable('addMapRole');
 
    //preloader
    document.querySelector('.loader1').classList.add('progress');
@@ -35,10 +35,10 @@ trainForm.addEventListener('submit', (e) => {
    document.querySelector('.loader1').classList.remove('progress');
    document.querySelector('.loader2').classList.remove('indeterminate');
  },3000);
-  // for train role
-  addTrainRole({ email: trainEmail }).then(() => {
+  // for Map role
+  addMapRole({ email: mapEmail }).then(() => {
     
-    trainForm.reset();
+    mapForm.reset();
   });
 });
 
@@ -74,9 +74,9 @@ auth.onAuthStateChanged(user => {
       user.admin = idTokenResult.claims.admin;
       setupUI(user);
     });
-    // for getting user training token to work
+    // for getting user maping token to work
     user.getIdTokenResult().then(idTokenResult => {
-      user.train = idTokenResult.claims.train;
+      user.map = idTokenResult.claims.map;
       setupUI(user);
       
     });

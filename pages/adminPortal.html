@@ -60,7 +60,7 @@
         <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;"
             data-tooltip="Search"><i class="material-icons">search</i></a></li>
 
-            <li><a href="/pages/classes.html" class="white-text waves-effect waves-light train tooltipped" style="display: none;" data-tooltip="Classes"><i class="material-icons center white-text">school</i></a></li>
+            <li><a href="/pages/classes.html" class="white-text waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Classes"><i class="material-icons center white-text">school</i></a></li>
 
         <li><a href="/pages/forms.html" class="white-text logged-in tooltipped waves-effect waves-light"
             style="display: none;" data-tooltip="Forms"><i class="material-icons">fact_check</i></a></li>
@@ -148,17 +148,17 @@
       </div>
     </div>
 
-    <!-- Make User Train-->
+    <!-- Make User map-->
     <div class="col s12 m4">
       <div class="card darken-1 admin">
         <div class="card-content white-text">
-          <span class="card-title black-text center-align">Make User Train</span>
-          <form class="center-align train-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
-            <input type="email" class="center-align" placeholder="User email" id="train-email" required />
+          <span class="card-title black-text center-align">Make User Map</span>
+          <form class="center-align map-actions admin" style="margin: 40px auto; max-width: 300px; display: none">
+            <input type="email" class="center-align" placeholder="User email" id="map-email" required />
         </div>
 
         <div class="card-action blue-grey center-align">
-          <button class="btn-small blue darken-2">Make training</button>
+          <button class="btn-small blue darken-2">Make map</button>
           </form>
         </div>
       </div>
@@ -179,70 +179,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-
-
-
-  <!--ticketOne card-->
-  <div class="row container">
-    <div class="col s12 m6">
-      <div class="card logged-in">
-        <div class="card-content black-text">
-          <span class="card-title secondary-color center" style="padding-bottom: 10px;">
-            <h4>Create Help Desk Ticket</h4>
-          </span>
-          <div class="divider"></div>
-
-        </div>
-        <div class="card-action">
-          <a href="#" style="display: none" class="modal-trigger logged-in btn call"
-            data-target="modal-ticket">Start</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-
-  <!-- Ticket MODAL -->
-  <div id="modal-ticket" class="modal">
-    <div class="modal-content">
-      <h4 class="center">Create Help Desk Ticket</h4><br />
-      <div class="divider"></div>
-      <form class="ticketFormOne" action="#" id="ticket-form-one">
-
-
-        <!-- TicketFieldOne-->
-
-
-        <div class="input-field col s6">
-          <i class="material-icons prefix">mode_edit</i>
-          <textarea id="subject" class="materialize-textarea validate"></textarea>
-          <label for="subject">Enter Subject of the Ticket</label>
-        </div>
-
-        <!-- TicketFieldTwo-->
-
-        <div class="input-field col s6">
-          <i class="material-icons prefix">mode_edit</i>
-          <textarea id="text" class="materialize-textarea validate"></textarea>
-          <label for="text">Describe the issue in as much detail as possible</label>
-        </div>
-
-        <button class="btn yellow darken-2 z-depth-0" id="okButton">Submit</button>
-
-        <!-- Preloader-->
-        <div class="loader1" id="progress">
-          <div class="loader2" id="indeterminate"></div>
-        </div>
-
-    </div>
-    </form>
-
   </div>
   </div>
 
@@ -336,9 +272,9 @@
 </footer>
 
 
-<!-- FOR SOME REASON IT REQUIRES ADMIN-TRAIN-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+<!-- FOR SOME REASON IT REQUIRES ADMIN-map-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
 <div class="admin-actions" style="display: none;"></div>
-<div class="train-actions" style="display: none;"></div>
+<div class="map-actions" style="display: none;"></div>
 <div class="basic-actions" style="display: none;"></div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
