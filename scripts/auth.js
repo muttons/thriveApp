@@ -20,12 +20,12 @@ adminForm.addEventListener('submit', (e) => {
   });
 });
 
-// add Map cloud function
-const mapForm = document.querySelector('.map-actions');
-mapForm.addEventListener('submit', (e) => {
+// add mapUser cloud function
+const mapUserForm = document.querySelector('.mapUser-actions');
+mapUserForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const mapEmail = document.querySelector('#map-email').value;
-  const addMapRole = functions.httpsCallable('addMapRole');
+  const mapUserEmail = document.querySelector('#mapUser-email').value;
+  const addMapUserRole = functions.httpsCallable('addMapUserRole');
 
    //preloader
    document.querySelector('.loader1').classList.add('progress');
@@ -35,10 +35,10 @@ mapForm.addEventListener('submit', (e) => {
    document.querySelector('.loader1').classList.remove('progress');
    document.querySelector('.loader2').classList.remove('indeterminate');
  },3000);
-  // for Map role
-  addMapRole({ email: mapEmail }).then(() => {
+  // for mapUser role
+  addMapUserRole({ email: mapUserEmail }).then(() => {
     
-    mapForm.reset();
+    mapUserForm.reset();
   });
 });
 
@@ -74,9 +74,9 @@ auth.onAuthStateChanged(user => {
       user.admin = idTokenResult.claims.admin;
       setupUI(user);
     });
-    // for getting user maping token to work
+    // for getting user mapUser token to work
     user.getIdTokenResult().then(idTokenResult => {
-      user.map = idTokenResult.claims.map;
+      user.mapUser = idTokenResult.claims.mapUser;
       setupUI(user);
       
     });

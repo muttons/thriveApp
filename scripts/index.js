@@ -5,7 +5,7 @@ const therapeuticOptionsList = document.querySelector('.therapeuticOptions');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const adminItems = document.querySelectorAll('.admin');
-const mapItems = document.querySelectorAll('.map');
+const mapUserItems = document.querySelectorAll('.mapUser');
 const basicItems = document.querySelectorAll('.basic');
 const accountDetails = document.querySelector('.account-details');
 
@@ -43,10 +43,10 @@ const setupUI = (user) => {
       accountDetails.innerHTML = html;
     if (user.admin) {
       adminItems.forEach(item => item.style.display = 'block');
-      mapItems.forEach(item => item.style.display = 'block');
+      mapUserItems.forEach(item => item.style.display = 'block');
     }
-    if (user.map) {
-      mapItems.forEach(item => item.style.display = 'block');
+    if (user.mapUser) {
+      mapUserItems.forEach(item => item.style.display = 'block');
       
     }
     if (user.basic) {
@@ -60,7 +60,7 @@ const setupUI = (user) => {
     // toggle user UI elements
     
     adminItems.forEach(item => item.style.display = 'none');
-    mapItems.forEach(item => item.style.display = 'none');
+    mapUserItems.forEach(item => item.style.display = 'none');
     loggedInLinks.forEach(item => item.style.display = 'none');
     loggedOutLinks.forEach(item => item.style.display = 'block');
   }
