@@ -19,7 +19,7 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
             admin: true,
-            train: true,
+            mapUser: true,
             basic: true
         });
     }).then(() => {
@@ -32,23 +32,23 @@ exports.addAdminRole = functions.https.onCall((data, context) => {
     });
 });
 
-//add train role
-exports.addTrainRole = functions.https.onCall((data, context) => {
-    //check request is made by an train
+//add mapUser role
+exports.addMapUserRole = functions.https.onCall((data, context) => {
+    //check request is made by an mapUser
     if (context.auth.token.admin !== true) {
         return { error: 'only admins can add other roles, weeb'}
     }
-    // get user and add custom claim (train)
+    // get user and add custom claim (mapUser)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
             admin: false,
-            train: true,
+            mapUser: true,
             basic: true
             
         });
     }).then(() => {
           return {
-            message: `Success! ${data.email} has been made an train and all lower roles`
+            message: `Success! ${data.email} has been made an mapUser and all lower roles`
         }
     }).catch(err => {
         return err;
@@ -57,15 +57,15 @@ exports.addTrainRole = functions.https.onCall((data, context) => {
 
 //add basic role
 exports.addBasicRole = functions.https.onCall((data, context) => {
-    //check request is made by an train
+    //check request is made by an mapUser
     if (context.auth.token.admin !== true) {
         return { error: 'only admins can add other roles, weeb'}
     }
-    // get user and add custom claim (train)
+    // get user and add custom claim (mapUser)
     return admin.auth().getUserByEmail(data.email).then(user => {
         return admin.auth().setCustomUserClaims(user.uid, {
             admin: false,
-            train: false,
+            mapUser: false,
             basic: true
         });
     }).then(() => {
