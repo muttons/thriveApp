@@ -154,7 +154,8 @@ a {
 
 
 
-
+.modal 
+{ width: 50% !important ; height: 700px !important ; }  /* increase the height and width as you desire */
 
 
 /* Small screens */
@@ -167,6 +168,9 @@ a {
     border-top: 3px solid var(--tertiary);
     z-index: 1;
   }
+
+  .modal 
+  { width: 90% !important ; height: 90% !important ; }  /* increase the height and width as you desire */
 
   .borderleft {
     border-left: 1px solid var(--tertiary);
