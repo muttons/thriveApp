@@ -1,6 +1,6 @@
-const staticCacheName = 'site-static-v11.24'; //CHANGE THIS - name of your static cache
-const dynamicCacheName = 'site-dynamic-v11.24'; //CHANGE THIS - name of your dynamic cache
-const assets = [ //CHANGE THIS - list of assets to automatically get added to the static cache
+const staticCacheName = 'site-static-v16.64';
+const dynamicCacheName = 'site-dynamic-v16.64';
+const assets = [
   '',
   '/index.html',
   '/scripts/index.js',
@@ -29,6 +29,7 @@ const limitCacheSize = (name, size) => {
 
 // install event
 self.addEventListener('install', evt => {
+  //console.log('service worker installed');
   evt.waitUntil(
     caches.open(staticCacheName).then((cache) => {
       console.log('caching shell assets');
@@ -37,12 +38,12 @@ self.addEventListener('install', evt => {
   );
 });
 
-// activate event that deletes old cache versions as well
+// activate event
 self.addEventListener('activate', evt => {
-  console.log('service worker activated');
+  //console.log('service worker activated');
   evt.waitUntil(
     caches.keys().then(keys => {
-      console.log(keys);
+      //console.log(keys);
       return Promise.all(keys
         .filter(key => key !== staticCacheName && key !== dynamicCacheName)
         .map(key => caches.delete(key))
@@ -66,7 +67,7 @@ self.addEventListener('fetch', evt => {
         });
       }).catch(() => {
         if(evt.request.url.indexOf('.html') > -1){
-          return caches.match('/pages/fallback.html'); 
+          return caches.match('/pages/fallback.html');
         }
       })
     );
