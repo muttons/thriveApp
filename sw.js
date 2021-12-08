@@ -1,11 +1,11 @@
-const staticCacheName = 'site-static-v16.64';
-const dynamicCacheName = 'site-dynamic-v16.64';
+const staticCacheName = 'site-static-v16.65';
+const dynamicCacheName = 'site-dynamic-v16.65';
 const assets = [
   '',
   '/index.html',
-  '/scripts/index.js',
-  '/scripts/searchApp.js',
-  '/scripts/auth.js',
+  '/js/index.js',
+  '/js/searchApp.js',
+  '/js/auth.js',
   '/css/styles.css',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2',
