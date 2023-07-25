@@ -95,7 +95,7 @@ auth.onAuthStateChanged(user => {
 
 
 // Sign In with Microsoft OAuth
-const authProvider = new OAuthProvider('microsoft.com');
+const authProvider = new firebase.auth.OAuthProvider('microsoft.com');
     microsoftSignIn = () => {
       authProvider.setCustomParameters({
         // Have user select account - bypassess seamless sign on for the app
