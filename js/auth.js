@@ -120,23 +120,6 @@ firebase.auth().signOut().then(function() {
 
 
 
-// Code for uploading files to firebase storage bucket
 
-    //function to save file
-    function uploadFile(){
-      
-      // Created a Storage Reference with root dir
-      var storageRef = firebase.storage().ref();
-      // Get the file from DOM
-      var file = document.getElementById("files").files[0];
-      console.log(file);
-      
-      //dynamically set reference to the file name
-      var thisRef = storageRef.child('resume/' + ticketForm.subject.value);
-
-      //put request upload file to firebase storage
-      thisRef.put(file).then(function(snapshot) {
-      });
-    }
 
 
