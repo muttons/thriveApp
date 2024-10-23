@@ -41,7 +41,8 @@ const searchClient = algoliasearch(
 
           <ul>
           <li><a href="tel:+1-{{locationPhone}}" ><i class="material-icons vertical-align-middle">phone</i> Office Phone: {{locationPhone}}</a></li>
-          <li><p class="white-text"> <i class="material-icons vertical-align-middle">mode_edit</i> Fax: {{locationFax}}</p></li>
+          <li><a href="tel:+1-{{managerCellPhone}}" ><i class="material-icons vertical-align-middle">smartphone</i> Manager's Cell Phone: {{managerCellPhone}}</a></li>
+          <li><p class="white-text"> <i class="material-icons vertical-align-middle">fax</i> Fax: {{locationFax}}</p></li>
           <li><a href="{{locationAddressLink}}" target="_blank"><i class="material-icons vertical-align-middle">add_location</i> Address: {{locationAddress}}</a></li>
           
           
