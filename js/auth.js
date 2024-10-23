@@ -101,7 +101,7 @@ const authProvider = new firebase.auth.OAuthProvider('microsoft.com');
         // Have user select account - bypassess seamless sign on for the app
         prompt: 'select_account'
       });
-        firebase.auth().signInWithRedirect(authProvider).then(function(result){
+        firebase.auth().signInWithPopup(authProvider).then(function(result){
             console.log(result);
             console.log("Successfull Sign In with Microsoft Account");
         });
