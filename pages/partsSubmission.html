@@ -218,7 +218,7 @@
 
           <div class="divider"></div>
           <form id="myForm" action="javascript:void(0);">
-            <input type="text" placeholder="Enter something..." required>
+            <input type="text" placeholder="Paste the part number here..." required>
             <button type="submit">Submit</button>
           </form>
   
@@ -229,7 +229,7 @@
       </div>
     </div>
 
-    <div id="success-message">✅ Success! Refreshing page...</div>
+    <div id="success-message" class="center">✅ Success! Refreshing page...</div>
     <script>
       document.getElementById('myForm').addEventListener('submit', function(e) {
         e.preventDefault(); // Just in case
@@ -238,7 +238,7 @@
     
         setTimeout(() => {
           location.reload();
-        }, 3000);
+        }, 1500);
       });
     </script>
 
