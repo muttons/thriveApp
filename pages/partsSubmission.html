@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- my CSS -->
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Service Worker Manifest -->
+  <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-120x120.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-310x310.png">
+    <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#292929">
+    <meta name="theme-color" content="#292929">
+
+    <script>
+      if (location.protocol != 'https:') {
+       location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+      }
+      </script>
+      
+  <title>Thrive App</title>
+</head>
+<body class="grey lighten-3"></body>
+  <!-- nav -->
+  <header>
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="/index.html" class="brand-logo ">ThriveApp</a>
+        <!-- sidenav menu and search button commented out for new style
+
+        <a href="#" class="sidenav-trigger right" data-target="mobile-links"><i class="material-icons">menu</i></a>
+        
+        <a href="/pages/search.html" class="right hide-on-large-only hover logged-inwaves-effect waves-light logged-in" style="display: none">
+          <i class="large material-icons">search</i>
+        </a>
+      -->
+        <ul class="right hide-on-med-and-down">
+
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Login">Login</a></li>
+          
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Search"><i class="material-icons">search</i></a></li>
+
+          <li><a href="/pages/classes.html" class="white-text waves-effect waves-light logged-in tooltipped" style="display: none;" data-tooltip="Classes"><i class="material-icons center white-text">school</i></a></li>
+        
+          <li class="activeNav"><a href="/pages/forms.html" class="white-text logged-in tooltipped waves-effect waves-light" style="display: none;" data-tooltip="Forms"><i class="material-icons">fact_check</i></a></li>
+
+
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light tooltipped" style="display: none;" data-tooltip="Admin Portal"><i class="material-icons">blur_on</i></a></li>
+
+          <li><a href="#" class="white-text modal-trigger center-align logged-in waves-effect waves-light tooltipped" data-target="modal-account" style="display: none;" data-tooltip="Account Details"><i class="material-icons white-text">account_circle</i></a></li>
+  
+        </ul>
+      </div>
+    </nav>
+  </div>
+  </header>
+ <!-- Main Content Area-->
+ <main>
+
+  
+      
+
+
+
+  <!-- side nav -->
+<ul class="sidenav black lighten-1 " id="mobile-links">
+<br><br>
+
+      <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
+
+      <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search<i class="material-icons white-text">search</i></a></li>
+
+      <li><a href="/pages/classes.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Classes<i class="material-icons center white-text">school</i></a></li>
+
+
+      <li><a href="/pages/forms.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Forms<i class="material-icons white-text">fact_check</i></a></li>
+
+
+      <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal<i class="material-icons white-text">blur_on</i></a></li>
+
+      <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details<i class="material-icons white-text">account_circle</i></a></li>
+
+</ul>
+
+
+
+
+<!-- ACCOUNT MODAL -->
+<div id="modal-account" class="modal">
+<div class="modal-content center-align">
+  <h4>Account details</h4><br />
+  <div class="account-details"></div>
+  <li class="divider" tabindex="-1"></li>
+  <a onclick="microsoftSignOut()" class="white-text btn logged-in waves-effect waves-light" style="display: none;">Sign Out</a>
+</div>
+</div>
+
+
+<!-- RECEIPT MODAL -->
+<div id="modal-receipt" class="modal">
+  <div class="modal-content center-align">
+    <iframe width="350px" height="500px" src="https://apps.powerapps.com/play/fb944d4b-8e97-4b84-a77c-aad4d9bfea5f" frameborder="0" allowfullscreen></iframe>
+    <li class="divider" tabindex="-1"></li>
+    <a href="#!" class="modal-close white-text btn logged-in waves-effect waves-light">Close</a>
+  </div>
+  </div>
+
+
+
+
+
+<!--logged-out content-->
+
+<!--loginPrompt card-->
+<div class="row container logged-out" style="display: none;">
+<div class="col s12 m12">
+  <div class="card">
+    <div class="card-content black-text">
+      <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Login to view more options</h4></span>
+      <div class="divider"></div>
+
+    </div>
+    <div class="card-action center">
+      <a href="#" onclick="microsoftSignIn()" class="modal-trigger btn call">Login</a> 
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!--logged-in content-->
+
+<!--logged-in Residential Site Visit Form-->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+  }
+  .parts-list {
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Available Parts</h2>
+<div class="parts-list" id="partsList">
+  <ul>
+    <li>Part A123</li>
+    <li>Part B456</li>
+    <li>Part C789</li>
+    <li>Part D012</li>
+  </ul>
+  <p><em>Copy and paste parts you need into the box below.</em></p>
+</div>
+
+<form id="partsForm" method="POST" onsubmit="return handleSubmit();">
+  <label for="partsInput">Paste your parts here:</label><br>
+  <te
+
+<!--logged-in receiptSubmitter user card
+<div class="row container logged-in" style="display: none;">
+  <div class="col s12 m12">
+    <div class="card">
+      <div class="card-content black-text">
+        <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Submit Receipts: BETA</h4></span>
+        <div class="divider"></div>
+  
+      </div>
+      <div class="card-action center">
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=RzE5vGe84U2ymApY9bCFNJLSJ-UK7k5HuSqTbHyMBvlURUVLOTdUUFlEUTc2TFYxOVo1WldWTFhDTy4u"  class="modal-trigger btn call" target="_Blank">Start</a> 
+      </div>
+    </div>
+  </div> 
+  </div>
+-->
+  
+
+<!--mapUser user card
+<div class="row container logged-in mapUser" style="display: none;">
+<div class="col s12 m12">
+  <div class="card">
+    <div class="card-content black-text">
+      <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Individual Locator</h4></span>
+      <div class="divider"></div>
+
+    </div>
+    <div class="card-action center">
+      <a href="https://www.google.com/maps/d/edit?mid=1bud2y35_xiKijfuDUPB648hKsNl1rqcF&usp=sharing"  class="modal-trigger btn call" target="_Blank">Start</a> 
+    </div>
+  </div>
+</div> 
+</div>
+-->
+
+
+
+
+
+
+</main>
+
+<!-- Footer Content Area-->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Feedback is appreciated!</h5>
+        <div class="divider"></div>
+        
+  <ul><li><a href="mailto:help.desk@thriveupstate.org?subject=Mail from App"><i class="material-icons small vertical-align-middle">mail</i>  Email us about any incorrect information or bugs</a></li></ul>
+        
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <div class="divider"></div>
+        <ul>
+          <li><a onclick="microsoftSignIn()" class="white-text logged-out waves-effect waves-light white-text" style="display: none;">Login</a></li>
+
+          <li><a href="/pages/search.html" class="waves-effect waves-light logged-in white-text" style="display: none;">Search</a></li>
+
+          <li><a href="/pages/classes.html" class="white-text logged-in waves-effect waves-light" style="display: none;">Classes</a></li>
+          
+          <li><a href="/pages/forms.html" class="white-text waves-effect waves-light logged-in" style="display: none;">Forms</a></li>
+
+          <li><a href="/pages/adminPortal.html" class="white-text admin waves-effect waves-light" style="display: none;">Admin Portal</a></li>
+
+          <li><a href="#" class="white-text modal-trigger logged-in waves-effect waves-light" data-target="modal-account" style="display: none;">Account Details</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container center">
+    © 2020 Jonathan Osterud
+    </div>
+  </div>
+
+<!-- logged out nav bottom-->
+<nav class="navbarBottom hide-on-large-only logged-out" style="display: none;">
+  <ul class="navbar-navBottom">
+
+    <li class="nav-item">
+      <a onclick="microsoftSignIn()" class="logged-out activeFooter" style="display: none;" data-tooltip="Login">Login
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+
+
+
+
+
+<!-- logged in nav bottom-->
+  <nav class="navbarBottom hide-on-large-only logged-in" style="display: none;">
+    <ul class="navbar-navBottom">
+      <li class="logo">
+        <a href="/index.html" class="logged-in" style="display: none;"><i class="material-icons">home</i>
+          
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/pages/search.html" class="logged-in" style="display: none;"><i class="material-icons">search</i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/pages/classes.html" class=" waves-light logged-in" style="display: none;"><i class="material-icons">school</i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="/pages/forms.html" class="waves-light logged-in activeFooter" style="display: none;"><i class="material-icons">fact_check</i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="white-text modal-trigger center-align logged-in  waves-light" data-target="modal-account" style="display: none;" ><i class="material-icons white-text">account_circle</i>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</footer>
+
+
+  
+
+    <!-- FOR SOME REASON IT REQUIRES ADMIN-mapUser-BASIC ACTIONS ALL BE INCLUDED ON THE PAGE TO NOT ERROR-->
+    <div class="admin-actions" style="display: none;"></div>
+    <div class="mapUser-actions" style="display: none;"></div>
+    <div class="basic-actions" style="display: none;"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-functions.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyApz5zn0Sw553xEJAuw-uzbJbS8rTSZcOA",
+        authDomain: "thriveupstateapp-jlo.firebaseapp.com",
+        databaseURL: "https://thriveupstateapp-jlo.firebaseio.com",
+        projectId: "thriveupstateapp-jlo",
+        storageBucket: "thriveupstateapp-jlo.appspot.com",
+        messagingSenderId: "601846370875",
+        appId: "1:601846370875:web:b8869db616e0005824021e",
+        measurementId: "G-70M9CFWBJ4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+
+    </script>
+
+
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/index.js"></script>
+
+</body>
+</html>
