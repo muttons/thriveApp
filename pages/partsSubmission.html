@@ -184,16 +184,17 @@
     z-index: 9999;
   }
 </style>
-<script>
-  window.onload = function() {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'block';
-
-    setTimeout(() => {
-      location.reload(); // Reload the page after 5 seconds
-    }, 5000);
-  };
-</script>
+<style>
+  #success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+</style>
 
 
 <script>
@@ -218,7 +219,7 @@
 </script>
 
 
-<div id="popup">✅ Success! Reloading...</div>
+
 
 
     <div class="col s12 m6">
@@ -243,18 +244,22 @@
       </div>
     </div>
 
+    <div id="success-message">✅ Success! Refreshing page...</div>
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop actual form submission
 
-    <script>
-      document.getElementById('myForm').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent actual form submission
-        const popup = document.getElementById('popup');
-        popup.style.display = 'block';
-    
-        setTimeout(() => {
-          location.reload(); // Reload the page after 5 seconds
-        }, 3000);
-      });
-    </script>
+    // Show success message
+    const successMessage = document.getElementById('success-message');
+    successMessage.style.display = 'block';
+
+    // Wait 3 seconds, then refresh
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
+  });
+</script>
+
 
 
 
