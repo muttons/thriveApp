@@ -171,8 +171,7 @@
   </style>
 
 
-<h2>Generated Random String</h2>
-<p id="output"></p>
+
 
 <script>
   function generateRandomString(length = 10) {
@@ -186,8 +185,12 @@
 
   // Run on page load
   window.onload = function() {
-    const randomString = generateRandomString(12); // You can change the length here
-    document.getElementById('output').textContent = randomString;
+    const outputList = document.getElementById('output-list');
+    for (let i = 0; i < 6; i++) {
+      const li = document.createElement('li');
+      li.textContent = generateRandomString(12); // Adjust length as needed
+      outputList.appendChild(li);
+    }
   };
 </script>
 
@@ -200,18 +203,12 @@
         <div class="card-content black-text">
           <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Available Parts</h4></span>  
           <div class="parts-list" id="partsList">
-            <ul>
-              <li id="output"></li>
-              <li>Part B456</li>
-              <li>Part C789</li>
-              <li>Part D012</li>
-            </ul>
-            <p><em>Copy and paste parts you need into the box below.</em></p>
+            <ul id="output-list"></ul>
+
           </div>
 
           <div class="divider"></div>
           <form id="partsForm" method="POST" onsubmit="return handleSubmit();">
-            <label for="partsInput">Paste your parts here:</label><br>
             <textarea id="pasteField" rows="5" cols="25" placeholder="Paste your content here..."></textarea>
   
         </div>
