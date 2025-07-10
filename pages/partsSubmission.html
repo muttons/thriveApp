@@ -231,14 +231,16 @@
 
     <div id="success-message" class="center">✅ Success! Refreshing page...</div>
     <script>
+
       document.getElementById('myForm').addEventListener('submit', function(e) {
         e.preventDefault(); // Just in case
+        const form = document.getElementById('myForm');
         const successMessage = document.getElementById('success-message');
         successMessage.style.display = 'block';
 
         // Clear form inputs before reload
         form.reset();
-        
+
         setTimeout(() => {
           location.reload();
         }, 1500);
