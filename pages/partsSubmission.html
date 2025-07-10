@@ -169,8 +169,31 @@
       height: 100px;
     }
   </style>
+<style>
+  #popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    font-size: 16px;
+    z-index: 9999;
+  }
+</style>
+<script>
+  window.onload = function() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
 
-
+    setTimeout(() => {
+      location.reload(); // Reload the page after 5 seconds
+    }, 5000);
+  };
+</script>
 
 
 <script>
@@ -195,7 +218,7 @@
 </script>
 
 
-
+<div id="popup">✅ Success! Reloading...</div>
 
 
     <div class="col s12 m6">
@@ -213,13 +236,26 @@
   
         </div>
         <div class="card-action center">
-          <a href="https://app.thriveupstate.org/pages/partsSubmission.html"  class="modal-trigger btn call" target="_Blank">Submit</a> 
+          <form id="myForm">
+            <input type="text" placeholder="Type something..." required>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </div>
 
 
-
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent actual form submission
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+    
+        setTimeout(() => {
+          location.reload(); // Reload the page after 5 seconds
+        }, 5000);
+      });
+    </script>
 
 
 
