@@ -222,7 +222,8 @@
   
         </div>
         <div class="card-action center">
-          <form id="myForm">
+          <form id="myForm" action="javascript:void(0);">
+
             <button type="submit">Submit</button>
           </form>
         </div>
@@ -230,20 +231,17 @@
     </div>
 
     <div id="success-message">✅ Success! Refreshing page...</div>
-<script>
-  document.getElementById('myForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Stop actual form submission
-
-    // Show success message
-    const successMessage = document.getElementById('success-message');
-    successMessage.style.display = 'block';
-
-    // Wait 3 seconds, then refresh
-    setTimeout(() => {
-      location.reload();
-    }, 3000);
-  });
-</script>
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Just in case
+        const successMessage = document.getElementById('success-message');
+        successMessage.style.display = 'block';
+    
+        setTimeout(() => {
+          location.reload();
+        }, 3000);
+      });
+    </script>
 
 
 
