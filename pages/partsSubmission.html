@@ -172,16 +172,8 @@
 
 
 
-  <h2>Available Parts</h2>
-  <div class="parts-list" id="partsList">
-    <ul>
-      <li>Part A123</li>
-      <li>Part B456</li>
-      <li>Part C789</li>
-      <li>Part D012</li>
-    </ul>
-    <p><em>Copy and paste parts you need into the box below.</em></p>
-  </div>
+
+
 
   <form id="partsForm" method="POST" onsubmit="return handleSubmit();">
     <label for="partsInput">Paste your parts here:</label><br>
@@ -190,7 +182,31 @@
       <button type="submit">Submit</button>
     </form>
 
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title secondary-color center" style="padding-bottom: 10px;"><h4>Available Parts</h4></span>  
+          <div class="parts-list" id="partsList">
+            <ul>
+              <li>Part A123</li>
+              <li>Part B456</li>
+              <li>Part C789</li>
+              <li>Part D012</li>
+            </ul>
+            <p><em>Copy and paste parts you need into the box below.</em></p>
+          </div>
+
+          <div class="divider"></div>
+          <form id="partsForm" method="POST" onsubmit="return handleSubmit();">
+            <label for="partsInput">Paste your parts here:</label><br>
+            <textarea id="pasteField" rows="5" cols="25" placeholder="Paste your content here..."></textarea>
   
+        </div>
+        <div class="card-action center">
+          <a href="https://app.thriveupstate.org/pages/partsSubmission.html"  class="modal-trigger btn call" target="_Blank">Submit</a> 
+        </div>
+      </div>
+    </div>
 
 
 
