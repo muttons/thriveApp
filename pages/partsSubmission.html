@@ -235,7 +235,10 @@
         e.preventDefault(); // Just in case
         const successMessage = document.getElementById('success-message');
         successMessage.style.display = 'block';
-    
+
+        // Clear form inputs before reload
+        form.reset();
+        
         setTimeout(() => {
           location.reload();
         }, 1500);
